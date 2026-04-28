@@ -1,0 +1,916 @@
+[
+  {
+    "title": "Hearing your touch: A new acoustic side channel on smartphones",
+    "authors": [
+      "Ilia Shumailov",
+      "Laurent Simon",
+      "Jeff Yan",
+      "Ross Anderson"
+    ],
+    "published": "2019-03-26",
+    "arxiv_id": "1903.11137v1",
+    "abstract": "We present the first acoustic side-channel attack that recovers what users type on the virtual keyboard of their touch-screen smartphone or tablet. When a user taps the screen with a finger, the tap generates a sound wave that propagates on the screen surface and in the air. We found the device's microphone(s) can recover this wave and \"hear\" the finger's touch, and the wave's distortions are characteristic of the tap's location on the screen. Hence, by recording audio through the built-in microphone(s), a malicious app can infer text as the user enters it on their device. We evaluate the effe",
+    "pdf_url": "https://arxiv.org/pdf/1903.11137v1"
+  },
+  {
+    "title": "A Note on Shumailov et al. (2024): `AI Models Collapse When Trained on Recursively Generated Data'",
+    "authors": [
+      "Ali Borji"
+    ],
+    "published": "2024-10-16",
+    "arxiv_id": "2410.12954v2",
+    "abstract": "The study conducted by Shumailov et al. (2024) demonstrates that repeatedly training a generative model on synthetic data leads to model collapse. This finding has generated considerable interest and debate, particularly given that current models have nearly exhausted the available data. In this work, we investigate the effects of fitting a distribution (through Kernel Density Estimation, or KDE) or a model to the data, followed by repeated sampling from it. Our objective is to develop a theoretical understanding of the phenomenon observed by Shumailov et al. (2024). Our results indicate that ",
+    "pdf_url": "https://arxiv.org/pdf/2410.12954v2"
+  },
+  {
+    "title": "Collapse. What else?",
+    "authors": [
+      "Nicolas Gisin"
+    ],
+    "published": "2017-01-28",
+    "arxiv_id": "1701.08300v2",
+    "abstract": "We present the quantum measurement problem as a serious physics problem. Serious because without a resolution, quantum theory is not complete, as it does not tell how one should - in principle - perform measurements. It is physical in the sense that the solution will bring new physics, i.e. new testable predictions, hence it is not merely a matter of interpretation of a frozen formalism. I argue that the two popular ways around the measurement problem, many-worlds and Bohmian-like mechanics, do, de facto, introduce effective collapses when \"I\" interact with the quantum system. Hence, surprisin",
+    "pdf_url": "https://arxiv.org/pdf/1701.08300v2"
+  },
+  {
+    "title": "Collapse models and spacetime symmetries",
+    "authors": [
+      "Daniel J. Bedingham"
+    ],
+    "published": "2016-12-30",
+    "arxiv_id": "1612.09470v1",
+    "abstract": "A picture of dynamical collapse of the wave function which is relativistic and time symmetric is presented. The part of the model which exhibits these features is the set of collapse outcomes. These play the role of matter distributed in space and time. It is argued that the dynamically collapsing quantum state, which is both foliation dependent and follows a time-asymmetric dynamics, is not fundamental: it represents a state of information about the past matter distribution for the purpose of estimating the future matter distribution. It is also argued from the point of view of collapse model",
+    "pdf_url": "https://arxiv.org/pdf/1612.09470v1"
+  },
+  {
+    "title": "Stronger Tests of the Collapse Locality Loophole in Bell Experiments",
+    "authors": [
+      "Adrian Kent"
+    ],
+    "published": "2018-07-23",
+    "arxiv_id": "1807.08791v3",
+    "abstract": "Several versions of quantum theory assume some form of localized collapse. If measurement outcomes are indeed defined by localized collapses, then a loophole-free demonstration of Bell non-locality needs to ensure space-like separated collapses associated with the measurements of the entangled systems. This collapse locality loophole remains largely untested, with one significant exception probing Diosi's and Penrose's gravitationally induced collapse hypotheses. I describe here techniques that allow much stronger experimental tests. These apply to all the well known types of collapse postulat",
+    "pdf_url": "https://arxiv.org/pdf/1807.08791v3"
+  },
+  {
+    "title": "Future of AI Models: A Computational perspective on Model collapse",
+    "authors": [
+      "Trivikram Satharasi",
+      "S Sitharama Iyengar"
+    ],
+    "published": "2025-10-29",
+    "arxiv_id": "2511.05535v1",
+    "abstract": "Artificial Intelligence, especially Large Language Models (LLMs), has transformed domains such as software engineering, journalism, creative writing, academia, and media (Naveed et al. 2025; arXiv:2307.06435). Diffusion models like Stable Diffusion generate high-quality images and videos from text. Evidence shows rapid expansion: 74.2% of newly published webpages now contain AI-generated material (Ryan Law 2025), 30-40% of the active web corpus is synthetic (Spennemann 2025; arXiv:2504.08755), 52% of U.S. adults use LLMs for writing, coding, or research (Staff 2025), and audits find AI involve",
+    "pdf_url": "https://arxiv.org/pdf/2511.05535v1"
+  },
+  {
+    "title": "Critical Collapse of an Ultrarelativistic Fluid in the $\u0393\\to 1$ Limit",
+    "authors": [
+      "Martin Snajdr"
+    ],
+    "published": "2005-08-16",
+    "arxiv_id": "0508062v2",
+    "abstract": "In this paper we investigate the critical collapse of an ultrarelativistic perfect fluid with the equation of state $P=(\u0393-1)\u03c1$ in the limit of $\u0393\\to 1$. We calculate the limiting continuously self similar (CSS) solution and the limiting scaling exponent by exploiting self-similarity of the solution. We also solve the complete set of equations governing the gravitational collapse numerically for $(\u0393-1) = 10^{-2},...,10^{-6}$ and compare them with the CSS solutions. We also investigate the supercritical regime and discuss the hypothesis of naked singularity formation in a generic gravitational c",
+    "pdf_url": "https://arxiv.org/pdf/gr-qc/0508062v2"
+  },
+  {
+    "title": "Deep Neural Regression Collapse",
+    "authors": [
+      "Akshay Rangamani",
+      "Altay Unal"
+    ],
+    "published": "2026-03-25",
+    "arxiv_id": "2603.23805v1",
+    "abstract": "Neural Collapse is a phenomenon that helps identify sparse and low rank structures in deep classifiers. Recent work has extended the definition of neural collapse to regression problems, albeit only measuring the phenomenon at the last layer. In this paper, we establish that Neural Regression Collapse (NRC) also occurs below the last layer across different types of models. We show that in the collapsed layers of neural regression models, features lie in a subspace that corresponds to the target dimension, the feature covariance aligns with the target covariance, the input subspace of the layer",
+    "pdf_url": "https://arxiv.org/pdf/2603.23805v1"
+  },
+  {
+    "title": "On the spherical collapse model in dark energy cosmologies",
+    "authors": [
+      "D. F. Mota",
+      "C. van de Bruck"
+    ],
+    "published": "2004-01-23",
+    "arxiv_id": "0401504v2",
+    "abstract": "We study the spherical collapse model in dark energy cosmologies, in which dark energy is modelled as a minimally coupled scalar field. We first follow the standard assumption that dark energy does not cluster on the scales of interest. Investigating four different popular potentials in detail, we show that the predictions of the spherical collapse model depend on the potential used. We also investigate the dependence on the initial conditions. Secondly, we investigate in how far perturbations in the quintessence field affect the predictions of the spherical collapse model. In doing so, we ass",
+    "pdf_url": "https://arxiv.org/pdf/astro-ph/0401504v2"
+  },
+  {
+    "title": "Dephasing and collapse in continuous measurement of a single system",
+    "authors": [
+      "S. A. Gurvitz"
+    ],
+    "published": "1998-08-26",
+    "arxiv_id": "9808058v2",
+    "abstract": "We show that long standing debates on the collapse and the role of the observer in quantum mechanics can be resolved experimentally via a nondistructive continuous monitoring of a single quantum system. An example of such a system, coupled with the point-contact detector is presented. The detailed quantum mechanical analysis of the entire system (including the detector) shows that under certain conditions the measurement collapse would generate distinctive effects in the detector behavior, which can be experimentally investigated.",
+    "pdf_url": "https://arxiv.org/pdf/quant-ph/9808058v2"
+  },
+  {
+    "title": "Stellar collapse and gravitational waves",
+    "authors": [
+      "Chris L. Fryer",
+      "Daniel E. Holz",
+      "Scott A. Hughes",
+      "Michael S. Warren"
+    ],
+    "published": "2002-11-27",
+    "arxiv_id": "0211609v1",
+    "abstract": "The new generation of gravitational wave (GW) detectors have the potential to open a novel window onto the violent dynamics of core collapse. Although it is certain that core collapse events generate gravitational radiation, understanding the characteristics of the radiation -- whether it can be measured with these detectors, and the best way to go about doing so -- is a challenging problem. In this chapter we review the promise of GWs as observational probes, including a discussion of the current state of GW detectors, and discuss the status of work to understand the waves generated by stella",
+    "pdf_url": "https://arxiv.org/pdf/astro-ph/0211609v1"
+  },
+  {
+    "title": "Similarity Solutions and Collapse in the Attractive Gross-Pitaevskii Equation",
+    "authors": [
+      "Andrei Rybin",
+      "Gennadii Varzugin",
+      "Markus Lindberg",
+      "Jussi Timonen",
+      "Robin K. Bullough"
+    ],
+    "published": "2000-01-06",
+    "arxiv_id": "0001059v2",
+    "abstract": "We analyse a generalised Gross-Pitaevskii equation involving a paraboloidal trap potential in $D$ space dimensions and generalised to a nonlinearity of order $2n+1$. For {\\em attractive} coupling constants collapse of the particle density occurs for $Dn\\ge 2$ and typically to a $\u03b4$-function centered at the origin of the trap. By introducing a new dynamical variable for the spherically symmetric solutions we show that all such solutions are self-similar close to the center of the trap. Exact self-similar solutions occur if, and only if, $Dn=2$, and for this case of $Dn=2$ we exhibit an exact bu",
+    "pdf_url": "https://arxiv.org/pdf/cond-mat/0001059v2"
+  },
+  {
+    "title": "Explaining Grokking and Information Bottleneck through Neural Collapse Emergence",
+    "authors": [
+      "Keitaro Sakamoto",
+      "Issei Sato"
+    ],
+    "published": "2025-09-25",
+    "arxiv_id": "2509.20829v2",
+    "abstract": "The training dynamics of deep neural networks often defy expectations, even as these models form the foundation of modern machine learning. Two prominent examples are grokking, where test performance improves abruptly long after the training loss has plateaued, and the information bottleneck principle, where models progressively discard input information irrelevant to the prediction task as training proceeds. However, the mechanisms underlying these phenomena and their relations remain poorly understood. In this work, we present a unified explanation of such late-phase phenomena through the le",
+    "pdf_url": "https://arxiv.org/pdf/2509.20829v2"
+  },
+  {
+    "title": "Dynamical collapse for photons",
+    "authors": [
+      "Philip Pearle"
+    ],
+    "published": "2016-10-03",
+    "arxiv_id": "1610.00671v1",
+    "abstract": "I suggest a simple alteration of my CSL (Continuous Spontaneous Localization) theory, replacing the mass density collapse-generating operators by relativistic energy density operators. Some consequences of the density matrix evolution equation are explored. First, the expression for the mean energy increase of free particles is calculated (which, in the non-relativistic limit, agrees with the usual result). Then, the density matrix evolution is applied to photons. The mean rate of loss of photon number from a laser beam pulse, the momentum distribution of the photons \"excited\" out of the laser",
+    "pdf_url": "https://arxiv.org/pdf/1610.00671v1"
+  },
+  {
+    "title": "Wave Function Collapse, Correlating Interactions, and Conservation Laws",
+    "authors": [
+      "Edward J. Gillis"
+    ],
+    "published": "2021-02-22",
+    "arxiv_id": "2102.11370v4",
+    "abstract": "The assumption that wave function collapse is induced by correlating interactions of the kind that constitute measurements leads to a stochastic collapse equation that does not require the introduction of any new physical constants and that is consistent with conservation laws. The collapse operator is based on the interaction (potential) energy, with a variable timing parameter related to the rate at which individual interactions generate the correlations. The approximate localization of physical systems follows from the distance-dependent nature of the interaction potentials. The equation is",
+    "pdf_url": "https://arxiv.org/pdf/2102.11370v4"
+  },
+  {
+    "title": "Self-Correcting Self-Consuming Loops for Generative Model Training",
+    "authors": [
+      "Nate Gillman",
+      "Michael Freeman",
+      "Daksh Aggarwal",
+      "Chia-Hong Hsu",
+      "Calvin Luo"
+    ],
+    "published": "2024-02-11",
+    "arxiv_id": "2402.07087v3",
+    "abstract": "As synthetic data becomes higher quality and proliferates on the internet, machine learning models are increasingly trained on a mix of human- and machine-generated data. Despite the successful stories of using synthetic data for representation learning, using synthetic data for generative model training creates \"self-consuming loops\" which may lead to training instability or even collapse, unless certain conditions are met. Our paper aims to stabilize self-consuming generative model training. Our theoretical results demonstrate that by introducing an idealized correction function, which maps ",
+    "pdf_url": "https://arxiv.org/pdf/2402.07087v3"
+  },
+  {
+    "title": "Self-Consuming Generative Models with Adversarially Curated Data",
+    "authors": [
+      "Xiukun Wei",
+      "Xueru Zhang"
+    ],
+    "published": "2025-05-14",
+    "arxiv_id": "2505.09768v1",
+    "abstract": "Recent advances in generative models have made it increasingly difficult to distinguish real data from model-generated synthetic data. Using synthetic data for successive training of future model generations creates \"self-consuming loops\", which may lead to model collapse or training instability. Furthermore, synthetic data is often subject to human feedback and curated by users based on their preferences. Ferbach et al. (2024) recently showed that when data is curated according to user preferences, the self-consuming retraining loop drives the model to converge toward a distribution that opti",
+    "pdf_url": "https://arxiv.org/pdf/2505.09768v1"
+  },
+  {
+    "title": "Pre to Post-Treatment Glioblastoma MRI Prediction using a Latent Diffusion Model",
+    "authors": [
+      "Alexandre G. Leclercq",
+      "S\u00e9bastien Bougleux",
+      "No\u00e9mie N. Moreau",
+      "Alexis Desmonts",
+      "Romain H\u00e9rault"
+    ],
+    "published": "2025-10-13",
+    "arxiv_id": "2510.17851v1",
+    "abstract": "Glioblastoma (GBM) is an aggressive primary brain tumor with a median survival of approximately 15 months. In clinical practice, the Stupp protocol serves as the standard first-line treatment. However, patients exhibit highly heterogeneous therapeutic responses which required at least two months before first visual impact can be observed, typically with MRI. Early prediction treatment response is crucial for advancing personalized medicine. Disease Progression Modeling (DPM) aims to capture the trajectory of disease evolution, while Treatment Response Prediction (TRP) focuses on assessing the ",
+    "pdf_url": "https://arxiv.org/pdf/2510.17851v1"
+  },
+  {
+    "title": "Convergence and Stability Analysis of Self-Consuming Generative Models with Heterogeneous Human Curation",
+    "authors": [
+      "Hongru Zhao",
+      "Jinwen Fu",
+      "Tuan Pham"
+    ],
+    "published": "2025-11-12",
+    "arxiv_id": "2511.09002v2",
+    "abstract": "Self-consuming generative models have received significant attention over the last few years. In this paper, we study a self-consuming generative model with heterogeneous preferences that is a generalization of the model in Ferbach et al. (2024). The model is retrained round by round using real data and its previous-round synthetic outputs. The asymptotic behavior of the retraining dynamics is investigated across four regimes using different techniques including the nonlinear Perron--Frobenius theory. Our analyses improve upon that of Ferbach et al. (2024) and provide convergence results in se",
+    "pdf_url": "https://arxiv.org/pdf/2511.09002v2"
+  },
+  {
+    "title": "DiM: Distilling Dataset into Generative Model",
+    "authors": [
+      "Kai Wang",
+      "Jianyang Gu",
+      "Daquan Zhou",
+      "Zheng Zhu",
+      "Wei Jiang"
+    ],
+    "published": "2023-03-08",
+    "arxiv_id": "2303.04707v2",
+    "abstract": "Dataset distillation reduces the network training cost by synthesizing small and informative datasets from large-scale ones. Despite the success of the recent dataset distillation algorithms, three drawbacks still limit their wider application: i). the synthetic images perform poorly on large architectures; ii). they need to be re-optimized when the distillation ratio changes; iii). the limited diversity restricts the performance when the distillation ratio is large. In this paper, we propose a novel distillation scheme to \\textbf{D}istill information of large train sets \\textbf{i}nto generati",
+    "pdf_url": "https://arxiv.org/pdf/2303.04707v2"
+  },
+  {
+    "title": "Operationalizing Specifications, In Addition to Test Sets for Evaluating Constrained Generative Models",
+    "authors": [
+      "Vikas Raunak",
+      "Matt Post",
+      "Arul Menezes"
+    ],
+    "published": "2022-11-19",
+    "arxiv_id": "2212.00006v1",
+    "abstract": "In this work, we present some recommendations on the evaluation of state-of-the-art generative models for constrained generation tasks. The progress on generative models has been rapid in recent years. These large-scale models have had three impacts: firstly, the fluency of generation in both language and vision modalities has rendered common average-case evaluation metrics much less useful in diagnosing system errors. Secondly, the same substrate models now form the basis of a number of applications, driven both by the utility of their representations as well as phenomena such as in-context l",
+    "pdf_url": "https://arxiv.org/pdf/2212.00006v1"
+  },
+  {
+    "title": "Towards Theoretical Understandings of Self-Consuming Generative Models",
+    "authors": [
+      "Shi Fu",
+      "Sen Zhang",
+      "Yingjie Wang",
+      "Xinmei Tian",
+      "Dacheng Tao"
+    ],
+    "published": "2024-02-19",
+    "arxiv_id": "2402.11778v2",
+    "abstract": "This paper tackles the emerging challenge of training generative models within a self-consuming loop, wherein successive generations of models are recursively trained on mixtures of real and synthetic data from previous generations. We construct a theoretical framework to rigorously evaluate how this training procedure impacts the data distributions learned by future models, including parametric and non-parametric models. Specifically, we derive bounds on the total variation (TV) distance between the synthetic data distributions produced by future models and the original real data distribution",
+    "pdf_url": "https://arxiv.org/pdf/2402.11778v2"
+  },
+  {
+    "title": "Self-Consuming Generative Models Go MAD",
+    "authors": [
+      "Sina Alemohammad",
+      "Josue Casco-Rodriguez",
+      "Lorenzo Luzi",
+      "Ahmed Imtiaz Humayun",
+      "Hossein Babaei"
+    ],
+    "published": "2023-07-04",
+    "arxiv_id": "2307.01850v1",
+    "abstract": "Seismic advances in generative AI algorithms for imagery, text, and other data types has led to the temptation to use synthetic data to train next-generation models. Repeating this process creates an autophagous (self-consuming) loop whose properties are poorly understood. We conduct a thorough analytical and empirical analysis using state-of-the-art generative image models of three families of autophagous loops that differ in how fixed or fresh real training data is available through the generations of training and in whether the samples from previous generation models have been biased to tra",
+    "pdf_url": "https://arxiv.org/pdf/2307.01850v1"
+  },
+  {
+    "title": "Quaternion Generative Adversarial Networks",
+    "authors": [
+      "Eleonora Grassucci",
+      "Edoardo Cicero",
+      "Danilo Comminiello"
+    ],
+    "published": "2021-04-19",
+    "arxiv_id": "2104.09630v2",
+    "abstract": "Latest Generative Adversarial Networks (GANs) are gathering outstanding results through a large-scale training, thus employing models composed of millions of parameters requiring extensive computational capabilities. Building such huge models undermines their replicability and increases the training instability. Moreover, multi-channel data, such as images or audio, are usually processed by realvalued convolutional networks that flatten and concatenate the input, often losing intra-channel spatial relations. To address these issues related to complexity and information loss, we propose a famil",
+    "pdf_url": "https://arxiv.org/pdf/2104.09630v2"
+  },
+  {
+    "title": "Generative Models in Decision Making: A Survey",
+    "authors": [
+      "Xinyu Shao",
+      "Jianping Zhang",
+      "Haozhi Wang",
+      "Leo Maxime Brunswic",
+      "Kaiwen Zhou"
+    ],
+    "published": "2025-02-24",
+    "arxiv_id": "2502.17100v4",
+    "abstract": "Generative models have fundamentally reshaped the landscape of decision-making, reframing the problem from pure scalar reward maximization to high-fidelity trajectory generation and distribution matching. This paradigm shift addresses intrinsic limitations in classical Reinforcement Learning (RL), particularly the limited expressivity of standard unimodal policy distributions in capturing complex, multi-modal behaviors embedded in diverse datasets. However, current literature often treats these models as isolated algorithmic improvements, rarely synthesizing them into a single comprehensive fr",
+    "pdf_url": "https://arxiv.org/pdf/2502.17100v4"
+  },
+  {
+    "title": "Large Language Models Suffer From Their Own Output: An Analysis of the Self-Consuming Training Loop",
+    "authors": [
+      "Martin Briesch",
+      "Dominik Sobania",
+      "Franz Rothlauf"
+    ],
+    "published": "2023-11-28",
+    "arxiv_id": "2311.16822v2",
+    "abstract": "Large Language Models (LLM) are already widely used to generate content for a variety of online platforms. As we are not able to safely distinguish LLM-generated content from human-produced content, LLM-generated content is used to train the next generation of LLMs, giving rise to a self-consuming training loop. From the image generation domain we know that such a self-consuming training loop reduces both quality and diversity of images finally ending in a model collapse. However, it is unclear whether this alarming effect can also be observed for LLMs. Therefore, we present the first study in",
+    "pdf_url": "https://arxiv.org/pdf/2311.16822v2"
+  },
+  {
+    "title": "Stabilizing Self-Consuming Diffusion Models with Latent Space Filtering",
+    "authors": [
+      "Zhongteng Cai",
+      "Yaxuan Wang",
+      "Yang Liu",
+      "Xueru Zhang"
+    ],
+    "published": "2025-11-16",
+    "arxiv_id": "2511.12742v1",
+    "abstract": "As synthetic data proliferates across the Internet, it is often reused to train successive generations of generative models. This creates a ``self-consuming loop\" that can lead to training instability or \\textit{model collapse}. Common strategies to address the issue -- such as accumulating historical training data or injecting fresh real data -- either increase computational cost or require expensive human annotation. In this paper, we empirically analyze the latent space dynamics of self-consuming diffusion models and observe that the low-dimensional structure of latent representations extra",
+    "pdf_url": "https://arxiv.org/pdf/2511.12742v1"
+  },
+  {
+    "title": "Self-Consuming Generative Models with Curated Data Provably Optimize Human Preferences",
+    "authors": [
+      "Damien Ferbach",
+      "Quentin Bertrand",
+      "Avishek Joey Bose",
+      "Gauthier Gidel"
+    ],
+    "published": "2024-06-12",
+    "arxiv_id": "2407.09499v1",
+    "abstract": "The rapid progress in generative models has resulted in impressive leaps in generation quality, blurring the lines between synthetic and real data. Web-scale datasets are now prone to the inevitable contamination by synthetic data, directly impacting the training of future generated models. Already, some theoretical results on self-consuming generative models (a.k.a., iterative retraining) have emerged in the literature, showcasing that either model collapse or stability could be possible depending on the fraction of generated data used at each retraining step. However, in practice, synthetic ",
+    "pdf_url": "https://arxiv.org/pdf/2407.09499v1"
+  },
+  {
+    "title": "Improving Model Compatibility of Generative Adversarial Networks by Boundary Calibration",
+    "authors": [
+      "Si-An Chen",
+      "Chun-Liang Li",
+      "Hsuan-Tien Lin"
+    ],
+    "published": "2021-11-03",
+    "arxiv_id": "2111.02316v1",
+    "abstract": "Generative Adversarial Networks (GANs) is a powerful family of models that learn an underlying distribution to generate synthetic data. Many existing studies of GANs focus on improving the realness of the generated image data for visual applications, and few of them concern about improving the quality of the generated data for training other classifiers -- a task known as the model compatibility problem. As a consequence, existing GANs often prefer generating `easier' synthetic data that are far from the boundaries of the classifiers, and refrain from generating near-boundary data, which are k",
+    "pdf_url": "https://arxiv.org/pdf/2111.02316v1"
+  },
+  {
+    "title": "A 3D generative model of pathological multi-modal MR images and segmentations",
+    "authors": [
+      "Virginia Fernandez",
+      "Walter Hugo Lopez Pinaya",
+      "Pedro Borges",
+      "Mark S. Graham",
+      "Tom Vercauteren"
+    ],
+    "published": "2023-11-08",
+    "arxiv_id": "2311.04552v1",
+    "abstract": "Generative modelling and synthetic data can be a surrogate for real medical imaging datasets, whose scarcity and difficulty to share can be a nuisance when delivering accurate deep learning models for healthcare applications. In recent years, there has been an increased interest in using these models for data augmentation and synthetic data sharing, using architectures such as generative adversarial networks (GANs) or diffusion models (DMs). Nonetheless, the application of synthetic data to tasks such as 3D magnetic resonance imaging (MRI) segmentation remains limited due to the lack of labels",
+    "pdf_url": "https://arxiv.org/pdf/2311.04552v1"
+  },
+  {
+    "title": "Foundations of GenIR",
+    "authors": [
+      "Qingyao Ai",
+      "Jingtao Zhan",
+      "Yiqun Liu"
+    ],
+    "published": "2025-01-06",
+    "arxiv_id": "2501.02842v1",
+    "abstract": "The chapter discusses the foundational impact of modern generative AI models on information access (IA) systems. In contrast to traditional AI, the large-scale training and superior data modeling of generative AI models enable them to produce high-quality, human-like responses, which brings brand new opportunities for the development of IA paradigms. In this chapter, we identify and introduce two of them in details, i.e., information generation and information synthesis. Information generation allows AI to create tailored content addressing user needs directly, enhancing user experience with i",
+    "pdf_url": "https://arxiv.org/pdf/2501.02842v1"
+  },
+  {
+    "title": "AI prediction leads people to forgo guaranteed rewards",
+    "authors": [
+      "Aoi Naito",
+      "Hirokazu Shirado"
+    ],
+    "published": "2026-03-30",
+    "arxiv_id": "2603.28944v1",
+    "abstract": "Artificial intelligence (AI) is understood to affect the content of people's decisions. Here, using a behavioral implementation of the classic Newcomb's paradox in 1,305 participants, we show that AI can also change how people decide. In this paradigm, belief in predictive authority can lead individuals to constrain decision-making, forgoing a guaranteed reward. Over 40% of participants treated AI as such a predictive authority. This significantly increased the odds of forgoing the guaranteed reward by a factor of 3.39 (95% CI: 2.45-4.70) compared with random framing, and reduced earnings by 1",
+    "pdf_url": "https://arxiv.org/pdf/2603.28944v1"
+  },
+  {
+    "title": "Competing Visions of Ethical AI: A Case Study of OpenAI",
+    "authors": [
+      "Melissa Wilfley",
+      "Mengting Ai",
+      "Madelyn Rose Sanfilippo"
+    ],
+    "published": "2026-01-23",
+    "arxiv_id": "2601.16513v1",
+    "abstract": "Introduction. AI Ethics is framed distinctly across actors and stakeholder groups. We report results from a case study of OpenAI analysing ethical AI discourse. Method. Research addressed: How has OpenAI's public discourse leveraged 'ethics', 'safety', 'alignment' and adjacent related concepts over time, and what does discourse signal about framing in practice? A structured corpus, differentiating between communication for a general audience and communication with an academic audience, was assembled from public documentation. Analysis. Qualitative content analysis of ethical themes combined in",
+    "pdf_url": "https://arxiv.org/pdf/2601.16513v1"
+  },
+  {
+    "title": "Beyond principlism: Practical strategies for ethical AI use in research practices",
+    "authors": [
+      "Zhicheng Lin"
+    ],
+    "published": "2024-01-27",
+    "arxiv_id": "2401.15284v6",
+    "abstract": "The rapid adoption of generative artificial intelligence (AI) in scientific research, particularly large language models (LLMs), has outpaced the development of ethical guidelines, leading to a \"Triple-Too\" problem: too many high-level ethical initiatives, too abstract principles lacking contextual and practical relevance, and too much focus on restrictions and risks over benefits and utilities. Existing approaches--principlism (reliance on abstract ethical principles), formalism (rigid application of rules), and technological solutionism (overemphasis on technological fixes)--offer little pra",
+    "pdf_url": "https://arxiv.org/pdf/2401.15284v6"
+  },
+  {
+    "title": "Adaptive Data Flywheel: Applying MAPE Control Loops to AI Agent Improvement",
+    "authors": [
+      "Aaditya Shukla",
+      "Sidney Knowles",
+      "Meenakshi Madugula",
+      "Dave Farris",
+      "Ryan Angilly"
+    ],
+    "published": "2025-10-30",
+    "arxiv_id": "2510.27051v1",
+    "abstract": "Enterprise AI agents must continuously adapt to maintain accuracy, reduce latency, and remain aligned with user needs. We present a practical implementation of a data flywheel in NVInfo AI, NVIDIA's Mixture-of-Experts (MoE) Knowledge Assistant serving over 30,000 employees. By operationalizing a MAPE-driven data flywheel, we built a closed-loop system that systematically addresses failures in retrieval-augmented generation (RAG) pipelines and enables continuous learning. Over a 3-month post-deployment period, we monitored feedback and collected 495 negative samples. Analysis revealed two major",
+    "pdf_url": "https://arxiv.org/pdf/2510.27051v1"
+  },
+  {
+    "title": "Towards The Ultimate Brain: Exploring Scientific Discovery with ChatGPT AI",
+    "authors": [
+      "Gerardo Adesso"
+    ],
+    "published": "2023-07-08",
+    "arxiv_id": "2308.12400v1",
+    "abstract": "This paper presents a novel approach to scientific discovery using an artificial intelligence (AI) environment known as ChatGPT, developed by OpenAI. This is the first paper entirely generated with outputs from ChatGPT. We demonstrate how ChatGPT can be instructed through a gamification environment to define and benchmark hypothetical physical theories. Through this environment, ChatGPT successfully simulates the creation of a new improved model, called GPT$^4$, which combines the concepts of GPT in AI (generative pretrained transformer) and GPT in physics (generalized probabilistic theory). W",
+    "pdf_url": "https://arxiv.org/pdf/2308.12400v1"
+  },
+  {
+    "title": "Improving GenIR Systems Based on User Feedback",
+    "authors": [
+      "Qingyao Ai",
+      "Zhicheng Dou",
+      "Min Zhang"
+    ],
+    "published": "2025-01-06",
+    "arxiv_id": "2501.02838v1",
+    "abstract": "In this chapter, we discuss how to improve the GenIR systems based on user feedback. Before describing the approaches, it is necessary to be aware that the concept of \"user\" has been extended in the interactions with the GenIR systems. Different types of feedback information and strategies are also provided. Then the alignment techniques are highlighted in terms of objectives and methods. Following this, various ways of learning from user feedback in GenIR are presented, including continual learning, learning and ranking in the conversational context, and prompt learning. Through this comprehe",
+    "pdf_url": "https://arxiv.org/pdf/2501.02838v1"
+  },
+  {
+    "title": "Meaningful human control: actionable properties for AI system development",
+    "authors": [
+      "Luciano Cavalcante Siebert",
+      "Maria Luce Lupetti",
+      "Evgeni Aizenberg",
+      "Niek Beckers",
+      "Arkady Zgonnikov"
+    ],
+    "published": "2021-11-25",
+    "arxiv_id": "2112.01298v2",
+    "abstract": "How can humans remain in control of artificial intelligence (AI)-based systems designed to perform tasks autonomously? Such systems are increasingly ubiquitous, creating benefits - but also undesirable situations where moral responsibility for their actions cannot be properly attributed to any particular person or group. The concept of meaningful human control has been proposed to address responsibility gaps and mitigate them by establishing conditions that enable a proper attribution of responsibility for humans; however, clear requirements for researchers, designers, and engineers are yet in",
+    "pdf_url": "https://arxiv.org/pdf/2112.01298v2"
+  },
+  {
+    "title": "Need of AI in Modern Education: in the Eyes of Explainable AI (xAI)",
+    "authors": [
+      "Supriya Manna",
+      "Niladri Sett"
+    ],
+    "published": "2024-07-31",
+    "arxiv_id": "2408.00025v3",
+    "abstract": "Modern Education is not \\textit{Modern} without AI. However, AI's complex nature makes understanding and fixing problems challenging. Research worldwide shows that a parent's income greatly influences a child's education. This led us to explore how AI, especially complex models, makes important decisions using Explainable AI tools. Our research uncovered many complexities linked to parental income and offered reasonable explanations for these decisions. However, we also found biases in AI that go against what we want from AI in education: clear transparency and equal access for everyone. These",
+    "pdf_url": "https://arxiv.org/pdf/2408.00025v3"
+  },
+  {
+    "title": "DeBiasMe: De-biasing Human-AI Interactions with Metacognitive AIED (AI in Education) Interventions",
+    "authors": [
+      "Chaeyeon Lim"
+    ],
+    "published": "2025-04-23",
+    "arxiv_id": "2504.16770v1",
+    "abstract": "While generative artificial intelligence (Gen AI) increasingly transforms academic environments, a critical gap exists in understanding and mitigating human biases in AI interactions, such as anchoring and confirmation bias. This position paper advocates for metacognitive AI literacy interventions to help university students critically engage with AI and address biases across the Human-AI interaction workflows. The paper presents the importance of considering (1) metacognitive support with deliberate friction focusing on human bias; (2) bi-directional Human-AI interaction intervention addressi",
+    "pdf_url": "https://arxiv.org/pdf/2504.16770v1"
+  },
+  {
+    "title": "Privacy and Copyright Protection in Generative AI: A Lifecycle Perspective",
+    "authors": [
+      "Dawen Zhang",
+      "Boming Xia",
+      "Yue Liu",
+      "Xiwei Xu",
+      "Thong Hoang"
+    ],
+    "published": "2023-11-30",
+    "arxiv_id": "2311.18252v3",
+    "abstract": "The advent of Generative AI has marked a significant milestone in artificial intelligence, demonstrating remarkable capabilities in generating realistic images, texts, and data patterns. However, these advancements come with heightened concerns over data privacy and copyright infringement, primarily due to the reliance on vast datasets for model training. Traditional approaches like differential privacy, machine unlearning, and data poisoning only offer fragmented solutions to these complex issues. Our paper delves into the multifaceted challenges of privacy and copyright protection within the",
+    "pdf_url": "https://arxiv.org/pdf/2311.18252v3"
+  },
+  {
+    "title": "Expansive Participatory AI: Supporting Dreaming within Inequitable Institutions",
+    "authors": [
+      "Michael Alan Chang",
+      "Shiran Dudy"
+    ],
+    "published": "2022-11-22",
+    "arxiv_id": "2211.12434v1",
+    "abstract": "Participatory Artificial Intelligence (PAI) has recently gained interest by researchers as means to inform the design of technology through collective's lived experience. PAI has a greater promise than that of providing useful input to developers, it can contribute to the process of democratizing the design of technology, setting the focus on what should be designed. However, in the process of PAI there existing institutional power dynamics that hinder the realization of expansive dreams and aspirations of the relevant stakeholders. In this work we propose co-design principals for AI that addr",
+    "pdf_url": "https://arxiv.org/pdf/2211.12434v1"
+  },
+  {
+    "title": "BERT4beam: Large AI Model Enabled Generalized Beamforming Optimization",
+    "authors": [
+      "Yuhang Li",
+      "Yang Lu",
+      "Wei Chen",
+      "Bo Ai",
+      "Zhiguo Ding"
+    ],
+    "published": "2025-09-14",
+    "arxiv_id": "2509.11056v1",
+    "abstract": "Artificial intelligence (AI) is anticipated to emerge as a pivotal enabler for the forthcoming sixth-generation (6G) wireless communication systems. However, current research efforts regarding large AI models for wireless communications primarily focus on fine-tuning pre-trained large language models (LLMs) for specific tasks. This paper investigates the large-scale AI model designed for beamforming optimization to adapt and generalize to diverse tasks defined by system utilities and scales. We propose a novel framework based on bidirectional encoder representations from transformers (BERT), t",
+    "pdf_url": "https://arxiv.org/pdf/2509.11056v1"
+  },
+  {
+    "title": "Lattica: A Decentralized Cross-NAT Communication Framework for Scalable AI Inference and Training",
+    "authors": [
+      "Ween Yang",
+      "Jason Liu",
+      "Suli Wang",
+      "Xinyuan Song",
+      "Lynn Ai"
+    ],
+    "published": "2025-09-30",
+    "arxiv_id": "2510.00183v2",
+    "abstract": "The rapid expansion of distributed Artificial Intelligence (AI) workloads beyond centralized data centers creates a demand for new communication substrates. These substrates must operate reliably in heterogeneous and permissionless environments, where Network Address Translators (NATs) and firewalls impose significant constraints. Existing solutions, however, are either designed for controlled data center deployments or implemented as monolithic systems that tightly couple machine learning logic with networking code. To address these limitations, we present Lattica, a decentralized cross-NAT c",
+    "pdf_url": "https://arxiv.org/pdf/2510.00183v2"
+  },
+  {
+    "title": "Exploring utilization of generative AI for research and education in data-driven materials science",
+    "authors": [
+      "Takahiro Misawa",
+      "Ai Koizumi",
+      "Ryo Tamura",
+      "Kazuyoshi Yoshimi"
+    ],
+    "published": "2025-04-09",
+    "arxiv_id": "2504.08817v2",
+    "abstract": "Generative AI has recently had a profound impact on various fields, including daily life, research, and education. To explore its efficient utilization in data-driven materials science, we organized a hackathon -- AIMHack2024 -- in July 2024. In this hackathon, researchers from fields such as materials science, information science, bioinformatics, and condensed matter physics worked together to explore how generative AI can facilitate research and education. Based on the results of the hackathon, this paper presents topics related to (1) conducting AI-assisted software trials, (2) building AI ",
+    "pdf_url": "https://arxiv.org/pdf/2504.08817v2"
+  },
+  {
+    "title": "A Methodology to Engineer and Validate Dynamic Multi-level Multi-agent Based Simulations",
+    "authors": [
+      "Jean-Baptiste Soyez",
+      "Gildas Morvan",
+      "Daniel Dupont",
+      "Rochdi Merzouki"
+    ],
+    "published": "2013-11-20",
+    "arxiv_id": "1311.5108v1",
+    "abstract": "This article proposes a methodology to model and simulate complex systems, based on IRM4MLS, a generic agent-based meta-model able to deal with multi-level systems. This methodology permits the engineering of dynamic multi-level agent-based models, to represent complex systems over several scales and domains of interest. Its goal is to simulate a phenomenon using dynamically the lightest representation to save computer resources without loss of information. This methodology is based on two mechanisms: (1) the activation or deactivation of agents representing different domain parts of the same ",
+    "pdf_url": "https://arxiv.org/pdf/1311.5108v1"
+  },
+  {
+    "title": "A Survey of Multi-Agent Deep Reinforcement Learning with Communication",
+    "authors": [
+      "Changxi Zhu",
+      "Mehdi Dastani",
+      "Shihan Wang"
+    ],
+    "published": "2022-03-16",
+    "arxiv_id": "2203.08975v2",
+    "abstract": "Communication is an effective mechanism for coordinating the behaviors of multiple agents, broadening their views of the environment, and to support their collaborations. In the field of multi-agent deep reinforcement learning (MADRL), agents can improve the overall learning performance and achieve their objectives by communication. Agents can communicate various types of messages, either to all agents or to specific agent groups, or conditioned on specific constraints. With the growing body of research work in MADRL with communication (Comm-MADRL), there is a lack of a systematic and structur",
+    "pdf_url": "https://arxiv.org/pdf/2203.08975v2"
+  },
+  {
+    "title": "Emergent Language: A Survey and Taxonomy",
+    "authors": [
+      "Jannik Peters",
+      "Constantin Waubert de Puiseau",
+      "Hasan Tercan",
+      "Arya Gopikrishnan",
+      "Gustavo Adolpho Lucas De Carvalho"
+    ],
+    "published": "2024-09-04",
+    "arxiv_id": "2409.02645v2",
+    "abstract": "The field of emergent language represents a novel area of research within the domain of artificial intelligence, particularly within the context of multi-agent reinforcement learning. Although the concept of studying language emergence is not new, early approaches were primarily concerned with explaining human language formation, with little consideration given to its potential utility for artificial agents. In contrast, studies based on reinforcement learning aim to develop communicative capabilities in agents that are comparable to or even superior to human language. Thus, they extend beyond",
+    "pdf_url": "https://arxiv.org/pdf/2409.02645v2"
+  },
+  {
+    "title": "AOAD-MAT: Transformer-based multi-agent deep reinforcement learning model considering agents' order of action decisions",
+    "authors": [
+      "Shota Takayama",
+      "Katsuhide Fujita"
+    ],
+    "published": "2025-10-15",
+    "arxiv_id": "2510.13343v1",
+    "abstract": "Multi-agent reinforcement learning focuses on training the behaviors of multiple learning agents that coexist in a shared environment. Recently, MARL models, such as the Multi-Agent Transformer (MAT) and ACtion dEpendent deep Q-learning (ACE), have significantly improved performance by leveraging sequential decision-making processes. Although these models can enhance performance, they do not explicitly consider the importance of the order in which agents make decisions. In this paper, we propose an Agent Order of Action Decisions-MAT (AOAD-MAT), a novel MAT model that considers the order in wh",
+    "pdf_url": "https://arxiv.org/pdf/2510.13343v1"
+  },
+  {
+    "title": "Augmenting the action space with conventions to improve multi-agent cooperation in Hanabi",
+    "authors": [
+      "F. Bredell",
+      "H. A. Engelbrecht",
+      "J. C. Schoeman"
+    ],
+    "published": "2024-12-09",
+    "arxiv_id": "2412.06333v3",
+    "abstract": "The card game Hanabi is considered a strong medium for the testing and development of multi-agent reinforcement learning (MARL) algorithms, due to its cooperative nature, partial observability, limited communication and remarkable complexity. Previous research efforts have explored the capabilities of MARL algorithms within Hanabi, focusing largely on advanced architecture design and algorithmic manipulations to achieve state-of-the-art performance for various number of cooperators. However, this often leads to complex solution strategies with high computational cost and requiring large amount",
+    "pdf_url": "https://arxiv.org/pdf/2412.06333v3"
+  },
+  {
+    "title": "Hierarchical Multi-agent Large Language Model Reasoning for Autonomous Functional Materials Discovery",
+    "authors": [
+      "Samuel Rothfarb",
+      "Megan C. Davis",
+      "Ivana Matanovic",
+      "Baikun Li",
+      "Edward F. Holby"
+    ],
+    "published": "2025-12-15",
+    "arxiv_id": "2512.13930v1",
+    "abstract": "Artificial intelligence is reshaping scientific exploration, but most methods automate procedural tasks without engaging in scientific reasoning, limiting autonomy in discovery. We introduce Materials Agents for Simulation and Theory in Electronic-structure Reasoning (MASTER), an active learning framework where large language models autonomously design, execute, and interpret atomistic simulations. In MASTER, a multimodal system translates natural language into density functional theory workflows, while higher-level reasoning agents guide discovery through a hierarchy of strategies, including ",
+    "pdf_url": "https://arxiv.org/pdf/2512.13930v1"
+  },
+  {
+    "title": "From Model-Based Screening to Data-Driven Surrogates: A Multi-Stage Workflow for Exploring Stochastic Agent-Based Models",
+    "authors": [
+      "Paul Saves",
+      "Matthieu Mastio",
+      "Nicolas Verstaevel",
+      "Benoit Gaudou"
+    ],
+    "published": "2026-04-03",
+    "arxiv_id": "2604.03350v1",
+    "abstract": "Systematic exploration of Agent-Based Models (ABMs) is challenged by the curse of dimensionality and their inherent stochasticity. We present a multi-stage pipeline integrating the systematic design of experiments with machine learning surrogates. Using a predator-prey case study, our methodology proceeds in two steps. First, an automated model-based screening identifies dominant variables, assesses outcome variability, and segments the parameter space. Second, we train Machine Learning models to map the remaining nonlinear interaction effects. This approach automates the discovery of unstable",
+    "pdf_url": "https://arxiv.org/pdf/2604.03350v1"
+  },
+  {
+    "title": "Quantifying the effects of environment and population diversity in multi-agent reinforcement learning",
+    "authors": [
+      "Kevin R. McKee",
+      "Joel Z. Leibo",
+      "Charlie Beattie",
+      "Richard Everett"
+    ],
+    "published": "2021-02-16",
+    "arxiv_id": "2102.08370v2",
+    "abstract": "Generalization is a major challenge for multi-agent reinforcement learning. How well does an agent perform when placed in novel environments and in interactions with new co-players? In this paper, we investigate and quantify the relationship between generalization and diversity in the multi-agent domain. Across the range of multi-agent environments considered here, procedurally generating training levels significantly improves agent performance on held-out levels. However, agent performance on the specific levels used in training sometimes declines as a result. To better understand the effects",
+    "pdf_url": "https://arxiv.org/pdf/2102.08370v2"
+  },
+  {
+    "title": "ARCANE: A Multi-Agent Framework for Interpretable and Configurable Alignment",
+    "authors": [
+      "Charlie Masters",
+      "Marta Grze\u015bkiewicz",
+      "Stefano V. Albrecht"
+    ],
+    "published": "2025-12-05",
+    "arxiv_id": "2512.06196v1",
+    "abstract": "As agents based on large language models are increasingly deployed to long-horizon tasks, maintaining their alignment with stakeholder preferences becomes critical. Effective alignment in such settings requires reward models that are interpretable so that stakeholders can understand and audit model objectives. Moreover, reward models must be capable of steering agents at interaction time, allowing preference shifts to be incorporated without retraining. We introduce ARCANE, a framework that frames alignment as a multi-agent collaboration problem that dynamically represents stakeholder preferen",
+    "pdf_url": "https://arxiv.org/pdf/2512.06196v1"
+  },
+  {
+    "title": "Learning From Failure: Integrating Negative Examples when Fine-tuning Large Language Models as Agents",
+    "authors": [
+      "Renxi Wang",
+      "Haonan Li",
+      "Xudong Han",
+      "Yixuan Zhang",
+      "Timothy Baldwin"
+    ],
+    "published": "2024-02-18",
+    "arxiv_id": "2402.11651v2",
+    "abstract": "Large language models (LLMs) have achieved success in acting as agents, which interact with environments through tools such as search engines. However, LLMs are optimized for language generation instead of tool use during training or alignment, limiting their effectiveness as agents. To resolve this problem, previous work has first collected interaction trajectories between LLMs and environments, using only trajectories that successfully finished the task to fine-tune smaller models, making fine-tuning data scarce and acquiring it both difficult and costly. Discarding failed trajectories also ",
+    "pdf_url": "https://arxiv.org/pdf/2402.11651v2"
+  },
+  {
+    "title": "How do language models learn facts? Dynamics, curricula and hallucinations",
+    "authors": [
+      "Nicolas Zucchet",
+      "J\u00f6rg Bornschein",
+      "Stephanie Chan",
+      "Andrew Lampinen",
+      "Razvan Pascanu"
+    ],
+    "published": "2025-03-27",
+    "arxiv_id": "2503.21676v2",
+    "abstract": "Large language models accumulate vast knowledge during pre-training, yet the dynamics governing this acquisition remain poorly understood. This work investigates the learning dynamics of language models on a synthetic factual recall task, uncovering three key findings: First, language models learn in three phases, exhibiting a performance plateau before acquiring precise factual knowledge. Mechanistically, this plateau coincides with the formation of attention-based circuits that support recall. Second, the training data distribution significantly impacts learning dynamics, as imbalanced distr",
+    "pdf_url": "https://arxiv.org/pdf/2503.21676v2"
+  },
+  {
+    "title": "Re-conceptualising the Language Game Paradigm in the Framework of Multi-Agent Reinforcement Learning",
+    "authors": [
+      "Paul Van Eecke",
+      "Katrien Beuls"
+    ],
+    "published": "2020-04-09",
+    "arxiv_id": "2004.04722v1",
+    "abstract": "In this paper, we formulate the challenge of re-conceptualising the language game experimental paradigm in the framework of multi-agent reinforcement learning (MARL). If successful, future language game experiments will benefit from the rapid and promising methodological advances in the MARL community, while future MARL experiments on learning emergent communication will benefit from the insights and results gained from language game experiments. We strongly believe that this cross-pollination has the potential to lead to major breakthroughs in the modelling of how human-like languages can eme",
+    "pdf_url": "https://arxiv.org/pdf/2004.04722v1"
+  },
+  {
+    "title": "Multi-Agent Training for Pommerman: Curriculum Learning and Population-based Self-Play Approach",
+    "authors": [
+      "Nhat-Minh Huynh",
+      "Hoang-Giang Cao",
+      "I-Chen Wu"
+    ],
+    "published": "2024-06-30",
+    "arxiv_id": "2407.00662v2",
+    "abstract": "Pommerman is a multi-agent environment that has received considerable attention from researchers in recent years. This environment is an ideal benchmark for multi-agent training, providing a battleground for two teams with communication capabilities among allied agents. Pommerman presents significant challenges for model-free reinforcement learning due to delayed action effects, sparse rewards, and false positives, where opponent players can lose due to their own mistakes. This study introduces a system designed to train multi-agent systems to play Pommerman using a combination of curriculum l",
+    "pdf_url": "https://arxiv.org/pdf/2407.00662v2"
+  },
+  {
+    "title": "Towards Effective GenAI Multi-Agent Collaboration: Design and Evaluation for Enterprise Applications",
+    "authors": [
+      "Raphael Shu",
+      "Nilaksh Das",
+      "Michelle Yuan",
+      "Monica Sunkara",
+      "Yi Zhang"
+    ],
+    "published": "2024-12-06",
+    "arxiv_id": "2412.05449v1",
+    "abstract": "AI agents powered by large language models (LLMs) have shown strong capabilities in problem solving. Through combining many intelligent agents, multi-agent collaboration has emerged as a promising approach to tackle complex, multi-faceted problems that exceed the capabilities of single AI agents. However, designing the collaboration protocols and evaluating the effectiveness of these systems remains a significant challenge, especially for enterprise applications. This report addresses these challenges by presenting a comprehensive evaluation of coordination and routing capabilities in a novel ",
+    "pdf_url": "https://arxiv.org/pdf/2412.05449v1"
+  },
+  {
+    "title": "Pommerman: A Multi-Agent Playground",
+    "authors": [
+      "Cinjon Resnick",
+      "Wes Eldridge",
+      "David Ha",
+      "Denny Britz",
+      "Jakob Foerster"
+    ],
+    "published": "2018-09-19",
+    "arxiv_id": "1809.07124v2",
+    "abstract": "We present Pommerman, a multi-agent environment based on the classic console game Bomberman. Pommerman consists of a set of scenarios, each having at least four players and containing both cooperative and competitive aspects. We believe that success in Pommerman will require a diverse set of tools and methods, including planning, opponent/teammate modeling, game theory, and communication, and consequently can serve well as a multi-agent benchmark. To date, we have already hosted one competition, and our next one will be featured in the NIPS 2018 competition track.",
+    "pdf_url": "https://arxiv.org/pdf/1809.07124v2"
+  },
+  {
+    "title": "Internet of Intelligence: The Collective Advantage for Advancing Communications and Intelligence",
+    "authors": [
+      "Rongpeng Li",
+      "Zhifeng Zhao",
+      "Xing Xu",
+      "Fei Ni",
+      "Honggang Zhang"
+    ],
+    "published": "2019-04-26",
+    "arxiv_id": "1905.00719v7",
+    "abstract": "The fifth-generation cellular networks (5G) has boosted the unprecedented convergence between the information world and physical world. On the other hand, empowered with the enormous amount of data and information, artificial intelligence (AI) has been universally applied and pervasive AI is believed to be an integral part of the six-generation cellular networks (6G). Consequently, benefiting from the advancement in communication technology and AI, we boldly argue that the conditions for collective intelligence (CI) will be mature in the 6G era and CI will emerge among the widely connected bei",
+    "pdf_url": "https://arxiv.org/pdf/1905.00719v7"
+  },
+  {
+    "title": "AI-enhanced Collective Intelligence",
+    "authors": [
+      "Hao Cui",
+      "Taha Yasseri"
+    ],
+    "published": "2024-03-15",
+    "arxiv_id": "2403.10433v4",
+    "abstract": "Current societal challenges exceed the capacity of humans operating either alone or collectively. As AI evolves, its role within human collectives will vary from an assistive tool to a participatory member. Humans and AI possess complementary capabilities that, together, can surpass the collective intelligence of either humans or AI in isolation. However, the interactions in human-AI systems are inherently complex, involving intricate processes and interdependencies. This review incorporates perspectives from complex network science to conceptualize a multilayer representation of human-AI coll",
+    "pdf_url": "https://arxiv.org/pdf/2403.10433v4"
+  },
+  {
+    "title": "Focus Agent: LLM-Powered Virtual Focus Group",
+    "authors": [
+      "Taiyu Zhang",
+      "Xuesong Zhang",
+      "Robbe Cools",
+      "Adalberto L. Simeone"
+    ],
+    "published": "2024-09-03",
+    "arxiv_id": "2409.01907v1",
+    "abstract": "In the domain of Human-Computer Interaction, focus groups represent a widely utilised yet resource-intensive methodology, often demanding the expertise of skilled moderators and meticulous preparatory efforts. This study introduces the ``Focus Agent,'' a Large Language Model (LLM) powered framework that simulates both the focus group (for data collection) and acts as a moderator in a focus group setting with human participants. To assess the data quality derived from the Focus Agent, we ran five focus group sessions with a total of 23 human participants as well as deploying the Focus Agent to ",
+    "pdf_url": "https://arxiv.org/pdf/2409.01907v1"
+  },
+  {
+    "title": "Collective Intelligence in Humans: A Literature Review",
+    "authors": [
+      "Juho Salminen"
+    ],
+    "published": "2012-04-16",
+    "arxiv_id": "1204.3401v1",
+    "abstract": "This literature review focuses on collective intelligence in humans. A keyword search was performed on the Web of Knowledge and selected papers were reviewed in order to reveal themes relevant to collective intelligence. Three levels of abstraction were identified in discussion about the phenomenon: the micro-level, the macro-level and the level of emergence. Recurring themes in the literature were categorized under the above-mentioned framework and directions for future research were identified.",
+    "pdf_url": "https://arxiv.org/pdf/1204.3401v1"
+  },
+  {
+    "title": "Re-differentiation as collective intelligence: The Ktunaxa language online community",
+    "authors": [
+      "Christopher Horsethief"
+    ],
+    "published": "2012-04-17",
+    "arxiv_id": "1204.3891v1",
+    "abstract": "This paper presents preliminary results of an investigation of collectively intelligent behavior in a Native North American speech community. The research reveals several independently initiated strategies organized around the collective problem of language endangerment. Specifically, speakers are engaging in self-organizing efforts to reverse historical language simplification that resulted from cultural trauma. These acts of collective intelligence serve to reduce entropy in speech community identity.",
+    "pdf_url": "https://arxiv.org/pdf/1204.3891v1"
+  },
+  {
+    "title": "Using Artificial Intelligence to Accelerate Collective Intelligence: Policy Synth and Smarter Crowdsourcing",
+    "authors": [
+      "R\u00f3bert Bjarnason",
+      "Dane Gambrell",
+      "Joshua Lanthier-Welch"
+    ],
+    "published": "2024-06-03",
+    "arxiv_id": "2407.13960v1",
+    "abstract": "In an era characterized by rapid societal changes and complex challenges, institutions' traditional methods of problem-solving in the public sector are increasingly proving inadequate. In this study, we present an innovative and effective model for how institutions can use artificial intelligence to enable groups of people to generate effective solutions to urgent problems more efficiently. We describe a proven collective intelligence method, called Smarter Crowdsourcing, which is designed to channel the collective intelligence of those with expertise about a problem into actionable solutions ",
+    "pdf_url": "https://arxiv.org/pdf/2407.13960v1"
+  },
+  {
+    "title": "A Plan Reuse Mechanism for LLM-Driven Agent",
+    "authors": [
+      "Guopeng Li",
+      "Ruiqi Wu",
+      "Haisheng Tan"
+    ],
+    "published": "2025-12-24",
+    "arxiv_id": "2512.21309v2",
+    "abstract": "Integrating large language models (LLMs) into personal assistants, like Xiao Ai and Blue Heart V, effectively enhances their ability to interact with humans, solve complex tasks, and manage IoT devices. Such assistants are also termed LLM-driven agents. Upon receiving user requests, the LLM-driven agent generates plans using an LLM, executes these plans through various tools, and then returns the response to the user. During this process, the latency for generating a plan with an LLM can reach tens of seconds, significantly degrading user experience. Real-world dataset analysis shows that abou",
+    "pdf_url": "https://arxiv.org/pdf/2512.21309v2"
+  },
+  {
+    "title": "Crowdsourcing Collective Emotional Intelligence",
+    "authors": [
+      "Robert R. Morris",
+      "Rosalind Picard"
+    ],
+    "published": "2012-04-16",
+    "arxiv_id": "1204.3481v1",
+    "abstract": "One of the hallmarks of emotional intelligence is the ability to regulate emotions. Research suggests that cognitive reappraisal - a technique that involves reinterpreting the meaning of a thought or situation - can down-regulate negative emotions, without incurring significant psychological or physiological costs. Habitual use of this strategy is also linked to many key indices of physical and emotional health. Unfortunately, this technique is not always easy to apply. Thinking flexibly about stressful thoughts and situations requires creativity and poise, faculties that often elude us when w",
+    "pdf_url": "https://arxiv.org/pdf/1204.3481v1"
+  },
+  {
+    "title": "MedAide: Information Fusion and Anatomy of Medical Intents via LLM-based Agent Collaboration",
+    "authors": [
+      "Dingkang Yang",
+      "Jinjie Wei",
+      "Mingcheng Li",
+      "Jiyao Liu",
+      "Lihao Liu"
+    ],
+    "published": "2024-10-16",
+    "arxiv_id": "2410.12532v3",
+    "abstract": "In healthcare intelligence, the ability to fuse heterogeneous, multi-intent information from diverse clinical sources is fundamental to building reliable decision-making systems. Large Language Model (LLM)-driven information interaction systems currently showing potential promise in the healthcare domain. Nevertheless, they often suffer from information redundancy and coupling when dealing with complex medical intents, leading to severe hallucinations and performance bottlenecks. To this end, we propose MedAide, an LLM-based medical multi-agent collaboration framework designed to enable intent",
+    "pdf_url": "https://arxiv.org/pdf/2410.12532v3"
+  },
+  {
+    "title": "Creative Problem Solving in Artificially Intelligent Agents: A Survey and Framework",
+    "authors": [
+      "Evana Gizzi",
+      "Lakshmi Nair",
+      "Sonia Chernova",
+      "Jivko Sinapov"
+    ],
+    "published": "2022-04-21",
+    "arxiv_id": "2204.10358v1",
+    "abstract": "Creative Problem Solving (CPS) is a sub-area within Artificial Intelligence (AI) that focuses on methods for solving off-nominal, or anomalous problems in autonomous systems. Despite many advancements in planning and learning, resolving novel problems or adapting existing knowledge to a new context, especially in cases where the environment may change in unpredictable ways post deployment, remains a limiting factor in the safe and useful integration of intelligent systems. The emergence of increasingly autonomous systems dictates the necessity for AI agents to deal with environmental uncertain",
+    "pdf_url": "https://arxiv.org/pdf/2204.10358v1"
+  },
+  {
+    "title": "Motivations for Participation in Socially Networked Collective Intelligence Systems",
+    "authors": [
+      "Jon Chamberlain",
+      "Udo Kruschwitz",
+      "Massimo Poesio"
+    ],
+    "published": "2012-04-18",
+    "arxiv_id": "1204.4071v1",
+    "abstract": "One of the most significant challenges facing systems of collective intelligence is how to encourage participation on the scale required to produce high quality data. This paper details ongoing work with Phrase Detectives, an online game-with-a-purpose deployed on Facebook, and investigates user motivations for participation in social network gaming where the wisdom of crowds produces useful data.",
+    "pdf_url": "https://arxiv.org/pdf/1204.4071v1"
+  },
+  {
+    "title": "Small LLMs Are Weak Tool Learners: A Multi-LLM Agent",
+    "authors": [
+      "Weizhou Shen",
+      "Chenliang Li",
+      "Hongzhan Chen",
+      "Ming Yan",
+      "Xiaojun Quan"
+    ],
+    "published": "2024-01-14",
+    "arxiv_id": "2401.07324v3",
+    "abstract": "Large Language Model (LLM) agents significantly extend the capabilities of standalone LLMs, empowering them to interact with external tools (e.g., APIs, functions) and complete various tasks in a self-directed fashion. The challenge of tool use demands that LLMs not only understand user queries and generate answers accurately but also excel in task planning, tool invocation, and result summarization. While traditional works focus on training a single LLM with all these capabilities, performance limitations become apparent, particularly with smaller models. To overcome these challenges, we prop",
+    "pdf_url": "https://arxiv.org/pdf/2401.07324v3"
+  },
+  {
+    "title": "Next Generation Crowdsourcing for Collective Intelligence",
+    "authors": [
+      "J. Prpic"
+    ],
+    "published": "2017-02-10",
+    "arxiv_id": "1702.03109v1",
+    "abstract": "New techniques leveraging IT-mediated crowds such as Crowdsensing, Situated Crowdsourcing, Spatial Crowdsourcing, and Wearables Crowdsourcing have now materially emerged. These techniques, here termed next generation Crowdsourcing, serve to extend Crowdsourcing efforts beyond the heretofore dominant desktop computing paradigm. Employing new configurations of hardware, software, and people, these techniques represent new forms of organization for IT-mediated crowds. However, it is not known how these new techniques change the processes and outcomes of IT-mediated crowds for Collective Intellige",
+    "pdf_url": "https://arxiv.org/pdf/1702.03109v1"
+  },
+  {
+    "title": "Computer Environments Elicit General Agentic Intelligence in LLMs",
+    "authors": [
+      "Daixuan Cheng",
+      "Shaohan Huang",
+      "Yuxian Gu",
+      "Huatong Song",
+      "Guoxin Chen"
+    ],
+    "published": "2026-01-22",
+    "arxiv_id": "2601.16206v3",
+    "abstract": "Agentic intelligence in large language models (LLMs) requires not only model intrinsic capabilities but also interactions with external environments. Equipping LLMs with computers now represents a prevailing trend. However, the computer environment's intrinsic value has not been systematically investigated, particularly its potential to elicit general capabilities. Here we introduce LLM-in-Sandbox, which virtualizes the computer as a code sandbox with only basic functionalities, and demonstrate that this minimal setting elicits computer-based meta-capabilities for general task solving: externa",
+    "pdf_url": "https://arxiv.org/pdf/2601.16206v3"
+  },
+  {
+    "title": "Health Care Crowds: Collective Intelligence in Public Health",
+    "authors": [
+      "J. Prpic"
+    ],
+    "published": "2017-02-10",
+    "arxiv_id": "1702.04220v1",
+    "abstract": "For what purposes are crowds being implemented in health care? Which crowdsourcing methods are being used? This work begins to answer these questions by reporting the early results of a systematic literature review of 110 pieces of relevant research. The results of this exploratory research in progress reveals that collective intelligence outcomes are being generated in three broad categories of public health care; health promotion, health research, and health maintenance, using all three known forms of crowdsourcing. Stemming from this fundamental analysis, some potential implications of the ",
+    "pdf_url": "https://arxiv.org/pdf/1702.04220v1"
+  }
+]

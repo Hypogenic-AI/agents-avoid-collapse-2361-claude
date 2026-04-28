@@ -1,0 +1,562 @@
+[
+  {
+    "title": "Privacy Measurement in Tabular Synthetic Data: State of the Art and Future Research Directions",
+    "authors": [
+      "Alexander Boudewijn",
+      "Andrea Filippo Ferraris",
+      "Daniele Panfilo",
+      "Vanessa Cocca",
+      "Sabrina Zinutti",
+      "Karel De Schepper",
+      "Carlo Rossi Chauvenet"
+    ],
+    "published": "2023-11-29 08:51:40+00:00",
+    "arxiv_id": "2311.17453v1",
+    "abstract": "Synthetic data (SD) have garnered attention as a privacy enhancing technology. Unfortunately, there is no standard for quantifying their degree of privacy protection. In this paper, we discuss proposed quantification approaches. This contributes to the development of SD privacy standards; stimulates multi-disciplinary discussion; and helps SD researchers make informed modeling and evaluation decisions.",
+    "pdf_url": "https://arxiv.org/pdf/2311.17453v1"
+  },
+  {
+    "title": "Foundations of GenIR",
+    "authors": [
+      "Qingyao Ai",
+      "Jingtao Zhan",
+      "Yiqun Liu"
+    ],
+    "published": "2025-01-06 08:38:29+00:00",
+    "arxiv_id": "2501.02842v1",
+    "abstract": "The chapter discusses the foundational impact of modern generative AI models on information access (IA) systems. In contrast to traditional AI, the large-scale training and superior data modeling of generative AI models enable them to produce high-quality, human-like responses, which brings brand new opportunities for the development of IA paradigms. In this chapter, we identify and introduce two of them in details, i.e., information generation and information synthesis. Information generation a",
+    "pdf_url": "https://arxiv.org/pdf/2501.02842v1"
+  },
+  {
+    "title": "IVOA Recommendation: Spectrum Data Model 1.1",
+    "authors": [
+      "Jonathan McDowell",
+      "Doug Tody",
+      "Tamas Budavari",
+      "Markus Dolensky",
+      "Inga Kamp",
+      "Kelly McCusker",
+      "Pavlos Protopapas",
+      "Arnold Rots",
+      "Randy Thompson",
+      "Frank Valdes",
+      "Petr Skoda",
+      "Bruno Rino",
+      "Sebastien Derriere",
+      "Jesus Salgado",
+      "Omar Laurino",
+      "the IVOA Data Access Layer",
+      "Data Model Working Groups"
+    ],
+    "published": "2012-04-13 17:19:51+00:00",
+    "arxiv_id": "1204.3055v1",
+    "abstract": "We present a data model describing the structure of spectrophotometric datasets with spectral and temporal coordinates and associated metadata. This data model may be used to represent spectra, time series data, segments of SED (Spectral Energy Distributions) and other spectral or temporal associations.",
+    "pdf_url": "https://arxiv.org/pdf/1204.3055v1"
+  },
+  {
+    "title": "AeroGen: Enhancing Remote Sensing Object Detection with Diffusion-Driven Data Generation",
+    "authors": [
+      "Datao Tang",
+      "Xiangyong Cao",
+      "Xuan Wu",
+      "Jialin Li",
+      "Jing Yao",
+      "Xueru Bai",
+      "Dongsheng Jiang",
+      "Yin Li",
+      "Deyu Meng"
+    ],
+    "published": "2024-11-23 09:04:33+00:00",
+    "arxiv_id": "2411.15497v3",
+    "abstract": "Remote sensing image object detection (RSIOD) aims to identify and locate specific objects within satellite or aerial imagery. However, there is a scarcity of labeled data in current RSIOD datasets, which significantly limits the performance of current detection algorithms. Although existing techniques, e.g., data augmentation and semi-supervised learning, can mitigate this scarcity issue to some extent, they are heavily dependent on high-quality labeled data and perform worse in rare object cla",
+    "pdf_url": "https://arxiv.org/pdf/2411.15497v3"
+  },
+  {
+    "title": "TerraGen: A Unified Multi-Task Layout Generation Framework for Remote Sensing Data Augmentation",
+    "authors": [
+      "Datao Tang",
+      "Hao Wang",
+      "Yudeng Xin",
+      "Hui Qiao",
+      "Dongsheng Jiang",
+      "Yin Li",
+      "Zhiheng Yu",
+      "Xiangyong Cao"
+    ],
+    "published": "2025-10-24 12:29:12+00:00",
+    "arxiv_id": "2510.21391v1",
+    "abstract": "Remote sensing vision tasks require extensive labeled data across multiple, interconnected domains. However, current generative data augmentation frameworks are task-isolated, i.e., each vision task requires training an independent generative model, and ignores the modeling of geographical information and spatial constraints. To address these issues, we propose \\textbf{TerraGen}, a unified layout-to-image generation framework that enables flexible, spatially controllable synthesis of remote sens",
+    "pdf_url": "https://arxiv.org/pdf/2510.21391v1"
+  },
+  {
+    "title": "Data Encoding for Byzantine-Resilient Distributed Optimization",
+    "authors": [
+      "Deepesh Data",
+      "Linqi Song",
+      "Suhas Diggavi"
+    ],
+    "published": "2019-07-05 03:31:43+00:00",
+    "arxiv_id": "1907.02664v2",
+    "abstract": "We study distributed optimization in the presence of Byzantine adversaries, where both data and computation are distributed among $m$ worker machines, $t$ of which may be corrupt. The compromised nodes may collaboratively and arbitrarily deviate from their pre-specified programs, and a designated (master) node iteratively computes the model/parameter vector for generalized linear models. In this work, we primarily focus on two iterative algorithms: Proximal Gradient Descent (PGD) and Coordinate ",
+    "pdf_url": "https://arxiv.org/pdf/1907.02664v2"
+  },
+  {
+    "title": "FFPDG: Fast, Fair and Private Data Generation",
+    "authors": [
+      "Weijie Xu",
+      "Jinjin Zhao",
+      "Francis Iannacci",
+      "Bo Wang"
+    ],
+    "published": "2023-06-30 22:32:44+00:00",
+    "arxiv_id": "2307.00161v1",
+    "abstract": "Generative modeling has been used frequently in synthetic data generation. Fairness and privacy are two big concerns for synthetic data. Although Recent GAN [\\cite{goodfellow2014generative}] based methods show good results in preserving privacy, the generated data may be more biased. At the same time, these methods require high computation resources. In this work, we design a fast, fair, flexible and private data generation method. We show the effectiveness of our method theoretically and empiri",
+    "pdf_url": "https://arxiv.org/pdf/2307.00161v1"
+  },
+  {
+    "title": "Byzantine-Resilient SGD in High Dimensions on Heterogeneous Data",
+    "authors": [
+      "Deepesh Data",
+      "Suhas Diggavi"
+    ],
+    "published": "2020-05-16 04:15:27+00:00",
+    "arxiv_id": "2005.07866v1",
+    "abstract": "We study distributed stochastic gradient descent (SGD) in the master-worker architecture under Byzantine attacks. We consider the heterogeneous data model, where different workers may have different local datasets, and we do not make any probabilistic assumptions on data generation. At the core of our algorithm, we use the polynomial-time outlier-filtering procedure for robust mean estimation proposed by Steinhardt et al. (ITCS 2018) to filter-out corrupt gradients. In order to be able to apply ",
+    "pdf_url": "https://arxiv.org/pdf/2005.07866v1"
+  },
+  {
+    "title": "Constraints on dark energy from H II starburst galaxy apparent magnitude versus redshift data",
+    "authors": [
+      "Data Mania",
+      "Bharat Ratra"
+    ],
+    "published": "2011-10-25 19:44:22+00:00",
+    "arxiv_id": "1110.5626v1",
+    "abstract": "In this paper we use H II starburst galaxy apparent magnitude versus redshift data from Siegel et al. (2005) to constrain dark energy cosmological model parameters. These constraints are generally consistent with those derived using other data sets, but are not as restrictive as the tightest currently available constraints.",
+    "pdf_url": "https://arxiv.org/pdf/1110.5626v1"
+  },
+  {
+    "title": "Deep Generative Models for Synthetic Financial Data: Applications to Portfolio and Risk Modeling",
+    "authors": [
+      "Christophe D. Hounwanou",
+      "Yae Ulrich Gaba"
+    ],
+    "published": "2025-12-25 22:28:32+00:00",
+    "arxiv_id": "2512.21798v2",
+    "abstract": "Synthetic financial data provides a practical solution to the privacy, accessibility, and reproducibility challenges that often constrain empirical research in quantitative finance. This paper investigates the use of deep generative models, specifically Time-series Generative Adversarial Networks (TimeGAN) and Variational Autoencoders (VAEs) to generate realistic synthetic financial return series for portfolio construction and risk modeling applications. Using historical daily returns from the S",
+    "pdf_url": "https://arxiv.org/pdf/2512.21798v2"
+  },
+  {
+    "title": "Looping Back to Move Forward: Recursive Transformers for Efficient and Flexible Large Multimodal Models",
+    "authors": [
+      "Ruihan Xu",
+      "Yuting Gao",
+      "Lan Wang",
+      "Jianing Li",
+      "Weihao Chen",
+      "Qingpei Guo",
+      "Ming Yang",
+      "Shiliang Zhang"
+    ],
+    "published": "2026-02-09 17:58:23+00:00",
+    "arxiv_id": "2602.09080v1",
+    "abstract": "Large Multimodal Models (LMMs) have achieved remarkable success in vision-language tasks, yet their vast parameter counts are often underutilized during both training and inference. In this work, we embrace the idea of looping back to move forward: reusing model parameters through recursive refinement to extract stronger multimodal representations without increasing model size. We propose RecursiveVLM, a recursive Transformer architecture tailored for LMMs. Two key innovations enable effective l",
+    "pdf_url": "https://arxiv.org/pdf/2602.09080v1"
+  },
+  {
+    "title": "Enhancing Human-Like Responses in Large Language Models",
+    "authors": [
+      "Ethem Ya\u011f\u0131z \u00c7al\u0131k",
+      "Talha R\u00fczgar Akku\u015f"
+    ],
+    "published": "2025-01-09 07:44:06+00:00",
+    "arxiv_id": "2501.05032v2",
+    "abstract": "This paper explores the advancements in making large language models (LLMs) more human-like. We focus on techniques that enhance natural language understanding, conversational coherence, and emotional intelligence in AI systems. The study evaluates various approaches, including fine-tuning with diverse datasets, incorporating psychological principles, and designing models that better mimic human reasoning patterns. Our findings demonstrate that these enhancements not only improve user interactio",
+    "pdf_url": "https://arxiv.org/pdf/2501.05032v2"
+  },
+  {
+    "title": "Is Self-knowledge and Action Consistent or Not: Investigating Large Language Model's Personality",
+    "authors": [
+      "Yiming Ai",
+      "Zhiwei He",
+      "Ziyin Zhang",
+      "Wenhong Zhu",
+      "Hongkun Hao",
+      "Kai Yu",
+      "Lingjun Chen",
+      "Rui Wang"
+    ],
+    "published": "2024-02-22 16:32:08+00:00",
+    "arxiv_id": "2402.14679v2",
+    "abstract": "In this study, we delve into the validity of conventional personality questionnaires in capturing the human-like personality traits of Large Language Models (LLMs). Our objective is to assess the congruence between the personality traits LLMs claim to possess and their demonstrated tendencies in real-world scenarios. By conducting an extensive examination of LLM outputs against observed human response patterns, we aim to understand the disjunction between self-knowledge and action in LLMs.",
+    "pdf_url": "https://arxiv.org/pdf/2402.14679v2"
+  },
+  {
+    "title": "Large Language Models Lack Understanding of Character Composition of Words",
+    "authors": [
+      "Andrew Shin",
+      "Kunitake Kaneko"
+    ],
+    "published": "2024-05-18 18:08:58+00:00",
+    "arxiv_id": "2405.11357v3",
+    "abstract": "Large language models (LLMs) have demonstrated remarkable performances on a wide range of natural language tasks. Yet, LLMs' successes have been largely restricted to tasks concerning words, sentences, or documents, and it remains questionable how much they understand the minimal units of text, namely characters. In this paper, we examine contemporary LLMs regarding their ability to understand character composition of words, and show that most of them fail to reliably carry out even the simple t",
+    "pdf_url": "https://arxiv.org/pdf/2405.11357v3"
+  },
+  {
+    "title": "Unmasking the Shadows of AI: Investigating Deceptive Capabilities in Large Language Models",
+    "authors": [
+      "Linge Guo"
+    ],
+    "published": "2024-02-07 00:21:46+00:00",
+    "arxiv_id": "2403.09676v1",
+    "abstract": "This research critically navigates the intricate landscape of AI deception, concentrating on deceptive behaviours of Large Language Models (LLMs). My objective is to elucidate this issue, examine the discourse surrounding it, and subsequently delve into its categorization and ramifications. The essay initiates with an evaluation of the AI Safety Summit 2023 (ASS) and introduction of LLMs, emphasising multidimensional biases that underlie their deceptive behaviours.The literature review covers fo",
+    "pdf_url": "https://arxiv.org/pdf/2403.09676v1"
+  },
+  {
+    "title": "Self-Cognition in Large Language Models: An Exploratory Study",
+    "authors": [
+      "Dongping Chen",
+      "Jiawen Shi",
+      "Yao Wan",
+      "Pan Zhou",
+      "Neil Zhenqiang Gong",
+      "Lichao Sun"
+    ],
+    "published": "2024-07-01 17:52:05+00:00",
+    "arxiv_id": "2407.01505v1",
+    "abstract": "While Large Language Models (LLMs) have achieved remarkable success across various applications, they also raise concerns regarding self-cognition. In this paper, we perform a pioneering study to explore self-cognition in LLMs. Specifically, we first construct a pool of self-cognition instruction prompts to evaluate where an LLM exhibits self-cognition and four well-designed principles to quantify LLMs' self-cognition. Our study reveals that 4 of the 48 models on Chatbot Arena--specifically Comm",
+    "pdf_url": "https://arxiv.org/pdf/2407.01505v1"
+  },
+  {
+    "title": "Making Large Language Models Better Reasoners with Alignment",
+    "authors": [
+      "Peiyi Wang",
+      "Lei Li",
+      "Liang Chen",
+      "Feifan Song",
+      "Binghuai Lin",
+      "Yunbo Cao",
+      "Tianyu Liu",
+      "Zhifang Sui"
+    ],
+    "published": "2023-09-05 11:32:48+00:00",
+    "arxiv_id": "2309.02144v1",
+    "abstract": "Reasoning is a cognitive process of using evidence to reach a sound conclusion. The reasoning capability is essential for large language models (LLMs) to serve as the brain of the artificial general intelligence agent. Recent studies reveal that fine-tuning LLMs on data with the chain of thought (COT) reasoning process can significantly enhance their reasoning capabilities. However, we find that the fine-tuned LLMs suffer from an \\textit{Assessment Misalignment} problem, i.e., they frequently as",
+    "pdf_url": "https://arxiv.org/pdf/2309.02144v1"
+  },
+  {
+    "title": "Beneath the Surface: Unveiling Harmful Memes with Multimodal Reasoning Distilled from Large Language Models",
+    "authors": [
+      "Hongzhan Lin",
+      "Ziyang Luo",
+      "Jing Ma",
+      "Long Chen"
+    ],
+    "published": "2023-12-09 01:59:11+00:00",
+    "arxiv_id": "2312.05434v1",
+    "abstract": "The age of social media is rife with memes. Understanding and detecting harmful memes pose a significant challenge due to their implicit meaning that is not explicitly conveyed through the surface text and image. However, existing harmful meme detection approaches only recognize superficial harm-indicative signals in an end-to-end classification manner but ignore in-depth cognition of the meme text and image. In this paper, we attempt to detect harmful memes based on advanced reasoning over the ",
+    "pdf_url": "https://arxiv.org/pdf/2312.05434v1"
+  },
+  {
+    "title": "Classifying German Language Proficiency Levels Using Large Language Models",
+    "authors": [
+      "Elias-Leander Ahlers",
+      "Witold Brunsmann",
+      "Malte Schilling"
+    ],
+    "published": "2025-12-06 16:15:45+00:00",
+    "arxiv_id": "2512.06483v1",
+    "abstract": "Assessing language proficiency is essential for education, as it enables instruction tailored to learners needs. This paper investigates the use of Large Language Models (LLMs) for automatically classifying German texts according to the Common European Framework of Reference for Languages (CEFR) into different proficiency levels. To support robust training and evaluation, we construct a diverse dataset by combining multiple existing CEFR-annotated corpora with synthetic data. We then evaluate pr",
+    "pdf_url": "https://arxiv.org/pdf/2512.06483v1"
+  },
+  {
+    "title": "A Survey on Multimodal Large Language Models",
+    "authors": [
+      "Shukang Yin",
+      "Chaoyou Fu",
+      "Sirui Zhao",
+      "Ke Li",
+      "Xing Sun",
+      "Tong Xu",
+      "Enhong Chen"
+    ],
+    "published": "2023-06-23 15:21:52+00:00",
+    "arxiv_id": "2306.13549v4",
+    "abstract": "Recently, Multimodal Large Language Model (MLLM) represented by GPT-4V has been a new rising research hotspot, which uses powerful Large Language Models (LLMs) as a brain to perform multimodal tasks. The surprising emergent capabilities of MLLM, such as writing stories based on images and OCR-free math reasoning, are rare in traditional multimodal methods, suggesting a potential path to artificial general intelligence. To this end, both academia and industry have endeavored to develop MLLMs that",
+    "pdf_url": "https://arxiv.org/pdf/2306.13549v4"
+  },
+  {
+    "title": "An Analysis and Mitigation of the Reversal Curse",
+    "authors": [
+      "Ang Lv",
+      "Kaiyi Zhang",
+      "Shufang Xie",
+      "Quan Tu",
+      "Yuhan Chen",
+      "Ji-Rong Wen",
+      "Rui Yan"
+    ],
+    "published": "2023-11-13 17:01:12+00:00",
+    "arxiv_id": "2311.07468v3",
+    "abstract": "Recent research observed a noteworthy phenomenon in large language models (LLMs), referred to as the ``reversal curse.'' The reversal curse is that when dealing with two entities, denoted as $a$ and $b$, connected by their relation $R$ and its inverse $R^{-1}$, LLMs excel in handling sequences in the form of ``$aRb$,'' but encounter challenges when processing ``$bR^{-1}a$,'' whether in generation or comprehension. For instance, GPT-4 can accurately respond to the query ``Tom Cruise's mother is?'",
+    "pdf_url": "https://arxiv.org/pdf/2311.07468v3"
+  },
+  {
+    "title": "Collapse. What else?",
+    "authors": [
+      "Nicolas Gisin"
+    ],
+    "published": "2017-01-28 16:32:00+00:00",
+    "arxiv_id": "1701.08300v2",
+    "abstract": "We present the quantum measurement problem as a serious physics problem. Serious because without a resolution, quantum theory is not complete, as it does not tell how one should - in principle - perform measurements. It is physical in the sense that the solution will bring new physics, i.e. new testable predictions, hence it is not merely a matter of interpretation of a frozen formalism. I argue that the two popular ways around the measurement problem, many-worlds and Bohmian-like mechanics, do,",
+    "pdf_url": "https://arxiv.org/pdf/1701.08300v2"
+  },
+  {
+    "title": "Recursion Relations and Functional Equations for the Riemann Zeta Function",
+    "authors": [
+      "Henrik Stenlund"
+    ],
+    "published": "2011-07-18 15:45:44+00:00",
+    "arxiv_id": "1107.3479v3",
+    "abstract": "New recursion relations for the Riemann zeta function are introduced. Their derivation started from the standard functional equation. The new functional equations have both real and imaginary increment versions and can be applied over the whole complex plane. We have developed various versions of the recursion relations eliminating each of the coefficient functions, leaving plain zeta functions",
+    "pdf_url": "https://arxiv.org/pdf/1107.3479v3"
+  },
+  {
+    "title": "Binary Additive Problems: Recursions for Numbers of Representations",
+    "authors": [
+      "Vladimir Shevelev"
+    ],
+    "published": "2009-01-20 17:11:10+00:00",
+    "arxiv_id": "0901.3102v2",
+    "abstract": "We prove some general recursions for the numbers of representations of positive integers as a sum x+y, x in X, y in Y, where X,Y are increasing sequences. In particular, we obtain recursions for the number of the Goldbach, Lemoine-Levy, Chen and other binary partitions.",
+    "pdf_url": "https://arxiv.org/pdf/0901.3102v2"
+  },
+  {
+    "title": "Collapse models and spacetime symmetries",
+    "authors": [
+      "Daniel J. Bedingham"
+    ],
+    "published": "2016-12-30 12:06:41+00:00",
+    "arxiv_id": "1612.09470v1",
+    "abstract": "A picture of dynamical collapse of the wave function which is relativistic and time symmetric is presented. The part of the model which exhibits these features is the set of collapse outcomes. These play the role of matter distributed in space and time. It is argued that the dynamically collapsing quantum state, which is both foliation dependent and follows a time-asymmetric dynamics, is not fundamental: it represents a state of information about the past matter distribution for the purpose of e",
+    "pdf_url": "https://arxiv.org/pdf/1612.09470v1"
+  },
+  {
+    "title": "Direct Proof Of Tree-Level Recursion Relation In Yang-Mills Theory",
+    "authors": [
+      "Ruth Britto",
+      "Freddy Cachazo",
+      "Bo Feng",
+      "Edward Witten"
+    ],
+    "published": "2005-01-07 20:04:03+00:00",
+    "arxiv_id": "0501052v2",
+    "abstract": "Recently, by using the known structure of one-loop scattering amplitudes for gluons in Yang-Mills theory, a recursion relation for tree-level scattering amplitudes has been deduced. Here, we give a short and direct proof of this recursion relation based on properties of tree-level amplitudes only.",
+    "pdf_url": "https://arxiv.org/pdf/hep-th/0501052v2"
+  },
+  {
+    "title": "Stronger Tests of the Collapse Locality Loophole in Bell Experiments",
+    "authors": [
+      "Adrian Kent"
+    ],
+    "published": "2018-07-23 19:21:42+00:00",
+    "arxiv_id": "1807.08791v3",
+    "abstract": "Several versions of quantum theory assume some form of localized collapse. If measurement outcomes are indeed defined by localized collapses, then a loophole-free demonstration of Bell non-locality needs to ensure space-like separated collapses associated with the measurements of the entangled systems. This collapse locality loophole remains largely untested, with one significant exception probing Diosi's and Penrose's gravitationally induced collapse hypotheses. I describe here techniques that ",
+    "pdf_url": "https://arxiv.org/pdf/1807.08791v3"
+  },
+  {
+    "title": "Left Recursion in Parsing Expression Grammars",
+    "authors": [
+      "S\u00e9rgio Medeiros",
+      "Fabio Mascarenhas",
+      "Roberto Ierusalimschy"
+    ],
+    "published": "2012-07-02 16:48:50+00:00",
+    "arxiv_id": "1207.0443v3",
+    "abstract": "Parsing Expression Grammars (PEGs) are a formalism that can describe all deterministic context-free languages through a set of rules that specify a top-down parser for some language. PEGs are easy to use, and there are efficient implementations of PEG libraries in several programming languages.\n  A frequently missed feature of PEGs is left recursion, which is commonly used in Context-Free Grammars (CFGs) to encode left-associative operations. We present a simple conservative extension to the sem",
+    "pdf_url": "https://arxiv.org/pdf/1207.0443v3"
+  },
+  {
+    "title": "Critical Collapse of an Ultrarelativistic Fluid in the $\u0393\\to 1$ Limit",
+    "authors": [
+      "Martin Snajdr"
+    ],
+    "published": "2005-08-16 05:30:39+00:00",
+    "arxiv_id": "0508062v2",
+    "abstract": "In this paper we investigate the critical collapse of an ultrarelativistic perfect fluid with the equation of state $P=(\u0393-1)\u03c1$ in the limit of $\u0393\\to 1$. We calculate the limiting continuously self similar (CSS) solution and the limiting scaling exponent by exploiting self-similarity of the solution. We also solve the complete set of equations governing the gravitational collapse numerically for $(\u0393-1) = 10^{-2},...,10^{-6}$ and compare them with the CSS solutions. We also investigate the supercr",
+    "pdf_url": "https://arxiv.org/pdf/gr-qc/0508062v2"
+  },
+  {
+    "title": "Hopf Algebras and Topological Recursion",
+    "authors": [
+      "Jo\u00e3o N. Esteves"
+    ],
+    "published": "2017-09-18 10:44:16+00:00",
+    "arxiv_id": "1709.05857v1",
+    "abstract": "We first review our previous work arxiv:1503.02993 [math-ph] where we considered a model for topological recursion based on the Hopf Algebra of planar binary trees of Loday and Ronco and showed that extending this Hopf Algebra by identifying pairs of nearest neighbor leaves and thus producing graphs with loops we obtain the full recursion formula of Eynard and Orantin. Then we discuss the algebraic structure of the spaces of correlation functions in g = 0 and in g > 0. By taking a classical and ",
+    "pdf_url": "https://arxiv.org/pdf/1709.05857v1"
+  },
+  {
+    "title": "Data Encoding for Byzantine-Resilient Distributed Optimization",
+    "authors": [
+      "Deepesh Data",
+      "Linqi Song",
+      "Suhas Diggavi"
+    ],
+    "published": "2019-07-05 03:31:43+00:00",
+    "arxiv_id": "1907.02664v2",
+    "abstract": "We study distributed optimization in the presence of Byzantine adversaries, where both data and computation are distributed among $m$ worker machines, $t$ of which may be corrupt. The compromised nodes may collaboratively and arbitrarily deviate from their pre-specified programs, and a designated (master) node iteratively computes the model/parameter vector for generalized linear models. In this work, we primarily focus on two iterative algorithms: Proximal Gradient Descent (PGD) and Coordinate ",
+    "pdf_url": "https://arxiv.org/pdf/1907.02664v2"
+  },
+  {
+    "title": "Byzantine-Resilient SGD in High Dimensions on Heterogeneous Data",
+    "authors": [
+      "Deepesh Data",
+      "Suhas Diggavi"
+    ],
+    "published": "2020-05-16 04:15:27+00:00",
+    "arxiv_id": "2005.07866v1",
+    "abstract": "We study distributed stochastic gradient descent (SGD) in the master-worker architecture under Byzantine attacks. We consider the heterogeneous data model, where different workers may have different local datasets, and we do not make any probabilistic assumptions on data generation. At the core of our algorithm, we use the polynomial-time outlier-filtering procedure for robust mean estimation proposed by Steinhardt et al. (ITCS 2018) to filter-out corrupt gradients. In order to be able to apply ",
+    "pdf_url": "https://arxiv.org/pdf/2005.07866v1"
+  },
+  {
+    "title": "Constraints on dark energy from H II starburst galaxy apparent magnitude versus redshift data",
+    "authors": [
+      "Data Mania",
+      "Bharat Ratra"
+    ],
+    "published": "2011-10-25 19:44:22+00:00",
+    "arxiv_id": "1110.5626v1",
+    "abstract": "In this paper we use H II starburst galaxy apparent magnitude versus redshift data from Siegel et al. (2005) to constrain dark energy cosmological model parameters. These constraints are generally consistent with those derived using other data sets, but are not as restrictive as the tightest currently available constraints.",
+    "pdf_url": "https://arxiv.org/pdf/1110.5626v1"
+  },
+  {
+    "title": "AeroGen: Enhancing Remote Sensing Object Detection with Diffusion-Driven Data Generation",
+    "authors": [
+      "Datao Tang",
+      "Xiangyong Cao",
+      "Xuan Wu",
+      "Jialin Li",
+      "Jing Yao",
+      "Xueru Bai",
+      "Dongsheng Jiang",
+      "Yin Li",
+      "Deyu Meng"
+    ],
+    "published": "2024-11-23 09:04:33+00:00",
+    "arxiv_id": "2411.15497v3",
+    "abstract": "Remote sensing image object detection (RSIOD) aims to identify and locate specific objects within satellite or aerial imagery. However, there is a scarcity of labeled data in current RSIOD datasets, which significantly limits the performance of current detection algorithms. Although existing techniques, e.g., data augmentation and semi-supervised learning, can mitigate this scarcity issue to some extent, they are heavily dependent on high-quality labeled data and perform worse in rare object cla",
+    "pdf_url": "https://arxiv.org/pdf/2411.15497v3"
+  },
+  {
+    "title": "TerraGen: A Unified Multi-Task Layout Generation Framework for Remote Sensing Data Augmentation",
+    "authors": [
+      "Datao Tang",
+      "Hao Wang",
+      "Yudeng Xin",
+      "Hui Qiao",
+      "Dongsheng Jiang",
+      "Yin Li",
+      "Zhiheng Yu",
+      "Xiangyong Cao"
+    ],
+    "published": "2025-10-24 12:29:12+00:00",
+    "arxiv_id": "2510.21391v1",
+    "abstract": "Remote sensing vision tasks require extensive labeled data across multiple, interconnected domains. However, current generative data augmentation frameworks are task-isolated, i.e., each vision task requires training an independent generative model, and ignores the modeling of geographical information and spatial constraints. To address these issues, we propose \\textbf{TerraGen}, a unified layout-to-image generation framework that enables flexible, spatially controllable synthesis of remote sens",
+    "pdf_url": "https://arxiv.org/pdf/2510.21391v1"
+  },
+  {
+    "title": "A 20 Gbps Data Transmitting ASIC with PAM4 for Particle Physics Experiments",
+    "authors": [
+      "Li Zhang",
+      "Datao Gong",
+      "Suen Hou",
+      "Guanming Huang",
+      "Xing Huang",
+      "Chonghan Liu",
+      "Tiankuan Liu",
+      "Hanhan Sun",
+      "Quan Sun",
+      "Xiangming Sun",
+      "Wei Zhang",
+      "Jingbo Ye"
+    ],
+    "published": "2020-10-30 04:24:49+00:00",
+    "arxiv_id": "2010.16064v1",
+    "abstract": "We present the design principle and test results of a data transmitting ASIC, GBS20, for particle physics experiments. The goal of GBS20 will be an ASIC that employs two serializers each from the 10.24 Gbps lpGBT SerDes, sharing the PLL also from lpGBT. A PAM4 encoder plus a VCSEL driver will be implemented in the same die to use the same clock system, eliminating the need of CDRs in the PAM4 encoder. This way the transmitter module, GBT20, developed using the GBS20 ASIC, will have the exact lpG",
+    "pdf_url": "https://arxiv.org/pdf/2010.16064v1"
+  },
+  {
+    "title": "A Survey of LLM $\\times$ DATA",
+    "authors": [
+      "Xuanhe Zhou",
+      "Junxuan He",
+      "Wei Zhou",
+      "Haodong Chen",
+      "Zirui Tang",
+      "Haoyu Zhao",
+      "Xin Tong",
+      "Guoliang Li",
+      "Youmin Chen",
+      "Jun Zhou",
+      "Zhaojun Sun",
+      "Binyuan Hui",
+      "Shuo Wang",
+      "Conghui He",
+      "Zhiyuan Liu",
+      "Jingren Zhou",
+      "Fan Wu"
+    ],
+    "published": "2025-05-24 01:57:12+00:00",
+    "arxiv_id": "2505.18458v3",
+    "abstract": "The integration of large language model (LLM) and data management (DATA) is rapidly redefining both domains. In this survey, we comprehensively review the bidirectional relationships. On the one hand, DATA4LLM, spanning large-scale data processing, storage, and serving, feeds LLMs with high quality, diversity, and timeliness of data required for stages like pre-training, post-training, retrieval-augmented generation, and agentic workflows: (i) Data processing for LLMs includes scalable acquisiti",
+    "pdf_url": "https://arxiv.org/pdf/2505.18458v3"
+  },
+  {
+    "title": "Small Data Explainer -- The impact of small data methods in everyday life",
+    "authors": [
+      "Maren Hackenberg",
+      "Sophia G. Connor",
+      "Fabian Kabus",
+      "June Brawner",
+      "Ella Markham",
+      "Mahi Hardalupas",
+      "Areeq Chowdhury",
+      "Rolf Backofen",
+      "Anna K\u00f6ttgen",
+      "Angelika Rohde",
+      "Nadine Binder",
+      "Harald Binder",
+      "the Collaborative Research Center 1597 Small Data"
+    ],
+    "published": "2025-07-15 22:24:17+00:00",
+    "arxiv_id": "2507.11773v1",
+    "abstract": "The emergence of breakthrough artificial intelligence (AI) techniques has led to a renewed focus on how small data settings, i.e., settings with limited information, can benefit from such developments. This includes societal issues such as how best to include under-represented groups in data-driven policy and decision making, or the health benefits of assistive technologies such as wearables. We provide a conceptual overview, in particular contrasting small data with big data, and identify commo",
+    "pdf_url": "https://arxiv.org/pdf/2507.11773v1"
+  },
+  {
+    "title": "Vendi-RAG: Adaptively Trading-Off Diversity And Quality Significantly Improves Retrieval Augmented Generation With LLMs",
+    "authors": [
+      "Mohammad Reza Rezaei",
+      "Adji Bousso Dieng"
+    ],
+    "published": "2025-02-16 18:46:10+00:00",
+    "arxiv_id": "2502.11228v2",
+    "abstract": "Retrieval-augmented generation (RAG) enhances large language models (LLMs) for domain-specific question-answering (QA) tasks by leveraging external knowledge sources. However, traditional RAG systems primarily focus on relevance-based retrieval and often struggle with redundancy, especially when reasoning requires connecting information from multiple sources. This paper introduces Vendi-RAG, a framework based on an iterative process that jointly optimizes retrieval diversity and answer quality. ",
+    "pdf_url": "https://arxiv.org/pdf/2502.11228v2"
+  },
+  {
+    "title": "Ecosystem Graphs: The Social Footprint of Foundation Models",
+    "authors": [
+      "Rishi Bommasani",
+      "Dilara Soylu",
+      "Thomas I. Liao",
+      "Kathleen A. Creel",
+      "Percy Liang"
+    ],
+    "published": "2023-03-28 07:18:29+00:00",
+    "arxiv_id": "2303.15772v1",
+    "abstract": "Foundation models (e.g. ChatGPT, StableDiffusion) pervasively influence society, warranting immediate social attention. While the models themselves garner much attention, to accurately characterize their impact, we must consider the broader sociotechnical ecosystem. We propose Ecosystem Graphs as a documentation framework to transparently centralize knowledge of this ecosystem. Ecosystem Graphs is composed of assets (datasets, models, applications) linked together by dependencies that indicate t",
+    "pdf_url": "https://arxiv.org/pdf/2303.15772v1"
+  }
+]

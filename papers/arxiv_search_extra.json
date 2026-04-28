@@ -1,0 +1,871 @@
+[
+  {
+    "title": "Hierarchical Multi-agent Large Language Model Reasoning for Autonomous Functional Materials Discovery",
+    "authors": [
+      "Samuel Rothfarb",
+      "Megan C. Davis",
+      "Ivana Matanovic",
+      "Baikun Li",
+      "Edward F. Holby"
+    ],
+    "published": "2025-12-15",
+    "arxiv_id": "2512.13930v1",
+    "abstract": "Artificial intelligence is reshaping scientific exploration, but most methods automate procedural tasks without engaging in scientific reasoning, limiting autonomy in discovery. We introduce Materials Agents for Simulation and Theory in Electronic-structure Reasoning (MASTER), an active learning framework where large language models autonomously design, execute, and interpret atomistic simulations. In MASTER, a multimodal system translates natural language into density functional theory workflows, while higher-level reasoning agents guide discovery through a hierarchy of strategies, including ",
+    "pdf_url": "https://arxiv.org/pdf/2512.13930v1"
+  },
+  {
+    "title": "A Survey of Multi-Agent Deep Reinforcement Learning with Communication",
+    "authors": [
+      "Changxi Zhu",
+      "Mehdi Dastani",
+      "Shihan Wang"
+    ],
+    "published": "2022-03-16",
+    "arxiv_id": "2203.08975v2",
+    "abstract": "Communication is an effective mechanism for coordinating the behaviors of multiple agents, broadening their views of the environment, and to support their collaborations. In the field of multi-agent deep reinforcement learning (MADRL), agents can improve the overall learning performance and achieve their objectives by communication. Agents can communicate various types of messages, either to all agents or to specific agent groups, or conditioned on specific constraints. With the growing body of research work in MADRL with communication (Comm-MADRL), there is a lack of a systematic and structur",
+    "pdf_url": "https://arxiv.org/pdf/2203.08975v2"
+  },
+  {
+    "title": "A Methodology to Engineer and Validate Dynamic Multi-level Multi-agent Based Simulations",
+    "authors": [
+      "Jean-Baptiste Soyez",
+      "Gildas Morvan",
+      "Daniel Dupont",
+      "Rochdi Merzouki"
+    ],
+    "published": "2013-11-20",
+    "arxiv_id": "1311.5108v1",
+    "abstract": "This article proposes a methodology to model and simulate complex systems, based on IRM4MLS, a generic agent-based meta-model able to deal with multi-level systems. This methodology permits the engineering of dynamic multi-level agent-based models, to represent complex systems over several scales and domains of interest. Its goal is to simulate a phenomenon using dynamically the lightest representation to save computer resources without loss of information. This methodology is based on two mechanisms: (1) the activation or deactivation of agents representing different domain parts of the same ",
+    "pdf_url": "https://arxiv.org/pdf/1311.5108v1"
+  },
+  {
+    "title": "Emergent Language: A Survey and Taxonomy",
+    "authors": [
+      "Jannik Peters",
+      "Constantin Waubert de Puiseau",
+      "Hasan Tercan",
+      "Arya Gopikrishnan",
+      "Gustavo Adolpho Lucas De Carvalho"
+    ],
+    "published": "2024-09-04",
+    "arxiv_id": "2409.02645v2",
+    "abstract": "The field of emergent language represents a novel area of research within the domain of artificial intelligence, particularly within the context of multi-agent reinforcement learning. Although the concept of studying language emergence is not new, early approaches were primarily concerned with explaining human language formation, with little consideration given to its potential utility for artificial agents. In contrast, studies based on reinforcement learning aim to develop communicative capabilities in agents that are comparable to or even superior to human language. Thus, they extend beyond",
+    "pdf_url": "https://arxiv.org/pdf/2409.02645v2"
+  },
+  {
+    "title": "AOAD-MAT: Transformer-based multi-agent deep reinforcement learning model considering agents' order of action decisions",
+    "authors": [
+      "Shota Takayama",
+      "Katsuhide Fujita"
+    ],
+    "published": "2025-10-15",
+    "arxiv_id": "2510.13343v1",
+    "abstract": "Multi-agent reinforcement learning focuses on training the behaviors of multiple learning agents that coexist in a shared environment. Recently, MARL models, such as the Multi-Agent Transformer (MAT) and ACtion dEpendent deep Q-learning (ACE), have significantly improved performance by leveraging sequential decision-making processes. Although these models can enhance performance, they do not explicitly consider the importance of the order in which agents make decisions. In this paper, we propose an Agent Order of Action Decisions-MAT (AOAD-MAT), a novel MAT model that considers the order in wh",
+    "pdf_url": "https://arxiv.org/pdf/2510.13343v1"
+  },
+  {
+    "title": "SWE-Debate: Competitive Multi-Agent Debate for Software Issue Resolution",
+    "authors": [
+      "Han Li",
+      "Yuling Shi",
+      "Shaoxin Lin",
+      "Xiaodong Gu",
+      "Heng Lian"
+    ],
+    "published": "2025-07-31",
+    "arxiv_id": "2507.23348v1",
+    "abstract": "Issue resolution has made remarkable progress thanks to the advanced reasoning capabilities of large language models (LLMs). Recently, agent-based frameworks such as SWE-agent have further advanced this progress by enabling autonomous, tool-using agents to tackle complex software engineering tasks. While existing agent-based issue resolution approaches are primarily based on agents' independent explorations, they often get stuck in local solutions and fail to identify issue patterns that span across different parts of the codebase. To address this limitation, we propose SWE-Debate, a competiti",
+    "pdf_url": "https://arxiv.org/pdf/2507.23348v1"
+  },
+  {
+    "title": "Augmenting the action space with conventions to improve multi-agent cooperation in Hanabi",
+    "authors": [
+      "F. Bredell",
+      "H. A. Engelbrecht",
+      "J. C. Schoeman"
+    ],
+    "published": "2024-12-09",
+    "arxiv_id": "2412.06333v3",
+    "abstract": "The card game Hanabi is considered a strong medium for the testing and development of multi-agent reinforcement learning (MARL) algorithms, due to its cooperative nature, partial observability, limited communication and remarkable complexity. Previous research efforts have explored the capabilities of MARL algorithms within Hanabi, focusing largely on advanced architecture design and algorithmic manipulations to achieve state-of-the-art performance for various number of cooperators. However, this often leads to complex solution strategies with high computational cost and requiring large amount",
+    "pdf_url": "https://arxiv.org/pdf/2412.06333v3"
+  },
+  {
+    "title": "Learning From Failure: Integrating Negative Examples when Fine-tuning Large Language Models as Agents",
+    "authors": [
+      "Renxi Wang",
+      "Haonan Li",
+      "Xudong Han",
+      "Yixuan Zhang",
+      "Timothy Baldwin"
+    ],
+    "published": "2024-02-18",
+    "arxiv_id": "2402.11651v2",
+    "abstract": "Large language models (LLMs) have achieved success in acting as agents, which interact with environments through tools such as search engines. However, LLMs are optimized for language generation instead of tool use during training or alignment, limiting their effectiveness as agents. To resolve this problem, previous work has first collected interaction trajectories between LLMs and environments, using only trajectories that successfully finished the task to fine-tune smaller models, making fine-tuning data scarce and acquiring it both difficult and costly. Discarding failed trajectories also ",
+    "pdf_url": "https://arxiv.org/pdf/2402.11651v2"
+  },
+  {
+    "title": "From Model-Based Screening to Data-Driven Surrogates: A Multi-Stage Workflow for Exploring Stochastic Agent-Based Models",
+    "authors": [
+      "Paul Saves",
+      "Matthieu Mastio",
+      "Nicolas Verstaevel",
+      "Benoit Gaudou"
+    ],
+    "published": "2026-04-03",
+    "arxiv_id": "2604.03350v1",
+    "abstract": "Systematic exploration of Agent-Based Models (ABMs) is challenged by the curse of dimensionality and their inherent stochasticity. We present a multi-stage pipeline integrating the systematic design of experiments with machine learning surrogates. Using a predator-prey case study, our methodology proceeds in two steps. First, an automated model-based screening identifies dominant variables, assesses outcome variability, and segments the parameter space. Second, we train Machine Learning models to map the remaining nonlinear interaction effects. This approach automates the discovery of unstable",
+    "pdf_url": "https://arxiv.org/pdf/2604.03350v1"
+  },
+  {
+    "title": "Enhancing Human-Like Responses in Large Language Models",
+    "authors": [
+      "Ethem Ya\u011f\u0131z \u00c7al\u0131k",
+      "Talha R\u00fczgar Akku\u015f"
+    ],
+    "published": "2025-01-09",
+    "arxiv_id": "2501.05032v2",
+    "abstract": "This paper explores the advancements in making large language models (LLMs) more human-like. We focus on techniques that enhance natural language understanding, conversational coherence, and emotional intelligence in AI systems. The study evaluates various approaches, including fine-tuning with diverse datasets, incorporating psychological principles, and designing models that better mimic human reasoning patterns. Our findings demonstrate that these enhancements not only improve user interactions but also open new possibilities for AI applications across different domains. Future work will ad",
+    "pdf_url": "https://arxiv.org/pdf/2501.05032v2"
+  },
+  {
+    "title": "Self induced class stratification in competitive societies of agents: Nash stability in the presence of envy",
+    "authors": [
+      "Claudius Gros"
+    ],
+    "published": "2020-05-25",
+    "arxiv_id": "2005.11966v1",
+    "abstract": "Envy, the inclination to compare rewards, can be expected to unfold when inequalities in terms of payoff differences are generated in competitive societies. It is shown that increasing levels of envy lead inevitably to a self-induced separation into a lower and an upper class. Class stratification is Nash stable and strict, with members of the same class receiving identical rewards. Upper class agents play exclusively pure strategies, all lower class agents the same mixed strategy. The fraction of upper class agents decreases progressively with larger levels of envy, until a single upper class",
+    "pdf_url": "https://arxiv.org/pdf/2005.11966v1"
+  },
+  {
+    "title": "Language Evolution with Deep Learning",
+    "authors": [
+      "Mathieu Rita",
+      "Paul Michel",
+      "Rahma Chaabouni",
+      "Olivier Pietquin",
+      "Emmanuel Dupoux"
+    ],
+    "published": "2024-03-18",
+    "arxiv_id": "2403.11958v1",
+    "abstract": "Computational modeling plays an essential role in the study of language emergence. It aims to simulate the conditions and learning processes that could trigger the emergence of a structured language within a simulated controlled environment. Several methods have been used to investigate the origin of our language, including agent-based systems, Bayesian agents, genetic algorithms, and rule-based systems. This chapter explores another class of computational models that have recently revolutionized the field of machine learning: deep learning models. The chapter introduces the basic concepts of ",
+    "pdf_url": "https://arxiv.org/pdf/2403.11958v1"
+  },
+  {
+    "title": "Ecosystem Graphs: The Social Footprint of Foundation Models",
+    "authors": [
+      "Rishi Bommasani",
+      "Dilara Soylu",
+      "Thomas I. Liao",
+      "Kathleen A. Creel",
+      "Percy Liang"
+    ],
+    "published": "2023-03-28",
+    "arxiv_id": "2303.15772v1",
+    "abstract": "Foundation models (e.g. ChatGPT, StableDiffusion) pervasively influence society, warranting immediate social attention. While the models themselves garner much attention, to accurately characterize their impact, we must consider the broader sociotechnical ecosystem. We propose Ecosystem Graphs as a documentation framework to transparently centralize knowledge of this ecosystem. Ecosystem Graphs is composed of assets (datasets, models, applications) linked together by dependencies that indicate technical (e.g. how Bing relies on GPT-4) and social (e.g. how Microsoft relies on OpenAI) relationsh",
+    "pdf_url": "https://arxiv.org/pdf/2303.15772v1"
+  },
+  {
+    "title": "Computational modelling of evolution: ecosystems and language",
+    "authors": [
+      "Adam Lipowski",
+      "Dorota Lipowska"
+    ],
+    "published": "2008-10-27",
+    "arxiv_id": "0810.4952v1",
+    "abstract": "Recently, computational modelling became a very important research tool that enables us to study problems that for decades evaded scientific analysis. Evolutionary systems are certainly examples of such problems: they are composed of many units that might reproduce, diffuse, mutate, die, or in some cases for example communicate. These processes might be of some adaptive value, they influence each other and occur on various time scales. That is why such systems are so difficult to study. In this paper we briefly review some computational approaches, as well as our contributions, to the evolutio",
+    "pdf_url": "https://arxiv.org/pdf/0810.4952v1"
+  },
+  {
+    "title": "Fixation probability of rare nonmutator and evolution of mutation rates",
+    "authors": [
+      "Ananthu James",
+      "Kavita Jain"
+    ],
+    "published": "2015-01-15",
+    "arxiv_id": "1501.03632v2",
+    "abstract": "Although mutations drive the evolutionary process, the rates at which the mutations occur are themselves subject to evolutionary forces. Our purpose here is to understand the role of selection and random genetic drift in the evolution of mutation rates, and we address this question in asexual populations at mutation-selection equilibrium neglecting selective sweeps. Using a multitype branching process, we calculate the fixation probability of a rare nonmutator in a large asexual population of mutators, and find that a nonmutator is more likely to fix when the deleterious mutation rate of the m",
+    "pdf_url": "https://arxiv.org/pdf/1501.03632v2"
+  },
+  {
+    "title": "How do language models learn facts? Dynamics, curricula and hallucinations",
+    "authors": [
+      "Nicolas Zucchet",
+      "J\u00f6rg Bornschein",
+      "Stephanie Chan",
+      "Andrew Lampinen",
+      "Razvan Pascanu"
+    ],
+    "published": "2025-03-27",
+    "arxiv_id": "2503.21676v2",
+    "abstract": "Large language models accumulate vast knowledge during pre-training, yet the dynamics governing this acquisition remain poorly understood. This work investigates the learning dynamics of language models on a synthetic factual recall task, uncovering three key findings: First, language models learn in three phases, exhibiting a performance plateau before acquiring precise factual knowledge. Mechanistically, this plateau coincides with the formation of attention-based circuits that support recall. Second, the training data distribution significantly impacts learning dynamics, as imbalanced distr",
+    "pdf_url": "https://arxiv.org/pdf/2503.21676v2"
+  },
+  {
+    "title": "Service Ecosystem: A Lens of Smart Society",
+    "authors": [
+      "Xiao Xue",
+      "ZhiYong Feng",
+      "ShiZhan Chen",
+      "ZhangBing Zhou",
+      "ChengZhi Qin"
+    ],
+    "published": "2020-08-08",
+    "arxiv_id": "2008.03418v2",
+    "abstract": "Intelligence services are playing an increasingly important role in the operation of our society. Exploring the evolution mechanism, boundaries and challenges of service ecosystem is essential to our ability to realize smart society, reap its benefits and prevent potential risks. We argue that this necessitates a broad scientific research agenda to study service ecosystem that incorporates and expands upon the disciplines of computer science and includes insights from across the sciences. We firstly outline a set of research issues that are fundamental to this emerging field, and then explores",
+    "pdf_url": "https://arxiv.org/pdf/2008.03418v2"
+  },
+  {
+    "title": "The Dynamics of Human Society Evolution: An Energetics Approach",
+    "authors": [
+      "Ram C. Poudel",
+      "Jon G. McGowan"
+    ],
+    "published": "2019-04-08",
+    "arxiv_id": "1904.04400v1",
+    "abstract": "Human society is an open system that evolves by coupling with various known and unknown (energy) fluxes. How do these dynamics precisely unfold? Energetics may provide further insights. We expand on Navier Stokes' approach to study non-equilibrium dynamics in a field that evolves with time. Based on the social field theory, an induction of the classical field theories, we define social force, social energy and Hamiltonian of an individual in a society. The equations for the evolution of an individual and society are sketched based on the time-dependent Hamiltonian that includes power dynamics.",
+    "pdf_url": "https://arxiv.org/pdf/1904.04400v1"
+  },
+  {
+    "title": "Framework for Visualizing Model-Driven Software Evolution and its Application",
+    "authors": [
+      "Akepogu Anand Rao",
+      "Karanam Madhavi"
+    ],
+    "published": "2010-02-05",
+    "arxiv_id": "1002.1188v1",
+    "abstract": "Software Visualization encompasses the development and evaluation of methods for graphically representing different aspects of methods of software, including its structure, execution and evolution. Creating visualizations helps the user to better understand complex phenomena. It is also found by the software engineering community that visualization is essential and important. In order to visualize the evolution of the models in Model-Driven Software Evolution, authors have proposed a framework which consists of 7 key areas (views) and 22 key features for the assessment of Model Driven Software",
+    "pdf_url": "https://arxiv.org/pdf/1002.1188v1"
+  },
+  {
+    "title": "Archaeo-Astronomy in Society: Supporting Citizenship in Schools Across Europe",
+    "authors": [
+      "D. Brown",
+      "L. Canas"
+    ],
+    "published": "2010-11-23",
+    "arxiv_id": "1011.5186v1",
+    "abstract": "The interdisciplinary topic of archaeo-astronomy links science subjects such as astronomy with archaeology and sociology to explore how ancient societies perceived the heavens above. This is achieved by analysing ancient sites such as megalithic monuments (e.g. Stonehenge), since they are the most common remains of these societies and are wide spread in Europe. We discuss how archaeo-astronomy and ancient sites can be transversal to many topics in school. The links to the science curricula in different countries are highlighted. However, especially the subject of citizenship can be supported b",
+    "pdf_url": "https://arxiv.org/pdf/1011.5186v1"
+  },
+  {
+    "title": "Data Encoding for Byzantine-Resilient Distributed Optimization",
+    "authors": [
+      "Deepesh Data",
+      "Linqi Song",
+      "Suhas Diggavi"
+    ],
+    "published": "2019-07-05",
+    "arxiv_id": "1907.02664v2",
+    "abstract": "We study distributed optimization in the presence of Byzantine adversaries, where both data and computation are distributed among $m$ worker machines, $t$ of which may be corrupt. The compromised nodes may collaboratively and arbitrarily deviate from their pre-specified programs, and a designated (master) node iteratively computes the model/parameter vector for generalized linear models. In this work, we primarily focus on two iterative algorithms: Proximal Gradient Descent (PGD) and Coordinate Descent (CD). Gradient descent (GD) is a special case of these algorithms. PGD is typically used in ",
+    "pdf_url": "https://arxiv.org/pdf/1907.02664v2"
+  },
+  {
+    "title": "Byzantine-Resilient SGD in High Dimensions on Heterogeneous Data",
+    "authors": [
+      "Deepesh Data",
+      "Suhas Diggavi"
+    ],
+    "published": "2020-05-16",
+    "arxiv_id": "2005.07866v1",
+    "abstract": "We study distributed stochastic gradient descent (SGD) in the master-worker architecture under Byzantine attacks. We consider the heterogeneous data model, where different workers may have different local datasets, and we do not make any probabilistic assumptions on data generation. At the core of our algorithm, we use the polynomial-time outlier-filtering procedure for robust mean estimation proposed by Steinhardt et al. (ITCS 2018) to filter-out corrupt gradients. In order to be able to apply their filtering procedure in our {\\em heterogeneous} data setting where workers compute {\\em stochas",
+    "pdf_url": "https://arxiv.org/pdf/2005.07866v1"
+  },
+  {
+    "title": "Constraints on dark energy from H II starburst galaxy apparent magnitude versus redshift data",
+    "authors": [
+      "Data Mania",
+      "Bharat Ratra"
+    ],
+    "published": "2011-10-25",
+    "arxiv_id": "1110.5626v1",
+    "abstract": "In this paper we use H II starburst galaxy apparent magnitude versus redshift data from Siegel et al. (2005) to constrain dark energy cosmological model parameters. These constraints are generally consistent with those derived using other data sets, but are not as restrictive as the tightest currently available constraints.",
+    "pdf_url": "https://arxiv.org/pdf/1110.5626v1"
+  },
+  {
+    "title": "TerraGen: A Unified Multi-Task Layout Generation Framework for Remote Sensing Data Augmentation",
+    "authors": [
+      "Datao Tang",
+      "Hao Wang",
+      "Yudeng Xin",
+      "Hui Qiao",
+      "Dongsheng Jiang"
+    ],
+    "published": "2025-10-24",
+    "arxiv_id": "2510.21391v1",
+    "abstract": "Remote sensing vision tasks require extensive labeled data across multiple, interconnected domains. However, current generative data augmentation frameworks are task-isolated, i.e., each vision task requires training an independent generative model, and ignores the modeling of geographical information and spatial constraints. To address these issues, we propose \\textbf{TerraGen}, a unified layout-to-image generation framework that enables flexible, spatially controllable synthesis of remote sensing imagery for various high-level vision tasks, e.g., detection, segmentation, and extraction. Spec",
+    "pdf_url": "https://arxiv.org/pdf/2510.21391v1"
+  },
+  {
+    "title": "AeroGen: Enhancing Remote Sensing Object Detection with Diffusion-Driven Data Generation",
+    "authors": [
+      "Datao Tang",
+      "Xiangyong Cao",
+      "Xuan Wu",
+      "Jialin Li",
+      "Jing Yao"
+    ],
+    "published": "2024-11-23",
+    "arxiv_id": "2411.15497v3",
+    "abstract": "Remote sensing image object detection (RSIOD) aims to identify and locate specific objects within satellite or aerial imagery. However, there is a scarcity of labeled data in current RSIOD datasets, which significantly limits the performance of current detection algorithms. Although existing techniques, e.g., data augmentation and semi-supervised learning, can mitigate this scarcity issue to some extent, they are heavily dependent on high-quality labeled data and perform worse in rare object classes. To address this issue, this paper proposes a layout-controllable diffusion generative model (i",
+    "pdf_url": "https://arxiv.org/pdf/2411.15497v3"
+  },
+  {
+    "title": "A 20 Gbps Data Transmitting ASIC with PAM4 for Particle Physics Experiments",
+    "authors": [
+      "Li Zhang",
+      "Datao Gong",
+      "Suen Hou",
+      "Guanming Huang",
+      "Xing Huang"
+    ],
+    "published": "2020-10-30",
+    "arxiv_id": "2010.16064v1",
+    "abstract": "We present the design principle and test results of a data transmitting ASIC, GBS20, for particle physics experiments. The goal of GBS20 will be an ASIC that employs two serializers each from the 10.24 Gbps lpGBT SerDes, sharing the PLL also from lpGBT. A PAM4 encoder plus a VCSEL driver will be implemented in the same die to use the same clock system, eliminating the need of CDRs in the PAM4 encoder. This way the transmitter module, GBT20, developed using the GBS20 ASIC, will have the exact lpGBT data interface and transmission protocol, with an output up to 20.48 Gbps over one fiber. With PA",
+    "pdf_url": "https://arxiv.org/pdf/2010.16064v1"
+  },
+  {
+    "title": "Small Data Explainer -- The impact of small data methods in everyday life",
+    "authors": [
+      "Maren Hackenberg",
+      "Sophia G. Connor",
+      "Fabian Kabus",
+      "June Brawner",
+      "Ella Markham"
+    ],
+    "published": "2025-07-15",
+    "arxiv_id": "2507.11773v1",
+    "abstract": "The emergence of breakthrough artificial intelligence (AI) techniques has led to a renewed focus on how small data settings, i.e., settings with limited information, can benefit from such developments. This includes societal issues such as how best to include under-represented groups in data-driven policy and decision making, or the health benefits of assistive technologies such as wearables. We provide a conceptual overview, in particular contrasting small data with big data, and identify common themes from exemplary case studies and application areas. Potential solutions are described in a m",
+    "pdf_url": "https://arxiv.org/pdf/2507.11773v1"
+  },
+  {
+    "title": "Mixtures of Experts Models",
+    "authors": [
+      "Isobel Claire Gormley",
+      "Sylvia Fr\u00fchwirth-Schnatter"
+    ],
+    "published": "2018-06-21",
+    "arxiv_id": "1806.08200v1",
+    "abstract": "Mixtures of experts models provide a framework in which covariates may be included in mixture models. This is achieved by modelling the parameters of the mixture model as functions of the concomitant covariates. Given their mixture model foundation, mixtures of experts models possess a diverse range of analytic uses, from clustering observations to capturing parameter heterogeneity in cross-sectional data. This chapter focuses on delineating the mixture of experts modelling framework and demonstrates the utility and flexibility of mixtures of experts models as an analytic tool.",
+    "pdf_url": "https://arxiv.org/pdf/1806.08200v1"
+  },
+  {
+    "title": "Collapse. What else?",
+    "authors": [
+      "Nicolas Gisin"
+    ],
+    "published": "2017-01-28",
+    "arxiv_id": "1701.08300v2",
+    "abstract": "We present the quantum measurement problem as a serious physics problem. Serious because without a resolution, quantum theory is not complete, as it does not tell how one should - in principle - perform measurements. It is physical in the sense that the solution will bring new physics, i.e. new testable predictions, hence it is not merely a matter of interpretation of a frozen formalism. I argue that the two popular ways around the measurement problem, many-worlds and Bohmian-like mechanics, do, de facto, introduce effective collapses when \"I\" interact with the quantum system. Hence, surprisin",
+    "pdf_url": "https://arxiv.org/pdf/1701.08300v2"
+  },
+  {
+    "title": "IVOA Recommendation: Spectrum Data Model 1.1",
+    "authors": [
+      "Jonathan McDowell",
+      "Doug Tody",
+      "Tamas Budavari",
+      "Markus Dolensky",
+      "Inga Kamp"
+    ],
+    "published": "2012-04-13",
+    "arxiv_id": "1204.3055v1",
+    "abstract": "We present a data model describing the structure of spectrophotometric datasets with spectral and temporal coordinates and associated metadata. This data model may be used to represent spectra, time series data, segments of SED (Spectral Energy Distributions) and other spectral or temporal associations.",
+    "pdf_url": "https://arxiv.org/pdf/1204.3055v1"
+  },
+  {
+    "title": "Iterative Refinement Improves Compositional Image Generation",
+    "authors": [
+      "Shantanu Jaiswal",
+      "Mihir Prabhudesai",
+      "Nikash Bhardwaj",
+      "Zheyang Qin",
+      "Amir Zadeh"
+    ],
+    "published": "2026-01-21",
+    "arxiv_id": "2601.15286v1",
+    "abstract": "Text-to-image (T2I) models have achieved remarkable progress, yet they continue to struggle with complex prompts that require simultaneously handling multiple objects, relations, and attributes. Existing inference-time strategies, such as parallel sampling with verifiers or simply increasing denoising steps, can improve prompt alignment but remain inadequate for richly compositional settings where many constraints must be satisfied. Inspired by the success of chain-of-thought reasoning in large language models, we propose an iterative test-time strategy in which a T2I model progressively refin",
+    "pdf_url": "https://arxiv.org/pdf/2601.15286v1"
+  },
+  {
+    "title": "Quaternion Generative Adversarial Networks",
+    "authors": [
+      "Eleonora Grassucci",
+      "Edoardo Cicero",
+      "Danilo Comminiello"
+    ],
+    "published": "2021-04-19",
+    "arxiv_id": "2104.09630v2",
+    "abstract": "Latest Generative Adversarial Networks (GANs) are gathering outstanding results through a large-scale training, thus employing models composed of millions of parameters requiring extensive computational capabilities. Building such huge models undermines their replicability and increases the training instability. Moreover, multi-channel data, such as images or audio, are usually processed by realvalued convolutional networks that flatten and concatenate the input, often losing intra-channel spatial relations. To address these issues related to complexity and information loss, we propose a famil",
+    "pdf_url": "https://arxiv.org/pdf/2104.09630v2"
+  },
+  {
+    "title": "Accelerating Diffusion Model Training under Minimal Budgets: A Condensation-Based Perspective",
+    "authors": [
+      "Rui Huang",
+      "Shitong Shao",
+      "Zikai Zhou",
+      "Pukun Zhao",
+      "Hangyu Guo"
+    ],
+    "published": "2025-07-08",
+    "arxiv_id": "2507.05914v3",
+    "abstract": "Diffusion models have achieved remarkable performance on a wide range of generative tasks, yet training them from scratch is notoriously resource-intensive, typically requiring millions of training images and many GPU days. Motivated by a data-centric view of this bottleneck, we adopt a condensation-based perspective: given a large training set, the goal is to construct a much smaller condensed dataset that still supports training strong diffusion models under minimal data and compute budgets. To operationalize this perspective, we introduce Diffusion Dataset Condensation (D2C), a two-phase fr",
+    "pdf_url": "https://arxiv.org/pdf/2507.05914v3"
+  },
+  {
+    "title": "Case Study of GAI for Generating Novel Images for Real-World Embroidery",
+    "authors": [
+      "Kate Glazko",
+      "Anika Arugunta",
+      "Janelle Chan",
+      "Nancy Jimenez-Garcia",
+      "Tashfia Sharmin"
+    ],
+    "published": "2025-10-17",
+    "arxiv_id": "2510.16223v1",
+    "abstract": "In this paper, we present a case study exploring the potential use of Generative Artificial Intelligence (GAI) to address the real-world need of making the design of embroiderable art patterns more accessible. Through an auto-ethnographic case study by a disabled-led team, we examine the application of GAI as an assistive technology in generating embroidery patterns, addressing the complexity involved in designing culturally-relevant patterns as well as those that meet specific needs regarding detail and color. We detail the iterative process of prompt engineering custom GPTs tailored for prod",
+    "pdf_url": "https://arxiv.org/pdf/2510.16223v1"
+  },
+  {
+    "title": "Training Generative Reversible Networks",
+    "authors": [
+      "Robin Tibor Schirrmeister",
+      "Patryk Chrab\u0105szcz",
+      "Frank Hutter",
+      "Tonio Ball"
+    ],
+    "published": "2018-06-05",
+    "arxiv_id": "1806.01610v4",
+    "abstract": "Generative models with an encoding component such as autoencoders currently receive great interest. However, training of autoencoders is typically complicated by the need to train a separate encoder and decoder model that have to be enforced to be reciprocal to each other. To overcome this problem, by-design reversible neural networks (RevNets) had been previously used as generative models either directly optimizing the likelihood of the data under the model or using an adversarial approach on the generated data. Here, we instead investigate their performance using an adversary on the latent s",
+    "pdf_url": "https://arxiv.org/pdf/1806.01610v4"
+  },
+  {
+    "title": "Lineage topology, replication kinetics and cell cycle synchronization reveal regulated growth dynamics in human bone marrow stromal cell colonies",
+    "authors": [
+      "Alessandro Allegrezza",
+      "Riccardo Beschi",
+      "Domenico Caudo",
+      "Andrea Cavagna",
+      "Alessandro Corsi"
+    ],
+    "published": "2025-04-30",
+    "arxiv_id": "2504.21818v2",
+    "abstract": "Bone marrow stromal cells (BMSC) -- which include skeletal stem cells -- are a promising tool in regenerative medicine. However, their heterogeneous and unpredictable in vivo behaviour remains a critical barrier preventing the development of standardized therapeutic approaches for skeletal tissue regeneration. Several studies have attempted to identify in vitro features that could correlate with the in vivo differentiation properties, yet the mechanisms ruling BMSC heterogeneity remain poorly understood. Here, using time-lapse imaging, we lineage-trace 32 single-cell-derived BMSC colonies thro",
+    "pdf_url": "https://arxiv.org/pdf/2504.21818v2"
+  },
+  {
+    "title": "Tracing the Roots: A Multi-Agent Framework for Uncovering Data Lineage in Post-Training LLMs",
+    "authors": [
+      "Yu Li",
+      "Xiaoran Shang",
+      "Qizhi Pei",
+      "Yun Zhu",
+      "Xin Gao"
+    ],
+    "published": "2026-04-12",
+    "arxiv_id": "2604.10480v1",
+    "abstract": "Post-training data plays a pivotal role in shaping the capabilities of Large Language Models (LLMs), yet datasets are often treated as isolated artifacts, overlooking the systemic connections that underlie their evolution. To disentangle these complex relationships, we introduce the concept of \\textbf{data lineage} to the LLM ecosystem and propose an automated multi-agent framework to reconstruct the evolutionary graph of dataset development. Through large-scale lineage analysis, we characterize domain-specific structural patterns, such as vertical refinement in math-oriented datasets and hori",
+    "pdf_url": "https://arxiv.org/pdf/2604.10480v1"
+  },
+  {
+    "title": "GAT: Generative Adversarial Training for Adversarial Example Detection and Robust Classification",
+    "authors": [
+      "Xuwang Yin",
+      "Soheil Kolouri",
+      "Gustavo K. Rohde"
+    ],
+    "published": "2019-05-27",
+    "arxiv_id": "1905.11475v4",
+    "abstract": "The vulnerabilities of deep neural networks against adversarial examples have become a significant concern for deploying these models in sensitive domains. Devising a definitive defense against such attacks is proven to be challenging, and the methods relying on detecting adversarial samples are only valid when the attacker is oblivious to the detection mechanism. In this paper we propose a principled adversarial example detection method that can withstand norm-constrained white-box attacks. Inspired by one-versus-the-rest classification, in a K class classification problem, we train K binary ",
+    "pdf_url": "https://arxiv.org/pdf/1905.11475v4"
+  },
+  {
+    "title": "Neural Lineage",
+    "authors": [
+      "Runpeng Yu",
+      "Xinchao Wang"
+    ],
+    "published": "2024-06-17",
+    "arxiv_id": "2406.11129v1",
+    "abstract": "Given a well-behaved neural network, is possible to identify its parent, based on which it was tuned? In this paper, we introduce a novel task known as neural lineage detection, aiming at discovering lineage relationships between parent and child models. Specifically, from a set of parent models, neural lineage detection predicts which parent model a child model has been fine-tuned from. We propose two approaches to address this task. (1) For practical convenience, we introduce a learning-free approach, which integrates an approximation of the finetuning process into the neural network represe",
+    "pdf_url": "https://arxiv.org/pdf/2406.11129v1"
+  },
+  {
+    "title": "Text Generation with Diffusion Language Models: A Pre-training Approach with Continuous Paragraph Denoise",
+    "authors": [
+      "Zhenghao Lin",
+      "Yeyun Gong",
+      "Yelong Shen",
+      "Tong Wu",
+      "Zhihao Fan"
+    ],
+    "published": "2022-12-22",
+    "arxiv_id": "2212.11685v2",
+    "abstract": "In this paper, we introduce a novel dIffusion language modEl pre-training framework for text generation, which we call GENIE. GENIE is a large-scale pretrained diffusion language model that consists of an encoder and a diffusion-based decoder, which can generate text by gradually transforming a random noise sequence into a coherent text sequence. To pre-train GENIE on a large-scale language corpus, we design a new continuous paragraph denoise objective, which encourages the diffusion-decoder to reconstruct a clean text paragraph from a corrupted version, while preserving the semantic and synta",
+    "pdf_url": "https://arxiv.org/pdf/2212.11685v2"
+  },
+  {
+    "title": "Creative Problem Solving in Artificially Intelligent Agents: A Survey and Framework",
+    "authors": [
+      "Evana Gizzi",
+      "Lakshmi Nair",
+      "Sonia Chernova",
+      "Jivko Sinapov"
+    ],
+    "published": "2022-04-21",
+    "arxiv_id": "2204.10358v1",
+    "abstract": "Creative Problem Solving (CPS) is a sub-area within Artificial Intelligence (AI) that focuses on methods for solving off-nominal, or anomalous problems in autonomous systems. Despite many advancements in planning and learning, resolving novel problems or adapting existing knowledge to a new context, especially in cases where the environment may change in unpredictable ways post deployment, remains a limiting factor in the safe and useful integration of intelligent systems. The emergence of increasingly autonomous systems dictates the necessity for AI agents to deal with environmental uncertain",
+    "pdf_url": "https://arxiv.org/pdf/2204.10358v1"
+  },
+  {
+    "title": "The Artificial Scientist: Logicist, Emergentist, and Universalist Approaches to Artificial General Intelligence",
+    "authors": [
+      "Michael Timothy Bennett",
+      "Yoshihiro Maruyama"
+    ],
+    "published": "2021-10-05",
+    "arxiv_id": "2110.01831v1",
+    "abstract": "We attempt to define what is necessary to construct an Artificial Scientist, explore and evaluate several approaches to artificial general intelligence (AGI) which may facilitate this, conclude that a unified or hybrid approach is necessary and explore two theories that satisfy this requirement to some degree.",
+    "pdf_url": "https://arxiv.org/pdf/2110.01831v1"
+  },
+  {
+    "title": "TRIZ Agents: A Multi-Agent LLM Approach for TRIZ-Based Innovation",
+    "authors": [
+      "Kamil Szczepanik",
+      "Jaros\u0142aw A. Chudziak"
+    ],
+    "published": "2025-06-23",
+    "arxiv_id": "2506.18783v1",
+    "abstract": "TRIZ, the Theory of Inventive Problem Solving, is a structured, knowledge-based framework for innovation and abstracting problems to find inventive solutions. However, its application is often limited by the complexity and deep interdisciplinary knowledge required. Advancements in Large Language Models (LLMs) have revealed new possibilities for automating parts of this process. While previous studies have explored single LLMs in TRIZ applications, this paper introduces a multi-agent approach. We propose an LLM-based multi-agent system, called TRIZ agents, each with specialized capabilities and",
+    "pdf_url": "https://arxiv.org/pdf/2506.18783v1"
+  },
+  {
+    "title": "Compression, The Fermi Paradox and Artificial Super-Intelligence",
+    "authors": [
+      "Michael Timothy Bennett"
+    ],
+    "published": "2021-10-05",
+    "arxiv_id": "2110.01835v1",
+    "abstract": "The following briefly discusses possible difficulties in communication with and control of an AGI (artificial general intelligence), building upon an explanation of The Fermi Paradox and preceding work on symbol emergence and artificial general intelligence. The latter suggests that to infer what someone means, an agent constructs a rationale for the observed behaviour of others. Communication then requires two agents labour under similar compulsions and have similar experiences (construct similar solutions to similar tasks). Any non-human intelligence may construct solutions such that any rat",
+    "pdf_url": "https://arxiv.org/pdf/2110.01835v1"
+  },
+  {
+    "title": "A Study of AI Population Dynamics with Million-agent Reinforcement Learning",
+    "authors": [
+      "Yaodong Yang",
+      "Lantao Yu",
+      "Yiwei Bai",
+      "Jun Wang",
+      "Weinan Zhang"
+    ],
+    "published": "2017-09-13",
+    "arxiv_id": "1709.04511v4",
+    "abstract": "We conduct an empirical study on discovering the ordered collective dynamics obtained by a population of intelligence agents, driven by million-agent reinforcement learning. Our intention is to put intelligent agents into a simulated natural context and verify if the principles developed in the real world could also be used in understanding an artificially-created intelligent population. To achieve this, we simulate a large-scale predator-prey world, where the laws of the world are designed by only the findings or logical equivalence that have been discovered in nature. We endow the agents wit",
+    "pdf_url": "https://arxiv.org/pdf/1709.04511v4"
+  },
+  {
+    "title": "Minimum Levels of Interpretability for Artificial Moral Agents",
+    "authors": [
+      "Avish Vijayaraghavan",
+      "Cosmin Badea"
+    ],
+    "published": "2023-07-02",
+    "arxiv_id": "2307.00660v1",
+    "abstract": "As artificial intelligence (AI) models continue to scale up, they are becoming more capable and integrated into various forms of decision-making systems. For models involved in moral decision-making, also known as artificial moral agents (AMA), interpretability provides a way to trust and understand the agent's internal reasoning mechanisms for effective use and error correction. In this paper, we provide an overview of this rapidly-evolving sub-field of AI interpretability, introduce the concept of the Minimum Level of Interpretability (MLI) and recommend an MLI for various types of agents, t",
+    "pdf_url": "https://arxiv.org/pdf/2307.00660v1"
+  },
+  {
+    "title": "On Theoretically-Driven LLM Agents for Multi-Dimensional Discourse Analysis",
+    "authors": [
+      "Maciej Uberna",
+      "Micha\u0142 Wawer",
+      "Jaros\u0142aw A. Chudziak",
+      "Marcin Koszowy"
+    ],
+    "published": "2026-02-14",
+    "arxiv_id": "2602.13713v2",
+    "abstract": "Identifying the strategic uses of reformulation in discourse remains a key challenge for computational argumentation. While LLMs can detect surface-level similarity, they often fail to capture the pragmatic functions of rephrasing, such as its role within rhetorical discourse. This paper presents a comparative multi-agent framework designed to quantify the benefits of incorporating explicit theoretical knowledge for this task. We utilise an dataset of annotated political debates to establish a new standard encompassing four distinct rephrase functions: Deintensification, Intensification, Speci",
+    "pdf_url": "https://arxiv.org/pdf/2602.13713v2"
+  },
+  {
+    "title": "The propagation of a cultural or biological trait by neutral genetic drift in a subdivided population",
+    "authors": [
+      "R A Blythe"
+    ],
+    "published": "2006-06-26",
+    "arxiv_id": "0606037v2",
+    "abstract": "We study fixation probabilities and times as a consequence of neutral genetic drift in subdivided populations, motivated by a model of the cultural evolutionary process of language change that is described by the same mathematics as the biological process. We focus on the growth of fixation times with the number of subpopulations, and variation of fixation probabilities and times with initial distributions of mutants. A general formula for the fixation probability for arbitrary initial condition is derived by extending a duality relation between forwards- and backwards-time properties of the m",
+    "pdf_url": "https://arxiv.org/pdf/q-bio/0606037v2"
+  },
+  {
+    "title": "Establishing Shared Query Understanding in an Open Multi-Agent System",
+    "authors": [
+      "Nikolaos Kondylidis",
+      "Ilaria Tiddi",
+      "Annette ten Teije"
+    ],
+    "published": "2023-05-16",
+    "arxiv_id": "2305.09349v1",
+    "abstract": "We propose a method that allows to develop shared understanding between two agents for the purpose of performing a task that requires cooperation. Our method focuses on efficiently establishing successful task-oriented communication in an open multi-agent system, where the agents do not know anything about each other and can only communicate via grounded interaction. The method aims to assist researchers that work on human-machine interaction or scenarios that require a human-in-the-loop, by defining interaction restrictions and efficiency metrics. To that end, we point out the challenges and ",
+    "pdf_url": "https://arxiv.org/pdf/2305.09349v1"
+  },
+  {
+    "title": "A Natural Language Agentic Approach to Study Affective Polarization",
+    "authors": [
+      "Stephanie Anneris Malvicini",
+      "Ewelina Gajewska",
+      "Arda Derbent",
+      "Katarzyna Budzynska",
+      "Jaros\u0142aw A. Chudziak"
+    ],
+    "published": "2026-03-03",
+    "arxiv_id": "2603.02711v1",
+    "abstract": "Affective polarization has been central to political and social studies, with growing focus on social media, where partisan divisions are often exacerbated. Real-world studies tend to have limited scope, while simulated studies suffer from insufficient high-quality training data, as manually labeling posts is labor-intensive and prone to subjective biases. The lack of adequate tools to formalize different definitions of affective polarization across studies complicates result comparison and hinders interoperable frameworks. We present a multi-agent model providing a comprehensive approach to s",
+    "pdf_url": "https://arxiv.org/pdf/2603.02711v1"
+  },
+  {
+    "title": "The Extended Evolutionary Synthesis Facilitates Evolutionary Models of Culture Change",
+    "authors": [
+      "Cameron M. Smith",
+      "Liane Gabora",
+      "William Gardner-O'Kearney"
+    ],
+    "published": "2018-12-01",
+    "arxiv_id": "1812.00143v4",
+    "abstract": "The Extended Evolutionary Synthesis (EES) is beginning to fulfill the whole promise of Darwinian insight through its extension of evolutionary understanding from the biological domain to include cultural information evolution. Several decades of important foundation-laying work took a social Darwinist approach and exhibited and ecologically-deterministic elements. This is not the case with more recent developments to the evolutionary study of culture, which emphasize non-Darwinian processes such as self-organization, potentiality, and epigenetic change.",
+    "pdf_url": "https://arxiv.org/pdf/1812.00143v4"
+  },
+  {
+    "title": "Modelling cultural evolution",
+    "authors": [
+      "Fredrik Jansson"
+    ],
+    "published": "2026-01-01",
+    "arxiv_id": "2601.00433v1",
+    "abstract": "Formal modelling provides a toolkit for understanding cultural dynamics, from individual decisions to recurring patterns of change. This chapter explains what models are and why they matter. Using a precise, shared language, they aid thinking and communication by turning fuzzy assumptions into clear, comparable, testable claims. The chapter describes the modelling process, trading explanatory clarity against predictive specificity. Four families of models are surveyed, from the micro-level with optimising agents to macro-level dynamics with heuristic or even implicit agents, covering reasoning",
+    "pdf_url": "https://arxiv.org/pdf/2601.00433v1"
+  },
+  {
+    "title": "Does Mapo Tofu Contain Coffee? Probing LLMs for Food-related Cultural Knowledge",
+    "authors": [
+      "Li Zhou",
+      "Taelin Karidi",
+      "Wanlong Liu",
+      "Nicolas Garneau",
+      "Yong Cao"
+    ],
+    "published": "2024-04-10",
+    "arxiv_id": "2404.06833v3",
+    "abstract": "Recent studies have highlighted the presence of cultural biases in Large Language Models (LLMs), yet often lack a robust methodology to dissect these phenomena comprehensively. Our work aims to bridge this gap by delving into the Food domain, a universally relevant yet culturally diverse aspect of human life. We introduce FmLAMA, a multilingual dataset centered on food-related cultural facts and variations in food practices. We analyze LLMs across various architectures and configurations, evaluating their performance in both monolingual and multilingual settings. By leveraging templates in six",
+    "pdf_url": "https://arxiv.org/pdf/2404.06833v3"
+  },
+  {
+    "title": "Egocentric Visitors Localization in Cultural Sites",
+    "authors": [
+      "Francesco Ragusa",
+      "Antonino Furnari",
+      "Sebastiano Battiato",
+      "Giovanni Signorello",
+      "Giovanni Maria Farinella"
+    ],
+    "published": "2019-04-10",
+    "arxiv_id": "1904.05264v1",
+    "abstract": "We consider the problem of localizing visitors in a cultural site from egocentric (first person) images. Localization information can be useful both to assist the user during his visit (e.g., by suggesting where to go and what to see next) and to provide behavioral information to the manager of the cultural site (e.g., how much time has been spent by visitors at a given location? What has been liked most?). To tackle the problem, we collected a large dataset of egocentric videos using two cameras: a head-mounted HoloLens device and a chest-mounted GoPro. Each frame has been labeled according t",
+    "pdf_url": "https://arxiv.org/pdf/1904.05264v1"
+  },
+  {
+    "title": "AI-based experts' knowledge visualization of cultural heritage: A case study of Terracotta Warriors",
+    "authors": [
+      "Siyi Li",
+      "Yue Jiang",
+      "Bowen Jing",
+      "Liuyuxin Yang",
+      "Yuhe Zhang"
+    ],
+    "published": "2026-04-24",
+    "arxiv_id": "2604.22480v1",
+    "abstract": "Advancements in 3D modeling,digital display technologies,and the growing availability of digital cultural heritage data have significantly improved the accuracy of heritage depictions and expanded opportunities for analysis.However,while many studies focus on presenting specific cultural heritage figurines,an often overlooked aspect is the visualization of the Terracotta Warriors as a unified entity.This involves concisely representing the distribution of features and their relationships,providing a clear and insightful presentation that engages practitioners, academics,and wider audiences.To ",
+    "pdf_url": "https://arxiv.org/pdf/2604.22480v1"
+  },
+  {
+    "title": "From Word to World: Evaluate and Mitigate Culture Bias in LLMs via Word Association Test",
+    "authors": [
+      "Xunlian Dai",
+      "Li Zhou",
+      "Benyou Wang",
+      "Haizhou Li"
+    ],
+    "published": "2025-05-24",
+    "arxiv_id": "2505.18562v2",
+    "abstract": "The human-centered word association test (WAT) serves as a cognitive proxy, revealing sociocultural variations through culturally shared semantic expectations and implicit linguistic patterns shaped by lived experiences. We extend this test into an LLM-adaptive, free-relation task to assess the alignment of large language models (LLMs) with cross-cultural cognition. To address culture preference, we propose CultureSteer, an innovative approach that moves beyond superficial cultural prompting by embedding cultural-specific semantic associations directly within the model's internal representatio",
+    "pdf_url": "https://arxiv.org/pdf/2505.18562v2"
+  },
+  {
+    "title": "Cultural Evolution as Distributed Computation",
+    "authors": [
+      "Liane Gabora"
+    ],
+    "published": "2013-10-23",
+    "arxiv_id": "1310.6342v1",
+    "abstract": "The speed and transformative power of human cultural evolution is evident from the change it has wrought on our planet. This chapter proposes a human computation program aimed at (1) distinguishing algorithmic from non-algorithmic components of cultural evolution, (2) computationally modeling the algorithmic components, and amassing human solutions to the non-algorithmic (generally, creative) components, and (3) combining them to develop human-machine hybrids with previously unforeseen computational power that can be used to solve real problems. Drawing on recent insights into the origins of e",
+    "pdf_url": "https://arxiv.org/pdf/1310.6342v1"
+  },
+  {
+    "title": "CDEval: A Benchmark for Measuring the Cultural Dimensions of Large Language Models",
+    "authors": [
+      "Yuhang Wang",
+      "Yanxu Zhu",
+      "Chao Kong",
+      "Shuyu Wei",
+      "Xiaoyuan Yi"
+    ],
+    "published": "2023-11-28",
+    "arxiv_id": "2311.16421v3",
+    "abstract": "As the scaling of Large Language Models (LLMs) has dramatically enhanced their capabilities, there has been a growing focus on the alignment problem to ensure their responsible and ethical use. While existing alignment efforts predominantly concentrate on universal values such as the HHH principle, the aspect of culture, which is inherently pluralistic and diverse, has not received adequate attention. This work introduces a new benchmark, CDEval, aimed at evaluating the cultural dimensions of LLMs. CDEval is constructed by incorporating both GPT-4's automated generation and human verification,",
+    "pdf_url": "https://arxiv.org/pdf/2311.16421v3"
+  },
+  {
+    "title": "Learning Robust Real-Time Cultural Transmission without Human Data",
+    "authors": [
+      "Cultural General Intelligence Team",
+      "Avishkar Bhoopchand",
+      "Bethanie Brownfield",
+      "Adrian Collister",
+      "Agustin Dal Lago"
+    ],
+    "published": "2022-03-01",
+    "arxiv_id": "2203.00715v1",
+    "abstract": "Cultural transmission is the domain-general social skill that allows agents to acquire and use information from each other in real-time with high fidelity and recall. In humans, it is the inheritance process that powers cumulative cultural evolution, expanding our skills, tools and knowledge across generations. We provide a method for generating zero-shot, high recall cultural transmission in artificially intelligent agents. Our agents succeed at real-time cultural transmission from humans in novel contexts without using any pre-collected human data. We identify a surprisingly simple set of in",
+    "pdf_url": "https://arxiv.org/pdf/2203.00715v1"
+  },
+  {
+    "title": "All Languages Matter: Evaluating LMMs on Culturally Diverse 100 Languages",
+    "authors": [
+      "Ashmal Vayani",
+      "Dinura Dissanayake",
+      "Hasindri Watawana",
+      "Noor Ahsan",
+      "Nevasini Sasikumar"
+    ],
+    "published": "2024-11-25",
+    "arxiv_id": "2411.16508v4",
+    "abstract": "Existing Large Multimodal Models (LMMs) generally focus on only a few regions and languages. As LMMs continue to improve, it is increasingly important to ensure they understand cultural contexts, respect local sensitivities, and support low-resource languages, all while effectively integrating corresponding visual cues. In pursuit of culturally diverse global multimodal models, our proposed All Languages Matter Benchmark (ALM-bench) represents the largest and most comprehensive effort to date for evaluating LMMs across 100 languages. ALM-bench challenges existing models by testing their abilit",
+    "pdf_url": "https://arxiv.org/pdf/2411.16508v4"
+  },
+  {
+    "title": "BotSim: Mitigating The Formation Of Conspiratorial Societies with Useful Bots",
+    "authors": [
+      "Lynnette Hui Xian Ng",
+      "Kathleen M. Carley"
+    ],
+    "published": "2026-01-06",
+    "arxiv_id": "2601.06154v1",
+    "abstract": "Societies can become a conspiratorial society where there is a majority of humans that believe, and therefore spread, conspiracy theories. Artificial intelligence gave rise to social media bots that can spread conspiracies in an automated fashion. Currently, organizations combat the spread of conspiracies through manual fact-checking processes and the dissemination of counter-narratives. However, the effects of harnessing the same automation to create useful bots are not well explored. To address this, we create BotSim, an Agent-Based Model of a society in which useful bots are introduced into",
+    "pdf_url": "https://arxiv.org/pdf/2601.06154v1"
+  },
+  {
+    "title": "Unforgettable Generalization in Language Models",
+    "authors": [
+      "Eric Zhang",
+      "Leshem Chosen",
+      "Jacob Andreas"
+    ],
+    "published": "2024-09-03",
+    "arxiv_id": "2409.02228v1",
+    "abstract": "When language models (LMs) are trained to forget (or \"unlearn'') a skill, how precisely does their behavior change? We study the behavior of transformer LMs in which tasks have been forgotten via fine-tuning on randomized labels. Such LMs learn to generate near-random predictions for individual examples in the \"training'' set used for forgetting. Across tasks, however, LMs exhibit extreme variability in whether LM predictions change on examples outside the training set. In some tasks (like entailment classification), forgetting generalizes robustly, and causes models to produce uninformative p",
+    "pdf_url": "https://arxiv.org/pdf/2409.02228v1"
+  },
+  {
+    "title": "Building a Strong Instruction Language Model for a Less-Resourced Language",
+    "authors": [
+      "Domen Vre\u0161",
+      "Tja\u0161a Ar\u010don",
+      "Timotej Petri\u010d",
+      "Dario Vajda",
+      "Marko Robnik-\u0160ikonja"
+    ],
+    "published": "2026-03-02",
+    "arxiv_id": "2603.01691v1",
+    "abstract": "Large language models (LLMs) have become an essential tool for natural language processing and artificial intelligence in general. Current open-source models are primarily trained on English texts, resulting in poorer performance on less-resourced languages and cultures. We present a set of methodological approaches necessary for the successful adaptation of an LLM to a less-resourced language, and demonstrate them using the Slovene language. We present GaMS3-12B, a generative model for Slovene with 12 billion parameters, and demonstrate that it is the best-performing open-source model for Slo",
+    "pdf_url": "https://arxiv.org/pdf/2603.01691v1"
+  },
+  {
+    "title": "Overview of the First Workshop on Language Models for Low-Resource Languages (LoResLM 2025)",
+    "authors": [
+      "Hansi Hettiarachchi",
+      "Tharindu Ranasinghe",
+      "Paul Rayson",
+      "Ruslan Mitkov",
+      "Mohamed Gaber"
+    ],
+    "published": "2024-12-20",
+    "arxiv_id": "2412.16365v1",
+    "abstract": "The first Workshop on Language Models for Low-Resource Languages (LoResLM 2025) was held in conjunction with the 31st International Conference on Computational Linguistics (COLING 2025) in Abu Dhabi, United Arab Emirates. This workshop mainly aimed to provide a forum for researchers to share and discuss their ongoing work on language models (LMs) focusing on low-resource languages, following the recent advancements in neural language models and their linguistic biases towards high-resource languages. LoResLM 2025 attracted notable interest from the natural language processing (NLP) community, ",
+    "pdf_url": "https://arxiv.org/pdf/2412.16365v1"
+  },
+  {
+    "title": "Discriminating Similar Languages: Evaluations and Explorations",
+    "authors": [
+      "Cyril Goutte",
+      "Serge L\u00e9ger",
+      "Shervin Malmasi",
+      "Marcos Zampieri"
+    ],
+    "published": "2016-09-30",
+    "arxiv_id": "1610.00031v1",
+    "abstract": "We present an analysis of the performance of machine learning classifiers on discriminating between similar languages and language varieties. We carried out a number of experiments using the results of the two editions of the Discriminating between Similar Languages (DSL) shared task. We investigate the progress made between the two tasks, estimate an upper bound on possible performance using ensemble and oracle combination, and provide learning curves to help us understand which languages are more challenging. A number of difficult sentences are identified and investigated further with human ",
+    "pdf_url": "https://arxiv.org/pdf/1610.00031v1"
+  },
+  {
+    "title": "Are Compressed Language Models Less Subgroup Robust?",
+    "authors": [
+      "Leonidas Gee",
+      "Andrea Zugarini",
+      "Novi Quadrianto"
+    ],
+    "published": "2024-03-26",
+    "arxiv_id": "2403.17811v1",
+    "abstract": "To reduce the inference cost of large language models, model compression is increasingly used to create smaller scalable models. However, little is known about their robustness to minority subgroups defined by the labels and attributes of a dataset. In this paper, we investigate the effects of 18 different compression methods and settings on the subgroup robustness of BERT language models. We show that worst-group performance does not depend on model size alone, but also on the compression method used. Additionally, we find that model compression does not always worsen the performance on minor",
+    "pdf_url": "https://arxiv.org/pdf/2403.17811v1"
+  },
+  {
+    "title": "Beneath the Surface: Unveiling Harmful Memes with Multimodal Reasoning Distilled from Large Language Models",
+    "authors": [
+      "Hongzhan Lin",
+      "Ziyang Luo",
+      "Jing Ma",
+      "Long Chen"
+    ],
+    "published": "2023-12-09",
+    "arxiv_id": "2312.05434v1",
+    "abstract": "The age of social media is rife with memes. Understanding and detecting harmful memes pose a significant challenge due to their implicit meaning that is not explicitly conveyed through the surface text and image. However, existing harmful meme detection approaches only recognize superficial harm-indicative signals in an end-to-end classification manner but ignore in-depth cognition of the meme text and image. In this paper, we attempt to detect harmful memes based on advanced reasoning over the interplay of multimodal information in memes. Inspired by the success of Large Language Models (LLMs",
+    "pdf_url": "https://arxiv.org/pdf/2312.05434v1"
+  },
+  {
+    "title": "Modeling Language Change in Historical Corpora: The Case of Portuguese",
+    "authors": [
+      "Marcos Zampieri",
+      "Shervin Malmasi",
+      "Mark Dras"
+    ],
+    "published": "2016-09-30",
+    "arxiv_id": "1610.00030v1",
+    "abstract": "This paper presents a number of experiments to model changes in a historical Portuguese corpus composed of literary texts for the purpose of temporal text classification. Algorithms were trained to classify texts with respect to their publication date taking into account lexical variation represented as word n-grams, and morphosyntactic variation represented by part-of-speech (POS) distribution. We report results of 99.8% accuracy using word unigram features with a Support Vector Machines classifier to predict the publication date of documents in time intervals of both one century and half a c",
+    "pdf_url": "https://arxiv.org/pdf/1610.00030v1"
+  },
+  {
+    "title": "How Important Is Tokenization in French Medical Masked Language Models?",
+    "authors": [
+      "Yanis Labrak",
+      "Adrien Bazoge",
+      "Beatrice Daille",
+      "Mickael Rouvier",
+      "Richard Dufour"
+    ],
+    "published": "2024-02-22",
+    "arxiv_id": "2402.15010v2",
+    "abstract": "Subword tokenization has become the prevailing standard in the field of natural language processing (NLP) over recent years, primarily due to the widespread utilization of pre-trained language models. This shift began with Byte-Pair Encoding (BPE) and was later followed by the adoption of SentencePiece and WordPiece. While subword tokenization consistently outperforms character and word-level tokenization, the precise factors contributing to its success remain unclear. Key aspects such as the optimal segmentation granularity for diverse tasks and languages, the influence of data sources on tok",
+    "pdf_url": "https://arxiv.org/pdf/2402.15010v2"
+  }
+]

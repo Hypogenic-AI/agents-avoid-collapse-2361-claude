@@ -1,0 +1,78 @@
+\section{Related Work}
+\label{sec:related}
+
+\para{Single-model collapse.}
+\citet{shumailov2024nature} formalised model collapse, showing that a
+single OPT-125m fine-tuned on its own \wikitext outputs has perplexity
+that rises monotonically across generations and a generation
+distribution whose tails progressively disappear.
+\citet{alemohammad2023mad} extended the result to image generative
+models under the name \emph{Model Autophagy Disorder} (MAD), and
+\citet{briesch2023suffer} disentangled quality decay (preserved on
+verifiable tasks) from diversity decay (not preserved).
+\citet{guo2023linguistic} introduced lexical, syntactic, and semantic
+diversity metrics for the recursive-training setting; we reuse the
+distinct-bigram metric from that work. Theoretical accounts include
+\citet{dohmatob2024tale}, who frame collapse as a change of scaling laws,
+and \citet{seddik2024synthetic}, who derive a maximal admissible
+synthetic ratio. Our N=1 condition is a direct reproduction of the
+\citet{shumailov2024nature} ``replace'' regime.
+
+\para{Mitigation by data dynamics.}
+\citet{gerstgrasser2024accumulating} show that \emph{accumulating}
+synthetic and real data (rather than replacing) yields a finite,
+bounded test error independent of iteration count, both empirically
+on TinyStories and theoretically. \citet{dey2024universality} sharpen
+this to a universal $\pi^2/6$ asymptote. These results establish
+data-side mitigations; we deliberately ablate them by running our
+fine-tuning harness in the harshest replace regime so that diversity
+alone is the variable being tested.
+
+\para{Ecosystem-level collapse.}
+The work most directly comparable to ours is
+\citet{hodel2026epistemic}: $M$ copies of one base model, each
+fine-tuned on a non-overlapping segment of \wikitext, then jointly
+generating, pooling, shuffling, and re-splitting the synthetic data
+each iteration. They sweep $M \in \{1, 2, 4, 16\}$ and find the
+\emph{optimal} $M$ grows monotonically with iteration count. Our E1
+reproduces their compute-controlled setup but (a) extends the sweep
+to $N{=}8$ at finer spacing, (b) reports an explicit \mvp estimate at
+fixed horizon $T{=}6$, and (c) provides a direct comparison to the
+much cheaper retrieval-based ecosystem.
+
+\citet{wang2025web} build a parameter-frozen retrieval ecosystem of
+$N{=}3$ pretrained-different LLMs sharing a growing post pool, and
+show that the Frobenius norm of the inter-agent embedding-distance
+matrix converges to a small constant. Our E2 generalises their setup
+along the missing $N$ axis. \citet{vu2025recursive} provide a
+theoretical framework for $N{=}2$ heterogeneous models, validate it
+on Llama and Phi family LLMs, and document the substantial overlap of
+modern LLM pretraining corpora --- empirical motivation for the
+ecosystem framing.
+
+\citet{kovac2025recursive} treat the data side as the diversity knob,
+rotating across four small base models per generation and studying
+how training-data properties (lexical, semantic, quality) modulate
+distribution shift. Their result that lexical diversity \emph{amplifies}
+shift while semantic diversity \emph{mitigates} it is consistent with
+our finding that prompt-induced ``surface'' diversity buys little
+collapse-resistance, while pretraining-prior diversity buys a lot.
+
+\para{Population ecology and minimum viable population.}
+\citet{shaffer1981minimum} introduced the concept of \mvp as the
+smallest isolated population with a high probability of long-run
+persistence in the wild. \citet{traill2007mvp} report a generic
+vertebrate \mvp around several thousand individuals; our analogue is
+specifically about the \emph{number of distinct LLMs} required to keep
+their shared synthetic-text substrate from converging. The Hill--Shannon
+Diversity / Vendi score \citep{friedman2023vendi} we use as a primary
+metric is itself imported from ecology.
+
+\para{Positioning.}
+We are not the first to observe that ecosystem-level diversity helps;
+\citet{hodel2026epistemic} and \citet{wang2025web} both make this
+qualitative point. Our contribution is to (i) give the first explicit
+\mvp estimates that pin down a number, (ii) compare four axes of
+``individuality'' on identical metrics, and (iii) cross-check between
+the two methodologically very different ecosystem operationalisations
+that until now had not been benchmarked side by side.

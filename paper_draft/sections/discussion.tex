@@ -1,0 +1,120 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{Why the two harnesses give different \mvp estimates}
+
+Our most striking finding is the asymmetry between the two
+operationalisations. In the \rag harness an ecosystem of just two
+LLMs from different pretraining families preserves diversity for
+twelve iterations; in the fine-tuning harness, sixteen \distilgpt
+copies still collapse. The mechanism is straightforward. In the
+fine-tuning ecosystem the agents' \emph{parameters} drift each
+iteration, and the drift compounds: every retraining step pushes the
+model toward the modal mode of the synthetic data distribution, the
+eigenvalues of the data covariance shrink, and the model loses its
+ability to reproduce the tails. In the \rag ecosystem the parameters
+are \emph{frozen}; the only thing that can collapse is the
+\emph{retrieved context}, and modest retrieval randomness combined with
+the agents' fixed inductive biases keeps generations diverse.
+
+The practical implication is that \emph{the training-time link is what
+matters for collapse risk, not the inference-time loop.} A web full
+of LLM-generated text whose authors do not retrain on it (\eg they
+call a fixed API) is in the regime where our $N{=}2$ \rag ecosystem
+is safe. A web full of LLM-generated text whose authors \emph{do}
+retrain on it --- LLM-as-curator pipelines and self-improvement loops
+\citep{kovac2025recursive} --- is in the Shumailov collapse regime.
+
+\subsection{What counts as ``different''?}
+
+Holding $N{=}4$ fixed, model-family differentiation preserves
+$\mathbf{1.9\times}$ the terminal inter-agent semantic distance of the
+next-best axis (\axisprompt or \axisdata). The control (\axisseed) is
+only modestly worse than either of those. This is the empirically
+clearest answer to the ``what counts as different'' question:
+\emph{inductive bias from pretraining is the only axis that
+meaningfully buys collapse-resistance}. Prompts and \rag-pool
+segmentation move the conditional but keep the likelihood narrow.
+Different sampling seeds shift the realisation but not the
+distribution.
+
+This sharpens \citet{hodel2026epistemic}'s data-segment framing: in a
+\rag ecosystem (no further training), the data segment buys very
+little diversity because all four agents converge on the same
+posterior conditional on different contexts. The result implies that
+``individuality'' is not free of architectural choice:
+
+\begin{quote}
+\itshape
+Population diversity that defends against collapse must come from
+diversity in the \emph{prior} (architecture / pretraining), not just
+from diversity in the \emph{conditioning} (prompt, retrieval pool,
+or random seed).
+\end{quote}
+
+\subsection{The shape of the diversity benefit in fine-tuning}
+
+The marginal benefit of doubling $N$ is not monotonically diminishing
+in our E1 data. Going $N{=}1 \to 2$ buys a $40\%$ reduction in the
+terminal collapse multiplier; $N{=}2 \to 4$ buys $17\%$;
+$N{=}4 \to 8$ buys $17\%$; $N{=}8 \to 16$ buys $31\%$ (computed off
+\tabref{tab:e1_perp}). The non-monotonicity is interesting but
+expected to be sample-noisy at our two-seed budget. What is robust is
+that no $N$ tested has a perplexity slope statistically
+indistinguishable from zero, and Hodel \& West's qualitative finding
+that the optimal $N$ \emph{grows} with iteration count
+\citep{hodel2026epistemic} is consistent with our slope reductions.
+
+Three structural caveats explain why we see no flat curve: (i)
+per-ecosystem token budget is held fixed across $N$, so larger $N$
+means each agent sees fewer training tokens per generation; (ii) we
+deliberately ran replace mode without real-data refresh, the harshest
+\citet{shumailov2024nature} regime; (iii) all sixteen agents share one
+base architecture, so there is no architecture-axis benefit. A
+follow-up combining replace-mode with $N$ different pretrained bases
+would test whether the architecture-axis benefit observed in E2
+transfers to the parameter-updating regime.
+
+\subsection{Limitations}
+
+\para{Small models.} \distilgpt (82M) is the only fine-tuned backbone.
+Larger models exhibit different collapse dynamics
+\citep{dohmatob2024tale, hodel2026epistemic}.
+\para{Replace mode only.} We deliberately avoided
+\citet{gerstgrasser2024accumulating}-style accumulation to maximise the
+collapse signal; combining accumulation with population diversity is
+open.
+\para{Short horizons.} $T{=}6$ (E1) and $T{=}12$ (E2) are short.
+\citet{hodel2026epistemic}'s optimal $M$ keeps growing past $T{=}10$,
+so our failure to detect collapse in $N{=}2$ \rag may reflect the
+limit of our horizon, not of the ecosystem.
+\para{Limited seeds.} Two seeds in E1 and three in E2/E3 -- enough
+for means but not for tight error bars.
+\para{API non-determinism.} OpenRouter routes to different providers;
+seeds control only Python-level RNG.
+\para{\rag ``data-segment'' is an analogue.} Our \axisdata partitions
+the retrieval pool, not the training data; comparable in spirit to
+\citet{hodel2026epistemic} but not identical.
+\para{Single embedding model.} All semantic-distance metrics use one
+encoder (\minilm); qualitative conclusions should be robust to
+encoder choice but absolute numbers will not be.
+
+\subsection{Broader implications}
+
+The model-collapse literature is regularly cited as a reason to worry
+about future foundation-model training on a web increasingly populated
+by LLM output \citep{shumailov2024nature, dohmatob2024tale}. Our
+results refine that worry into two distinguishable claims. First,
+\emph{if} the LLMs producing that text are themselves retrained on
+their pooled outputs, $N \le 16$ at fixed compute is not enough to
+halt collapse, and our results say nothing reassuring about $N$ in the
+hundreds either; the rate slows but the slope stays positive. Second,
+\emph{if} the producers are a stable population of architecturally
+distinct frozen models --- close to today's API-served model market ---
+the substrate stays diverse with as few as $N{=}2$ distinct families.
+This shifts the policy question from ``how many LLMs do we need on the
+web'' to ``how many \emph{architecturally distinct} LLMs do we need,
+and do we need to constrain when their outputs feed back into
+training.'' The same argument cautions against monocultures even at
+high $N$: a thousand fine-tuned descendants of one base model are not
+a population, they are one model with extra noise.

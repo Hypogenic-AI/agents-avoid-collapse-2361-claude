@@ -1,0 +1,134 @@
+\section{Methodology}
+\label{sec:methodology}
+
+\subsection{Problem formulation}
+\label{sec:problem}
+
+Let $\{A_1, \ldots, A_N\}$ be a population of $N$ generative agents
+sharing a common text substrate $\gS_t$ at iteration $t$. At each step,
+every agent $A_i$ produces a new text slice $\gS_t^{(i)}$ and the pool
+is updated $\gS_{t+1} \leftarrow \mathrm{update}(\gS_t,
+\{\gS_t^{(i)}\}_i)$. We say the ecosystem \emph{collapses on
+metric $M$} over horizon $T$ if the sequence $M(\gS_1), M(\gS_2),
+\ldots, M(\gS_T)$ has a regression slope significantly different from
+zero in the worsening direction. The \emph{minimum viable population}
+on $M$ at horizon $T$, $\mvp_M(T)$, is the smallest $N$ for which the
+slope's null hypothesis of ``no decay'' cannot be rejected at
+$p > 0.05$, or, for lower-better metrics, the smallest $N$ for which
+the terminal value remains within
+$\mathrm{horizon\_frac} \cdot (M(\gS_T)|_{N=1} - M(\gS_0)|_{N=1})$
+of the initial value (we use $\mathrm{horizon\_frac} = 0.5$).
+
+\subsection{Two complementary harnesses}
+\label{sec:harnesses}
+
+Because the ecosystem question has been operationalised in two very
+different ways in the literature --- fine-tuning ecosystems
+\citep{hodel2026epistemic, shumailov2024nature} and retrieval ecosystems
+\citep{wang2025web} --- we run \emph{both} on the \emph{same} metric
+suite, so that \mvp and axis conclusions can be cross-validated.
+
+\subsubsection{E1: Fine-tuning ecosystem}
+\label{sec:e1}
+
+\para{Backbone.} \distilgpt (82M parameters), one fresh copy per agent.
+\para{Data.} \wikitext-raw-v1 (train split as initial real data; test
+split, fixed across generations, for perplexity).
+\para{Per-ecosystem token budget.} 80{,}000 synthetic tokens per
+generation, partitioned into $N$ equal slices, holding total compute
+roughly constant across $N$.
+\para{Loop.} For $t = 1, \ldots, T$:
+(i) each agent generates $\mathrm{budget}/N$ tokens at temperature
+$1.0$ and top-$p$ $0.95$; (ii) generated streams are pooled,
+retokenised in 64-token blocks, shuffled, and re-split into $N$ new
+equal slices; (iii) each agent fine-tunes one epoch on its slice
+(AdamW, lr $5{\times}10^{-5}$, batch size $16$). Replace mode: no
+real-data refresh.
+\para{Sweep.} $N \in \{1, 2, 4, 8, 16\}$, $T = 6$, two seeds per
+condition.
+
+\subsubsection{E2: Retrieval-augmented (RAG) ecosystem}
+\label{sec:e2}
+
+\para{Models.} A pool of small instruct-tuned LLMs hosted on
+OpenRouter: Llama-3.1-8B-Instruct, Mistral-7B-Instruct,
+Qwen-2.5-7B-Instruct, Gemma-2-9B-it, GPT-4o-mini,
+DeepSeek-Chat-v3, Hermes-3-Llama-3.1-8B, WizardLM-2-8x22B.
+Larger $N$ exposes the ecosystem to more pretraining-prior
+diversity.
+\para{Internet seed.} 20 paragraphs of $\geq 200$ characters sampled
+from \wikitext.
+\para{Loop.} At each iteration each agent retrieves
+$k = \lceil \beta \cdot |\mathrm{pool}| \rceil$ random posts
+($\beta = 0.2$), uses them as RAG context, and emits one $\leq 120$-token
+paragraph. New posts are appended to the pool.
+\para{Sweep.} $N \in \{1, 2, 3, 5, 8\}$ (subset by API budget),
+$T = 12$, three seeds per condition.
+
+\subsubsection{E3: Diversity-axis comparison}
+\label{sec:e3}
+
+At fixed $N{=}4$ in the RAG harness, four conditions:
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+    \item \axisseed --- same model, same prompt, agents differ only
+    by sampling RNG (control).
+    \item \axisdata --- same model, same prompt, each agent retrieves
+    from a disjoint slice of the seed corpus.
+    \item \axisprompt --- same base model, four distinct system-prompt
+    personas (physicist, detective novelist, children's storyteller,
+    tech journalist).
+    \item \axisfamily --- four OpenRouter models from different
+    pretraining lineages.
+\end{itemize}
+$T = 10$, three seeds per condition.
+
+\subsection{Metrics}
+\label{sec:metrics}
+
+We evaluate every iteration of every run with five metrics
+(\tabref{tab:metrics}). The semantic metrics use the
+\minilm sentence encoder. The Hill--Shannon Diversity (\hsd) is the
+Vendi score \citep{friedman2023vendi}, an effective number of distinct
+outputs. ``Lower-better'' metrics (perplexity) and
+``higher-better'' metrics (the four diversity scores) are handled
+symmetrically by the \mvp definition above.
+
+\begin{table}[t]
+    \centering
+    \caption{Evaluation metrics and their interpretation.}
+    \label{tab:metrics}
+    \small
+    \begin{tabular}{@{}lll@{}}
+        \toprule
+        \textbf{Metric} & \textbf{Definition} & \textbf{Direction} \\
+        \midrule
+        perplexity        & $\exp(\mathrm{NLL})$ on \wikitext test       & lower better \\
+        distinct-2        & unique bigrams / total bigrams               & higher better \\
+        mean pairwise dist.\ & mean off-diag.\ of $1 - \cos(e_i, e_j)$  & higher better \\
+        Frobenius (\citealt{wang2025web}) & $\|1 - \cos(e_i, e_j)\|_F$  & higher better \\
+        \hsd (Vendi)      & $\exp(-\sum (\lambda/n) \log(\lambda/n))$    & higher better \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Statistical analysis}
+\label{sec:stats}
+
+For each (experiment, $N$, metric) we fit an ordinary-least-squares
+linear regression of the metric on iteration index, report the slope
+with $95\%$ confidence interval, and the two-sided $p$-value of the
+slope's null. We define \mvp as in \secref{sec:problem}. All numbers
+are mean $\pm$ standard deviation across seeds. Mean values aggregate
+both across seeds and across the $N$ agents within each condition.
+
+\subsection{Implementation and reproducibility}
+\label{sec:repro}
+
+Random seeds for Python, NumPy, PyTorch, and our slice-permutation RNG
+are set explicitly per run. Per-iteration metrics and a sample of
+generated text are streamed to JSONL logs for post-hoc inspection. Each
+run's full configuration is checkpointed alongside its result.
+Hardware: 1$\times$NVIDIA RTX A6000 (E1); CPU + OpenRouter API (E2,
+E3). E2/E3 do not depend on bit-identical sampling; OpenRouter routes
+models to different providers and the random seed controls only the
+Python-level RNG (retrieval, prompt selection).

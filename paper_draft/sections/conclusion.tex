@@ -1,0 +1,56 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+We asked whether a population of $N$ self-training LLMs has a
+\emph{minimum viable population} below which a shared synthetic-text
+substrate inevitably collapses, and what counts as enough
+differentiation between agents. Two complementary harnesses --- a
+fine-tuning ecosystem of \distilgpt copies and a retrieval ecosystem
+of frozen API LLMs --- run on a common metric suite give a unified
+answer with two regimes.
+
+\para{Bottom line.}
+For a frozen-parameter ecosystem, $\mathbf{N{=}2}$ agents from
+distinct pretraining families preserve diversity for at least twelve
+iterations (slope of mean pairwise distance: $-0.002 \pm 0.004$,
+$p = 0.44$). For a self-training ecosystem at fixed per-ecosystem
+compute, even $\mathbf{N{=}16}$ homogeneous agents are insufficient to
+halt collapse over six iterations; the perplexity slope falls
+$\sim 5\times$ from $N{=}1$ to $N{=}16$ but never reaches zero. Across
+both regimes, the only individuality axis that meaningfully reduces
+collapse is the underlying pretraining model family: at fixed $N{=}4$
+it preserves $1.9\times$ the inter-agent distance of prompt-, retrieval-,
+or seed-based diversity.
+
+\para{Key takeaway.}
+Population diversity that defends against ecosystem collapse must come
+from diversity in the prior, not the conditioning, and the
+training-time link between agents is what determines whether collapse
+can be halted at any finite $N$ at all.
+
+\para{Future work.}
+Four directions follow. (1) Push the fine-tuning sweep to $N{=}64$ or
+$N{=}128$ to see whether the perplexity-vs-iteration slope is
+asymptotically zero for some finite $N$, or whether it remains
+positive in the limit. (2) Combine the fine-tuning ecosystem with
+$N$ different pretrained checkpoints to test whether the architecture-
+diversity benefit observed in the \rag harness transfers to the
+parameter-updating regime. (3) Combine population diversity with
+\citet{gerstgrasser2024accumulating}-style data accumulation. (4) Run
+\rag horizons of $T{=}50$ or $T{=}100$ to check whether $N{=}2$
+model-family ecosystems eventually decay.
+
+\paragraph{Reproducibility.}
+Per-iteration metrics, generated-text samples, and per-run
+configurations are saved to JSONL logs. Hardware: 1$\times$NVIDIA
+RTX A6000 for E1; CPU + OpenRouter API for E2/E3.
+
+\paragraph{Broader impact.}
+Our results refine, rather than overturn, existing concerns about
+LLM-generated text contaminating future training corpora. Frozen-model
+ecosystems with architectural diversity are robust; self-training
+loops are not, even with substantial population diversity. Because
+the result speaks to AI deployment policy, the most important caveat
+is the limitation on model scale: \distilgpt is small, and we cannot
+rule out qualitatively different dynamics at the scale of frontier
+foundation models.

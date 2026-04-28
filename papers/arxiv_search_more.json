@@ -1,0 +1,721 @@
+[
+  {
+    "title": "Self-Consuming Generative Models Go MAD",
+    "authors": [
+      "Sina Alemohammad",
+      "Josue Casco-Rodriguez",
+      "Lorenzo Luzi",
+      "Ahmed Imtiaz Humayun"
+    ],
+    "published": "2023-07-04",
+    "arxiv_id": "2307.01850v1",
+    "abstract": "Seismic advances in generative AI algorithms for imagery, text, and other data types has led to the temptation to use synthetic data to train next-generation models. Repeating this process creates an autophagous (self-consuming) loop whose properties are poorly understood. We conduct a thorough analytical and empirical analysis using state-of-the-art generative image models of three families of autophagous loops that differ in how fixed or fresh real training data is available through the generations of training and in whether the samples from previous generation models have been biased to tra",
+    "pdf_url": "https://arxiv.org/pdf/2307.01850v1"
+  },
+  {
+    "title": "Improving Fairness and Mitigating MADness in Generative Models",
+    "authors": [
+      "Paul Mayer",
+      "Lorenzo Luzi",
+      "Ali Siahkoohi",
+      "Don H. Johnson"
+    ],
+    "published": "2024-05-22",
+    "arxiv_id": "2405.13977v3",
+    "abstract": "Generative models unfairly penalize data belonging to minority classes, suffer from model autophagy disorder (MADness), and learn biased estimates of the underlying distribution parameters. Our theoretical and empirical results show that training generative models with intentionally designed hypernetworks leads to models that 1) are more fair when generating datapoints belonging to minority classes 2) are more stable in a self-consumed (i.e., MAD) setting, and 3) learn parameters that are less statistically biased. To further mitigate unfairness, MADness, and bias, we introduce a regularizatio",
+    "pdf_url": "https://arxiv.org/pdf/2405.13977v3"
+  },
+  {
+    "title": "The Convergence of eQTL Mapping, Heritability Estimation and Polygenic Modeling: Emerging Spectrum of Risk Variation in Bipolar Disorder",
+    "authors": [
+      "Eric R. Gamazon",
+      "Hae Kyung Im",
+      "Chunyu Liu",
+      "Members of the Bipolar Disorder Genome Study"
+    ],
+    "published": "2013-03-25",
+    "arxiv_id": "1303.6227v2",
+    "abstract": "It is widely held that a substantial genetic component underlies Bipolar Disorder (BD) and other neuropsychiatric disease traits. Recent efforts have been aimed at understanding the genetic basis of disease susceptibility, with genome-wide association studies (GWAS) unveiling some promising associations. Nevertheless, the genetic etiology of BD remains elusive with a substantial proportion of the heritability - which has been estimated to be 80% based on twin and family studies - unaccounted for by the specific genetic variants identified by large-scale GWAS. Furthermore, functional understand",
+    "pdf_url": "https://arxiv.org/pdf/1303.6227v2"
+  },
+  {
+    "title": "Dynamic Modeling of the Interaction Between Autophagy and Apoptosis in Mammalian Cells",
+    "authors": [
+      "I. Tavassoly",
+      "J. Parmar",
+      "A. N. Shajahan-Haq",
+      "R. Clarke"
+    ],
+    "published": "2013-12-26",
+    "arxiv_id": "1312.7149v2",
+    "abstract": "Autophagy is a conserved biological stress response in mammalian cells that is responsible for clearing damaged proteins and organelles from the cytoplasm and recycling their contents via the lysosomal pathway. In cases of mild stress, autophagy acts as a survival mechanism, while in cases of severe stress cells may switch to programmed cell death. Understanding the decision process that moves a cell from autophagy to apoptosis is important since abnormal regulation of autophagy occurs in many diseases, including cancer. To integrate existing knowledge about this decision process into a rigoro",
+    "pdf_url": "https://arxiv.org/pdf/1312.7149v2"
+  },
+  {
+    "title": "M-MAD: Multidimensional Multi-Agent Debate for Advanced Machine Translation Evaluation",
+    "authors": [
+      "Zhaopeng Feng",
+      "Jiayuan Su",
+      "Jiamei Zheng",
+      "Jiahan Ren"
+    ],
+    "published": "2024-12-28",
+    "arxiv_id": "2412.20127v3",
+    "abstract": "Recent advancements in large language models (LLMs) have given rise to the LLM-as-a-judge paradigm, showcasing their potential to deliver human-like judgments. However, in the field of machine translation (MT) evaluation, current LLM-as-a-judge methods fall short of learned automatic metrics. In this paper, we propose Multidimensional Multi-Agent Debate (M-MAD), a systematic LLM-based multi-agent framework for advanced LLM-as-a-judge MT evaluation. Our findings demonstrate that M-MAD achieves significant advancements by (1) decoupling heuristic MQM criteria into distinct evaluation dimensions ",
+    "pdf_url": "https://arxiv.org/pdf/2412.20127v3"
+  },
+  {
+    "title": "Enhancing precision of atomic clocks by tuning disorder in accessories",
+    "authors": [
+      "Aparajita Bhattacharyya",
+      "Ahana Ghoshal",
+      "Ujjwal Sen"
+    ],
+    "published": "2022-12-16",
+    "arxiv_id": "2212.08523v4",
+    "abstract": "We find that a quantum device having an accessory involving precision measurement can have an enhancement of its metrological precision in estimating an unknown parameter of the quantum system by insertion of glassy disorder, accidental or engineered. We clearly mention how an unbiased estimator can also be identified in a disordered situation, and how the precision thereof can be bounded by the quantum Cr{\u00e1}mer-Rao inequality. We compare the Fisher information-based lower bound of the minimum standard deviation of an unbiased estimator, in presence of glassy disorder in the system, with the s",
+    "pdf_url": "https://arxiv.org/pdf/2212.08523v4"
+  },
+  {
+    "title": "A model of autophagy size selectivity by receptor clustering on peroxisomes",
+    "authors": [
+      "Aidan I Brown",
+      "Andrew D Rutenberg"
+    ],
+    "published": "2016-10-03",
+    "arxiv_id": "1610.00766v2",
+    "abstract": "Selective autophagy must not only select the correct type of organelle, but also must discriminate between individual organelles of the same kind so that some but not all of the organelles are removed. We propose that physical clustering of autophagy receptor proteins on the organelle surface can provide an appropriate all-or-none signal for organelle degradation. We explore this proposal using a computational model restricted to peroxisomes and the relatively well characterized pexophagy receptor proteins NBR1 and p62. We find that larger peroxisomes nucleate NBR1 clusters first and lose them",
+    "pdf_url": "https://arxiv.org/pdf/1610.00766v2"
+  },
+  {
+    "title": "A tumor growth model with autophagy: the reaction-(cross-)diffusion system and its free boundary limit",
+    "authors": [
+      "Xu'an Dou",
+      "Jian-Guo Liu",
+      "Zhennan Zhou"
+    ],
+    "published": "2020-07-27",
+    "arxiv_id": "2007.13543v2",
+    "abstract": "In this paper, we propose a tumor growth model to incorporate and investigate the spatial effects of autophagy. The cells are classified into two phases: normal cells and autophagic cells, whose dynamics are also coupled with the nutrients. First, we construct a reaction-(cross-)diffusion system describing the evolution of cell densities, where the drift is determined by the negative gradient of the joint pressure, and the reaction terms manifest the unique mechanism of autophagy. Next, in the incompressible limit, such a cell density model naturally connects to a free boundary system, describ",
+    "pdf_url": "https://arxiv.org/pdf/2007.13543v2"
+  },
+  {
+    "title": "IVOA Recommendation: Spectrum Data Model 1.1",
+    "authors": [
+      "Jonathan McDowell",
+      "Doug Tody",
+      "Tamas Budavari",
+      "Markus Dolensky"
+    ],
+    "published": "2012-04-13",
+    "arxiv_id": "1204.3055v1",
+    "abstract": "We present a data model describing the structure of spectrophotometric datasets with spectral and temporal coordinates and associated metadata. This data model may be used to represent spectra, time series data, segments of SED (Spectral Energy Distributions) and other spectral or temporal associations.",
+    "pdf_url": "https://arxiv.org/pdf/1204.3055v1"
+  },
+  {
+    "title": "TerraGen: A Unified Multi-Task Layout Generation Framework for Remote Sensing Data Augmentation",
+    "authors": [
+      "Datao Tang",
+      "Hao Wang",
+      "Yudeng Xin",
+      "Hui Qiao"
+    ],
+    "published": "2025-10-24",
+    "arxiv_id": "2510.21391v1",
+    "abstract": "Remote sensing vision tasks require extensive labeled data across multiple, interconnected domains. However, current generative data augmentation frameworks are task-isolated, i.e., each vision task requires training an independent generative model, and ignores the modeling of geographical information and spatial constraints. To address these issues, we propose \\textbf{TerraGen}, a unified layout-to-image generation framework that enables flexible, spatially controllable synthesis of remote sensing imagery for various high-level vision tasks, e.g., detection, segmentation, and extraction. Spec",
+    "pdf_url": "https://arxiv.org/pdf/2510.21391v1"
+  },
+  {
+    "title": "Data Encoding for Byzantine-Resilient Distributed Optimization",
+    "authors": [
+      "Deepesh Data",
+      "Linqi Song",
+      "Suhas Diggavi"
+    ],
+    "published": "2019-07-05",
+    "arxiv_id": "1907.02664v2",
+    "abstract": "We study distributed optimization in the presence of Byzantine adversaries, where both data and computation are distributed among $m$ worker machines, $t$ of which may be corrupt. The compromised nodes may collaboratively and arbitrarily deviate from their pre-specified programs, and a designated (master) node iteratively computes the model/parameter vector for generalized linear models. In this work, we primarily focus on two iterative algorithms: Proximal Gradient Descent (PGD) and Coordinate Descent (CD). Gradient descent (GD) is a special case of these algorithms. PGD is typically used in ",
+    "pdf_url": "https://arxiv.org/pdf/1907.02664v2"
+  },
+  {
+    "title": "Model-Targeted Poisoning Attacks with Provable Convergence",
+    "authors": [
+      "Fnu Suya",
+      "Saeed Mahloujifar",
+      "Anshuman Suri",
+      "David Evans"
+    ],
+    "published": "2020-06-30",
+    "arxiv_id": "2006.16469v2",
+    "abstract": "In a poisoning attack, an adversary with control over a small fraction of the training data attempts to select that data in a way that induces a corrupted model that misbehaves in favor of the adversary. We consider poisoning attacks against convex machine learning models and propose an efficient poisoning attack designed to induce a specified model. Unlike previous model-targeted poisoning attacks, our attack comes with provable convergence to {\\it any} attainable target classifier. The distance from the induced classifier to the target classifier is inversely proportional to the square root ",
+    "pdf_url": "https://arxiv.org/pdf/2006.16469v2"
+  },
+  {
+    "title": "Byzantine-Resilient SGD in High Dimensions on Heterogeneous Data",
+    "authors": [
+      "Deepesh Data",
+      "Suhas Diggavi"
+    ],
+    "published": "2020-05-16",
+    "arxiv_id": "2005.07866v1",
+    "abstract": "We study distributed stochastic gradient descent (SGD) in the master-worker architecture under Byzantine attacks. We consider the heterogeneous data model, where different workers may have different local datasets, and we do not make any probabilistic assumptions on data generation. At the core of our algorithm, we use the polynomial-time outlier-filtering procedure for robust mean estimation proposed by Steinhardt et al. (ITCS 2018) to filter-out corrupt gradients. In order to be able to apply their filtering procedure in our {\\em heterogeneous} data setting where workers compute {\\em stochas",
+    "pdf_url": "https://arxiv.org/pdf/2005.07866v1"
+  },
+  {
+    "title": "AeroGen: Enhancing Remote Sensing Object Detection with Diffusion-Driven Data Generation",
+    "authors": [
+      "Datao Tang",
+      "Xiangyong Cao",
+      "Xuan Wu",
+      "Jialin Li"
+    ],
+    "published": "2024-11-23",
+    "arxiv_id": "2411.15497v3",
+    "abstract": "Remote sensing image object detection (RSIOD) aims to identify and locate specific objects within satellite or aerial imagery. However, there is a scarcity of labeled data in current RSIOD datasets, which significantly limits the performance of current detection algorithms. Although existing techniques, e.g., data augmentation and semi-supervised learning, can mitigate this scarcity issue to some extent, they are heavily dependent on high-quality labeled data and perform worse in rare object classes. To address this issue, this paper proposes a layout-controllable diffusion generative model (i",
+    "pdf_url": "https://arxiv.org/pdf/2411.15497v3"
+  },
+  {
+    "title": "Constraints on dark energy from H II starburst galaxy apparent magnitude versus redshift data",
+    "authors": [
+      "Data Mania",
+      "Bharat Ratra"
+    ],
+    "published": "2011-10-25",
+    "arxiv_id": "1110.5626v1",
+    "abstract": "In this paper we use H II starburst galaxy apparent magnitude versus redshift data from Siegel et al. (2005) to constrain dark energy cosmological model parameters. These constraints are generally consistent with those derived using other data sets, but are not as restrictive as the tightest currently available constraints.",
+    "pdf_url": "https://arxiv.org/pdf/1110.5626v1"
+  },
+  {
+    "title": "IVOA Recommendation: Data Model for Astronomical DataSet Characterisation",
+    "authors": [
+      "Mireille Louys",
+      "Anita Richards",
+      "Francois Bonnarel",
+      "Alberto Micol"
+    ],
+    "published": "2011-11-09",
+    "arxiv_id": "1111.2281v1",
+    "abstract": "This document defines the high level metadata necessary to describe the physical parameter space of observed or simulated astronomical data sets, such as 2D-images, data cubes, X-ray event lists, IFU data, etc.. The Characterisation data model is an abstraction which can be used to derive a structured description of any relevant data and thus to facilitate its discovery and scientific interpretation. The model aims at facilitating the manipulation of heterogeneous data in any VO framework or portal. A VO Characterisation instance can include descriptions of the data axes, the range of coordina",
+    "pdf_url": "https://arxiv.org/pdf/1111.2281v1"
+  },
+  {
+    "title": "Long-Tailed Recognition on Binary Networks by Calibrating A Pre-trained Model",
+    "authors": [
+      "Jihun Kim",
+      "Dahyun Kim",
+      "Hyungrok Jung",
+      "Taeil Oh"
+    ],
+    "published": "2024-03-30",
+    "arxiv_id": "2404.00285v1",
+    "abstract": "Deploying deep models in real-world scenarios entails a number of challenges, including computational efficiency and real-world (e.g., long-tailed) data distributions. We address the combined challenge of learning long-tailed distributions using highly resource-efficient binary neural networks as backbones. Specifically, we propose a calibrate-and-distill framework that uses off-the-shelf pretrained full-precision models trained on balanced datasets to use as teachers for distillation when learning binary networks on long-tailed datasets. To better generalize to various datasets, we further pr",
+    "pdf_url": "https://arxiv.org/pdf/2404.00285v1"
+  },
+  {
+    "title": "Hierarchical Character Embeddings: Learning Phonological and Semantic Representations in Languages of Logographic Origin using Recursive Neural Networks",
+    "authors": [
+      "Minh Nguyen",
+      "Gia H. Ngo",
+      "Nancy F. Chen"
+    ],
+    "published": "2019-12-20",
+    "arxiv_id": "1912.09913v2",
+    "abstract": "Logographs (Chinese characters) have recursive structures (i.e. hierarchies of sub-units in logographs) that contain phonological and semantic information, as developmental psychology literature suggests that native speakers leverage on the structures to learn how to read. Exploiting these structures could potentially lead to better embeddings that can benefit many downstream tasks. We propose building hierarchical logograph (character) embeddings from logograph recursive structures using treeLSTM, a recursive neural network. Using recursive neural network imposes a prior on the mapping from l",
+    "pdf_url": "https://arxiv.org/pdf/1912.09913v2"
+  },
+  {
+    "title": "Unforgettable Generalization in Language Models",
+    "authors": [
+      "Eric Zhang",
+      "Leshem Chosen",
+      "Jacob Andreas"
+    ],
+    "published": "2024-09-03",
+    "arxiv_id": "2409.02228v1",
+    "abstract": "When language models (LMs) are trained to forget (or \"unlearn'') a skill, how precisely does their behavior change? We study the behavior of transformer LMs in which tasks have been forgotten via fine-tuning on randomized labels. Such LMs learn to generate near-random predictions for individual examples in the \"training'' set used for forgetting. Across tasks, however, LMs exhibit extreme variability in whether LM predictions change on examples outside the training set. In some tasks (like entailment classification), forgetting generalizes robustly, and causes models to produce uninformative p",
+    "pdf_url": "https://arxiv.org/pdf/2409.02228v1"
+  },
+  {
+    "title": "Looping Back to Move Forward: Recursive Transformers for Efficient and Flexible Large Multimodal Models",
+    "authors": [
+      "Ruihan Xu",
+      "Yuting Gao",
+      "Lan Wang",
+      "Jianing Li"
+    ],
+    "published": "2026-02-09",
+    "arxiv_id": "2602.09080v1",
+    "abstract": "Large Multimodal Models (LMMs) have achieved remarkable success in vision-language tasks, yet their vast parameter counts are often underutilized during both training and inference. In this work, we embrace the idea of looping back to move forward: reusing model parameters through recursive refinement to extract stronger multimodal representations without increasing model size. We propose RecursiveVLM, a recursive Transformer architecture tailored for LMMs. Two key innovations enable effective looping: (i) a Recursive Connector that aligns features across recursion steps by fusing intermediate",
+    "pdf_url": "https://arxiv.org/pdf/2602.09080v1"
+  },
+  {
+    "title": "Forgetting is Everywhere",
+    "authors": [
+      "Ben Sanati",
+      "Thomas L. Lee",
+      "Trevor McInroe",
+      "Aidan Scannell"
+    ],
+    "published": "2025-11-06",
+    "arxiv_id": "2511.04666v3",
+    "abstract": "A fundamental challenge in developing general learning algorithms is their tendency to forget past knowledge when adapting to new data. Addressing this problem requires a principled understanding of forgetting; yet, despite decades of study, no unified definition has emerged that provides insights into the underlying dynamics of learning. We propose an algorithm- and task-agnostic theory that characterises forgetting as a lack of self-consistency in a learner's predictive distribution, manifesting as a loss of predictive information. Our theory naturally yields a general measure of an algorith",
+    "pdf_url": "https://arxiv.org/pdf/2511.04666v3"
+  },
+  {
+    "title": "How do language models learn facts? Dynamics, curricula and hallucinations",
+    "authors": [
+      "Nicolas Zucchet",
+      "J\u00f6rg Bornschein",
+      "Stephanie Chan",
+      "Andrew Lampinen"
+    ],
+    "published": "2025-03-27",
+    "arxiv_id": "2503.21676v2",
+    "abstract": "Large language models accumulate vast knowledge during pre-training, yet the dynamics governing this acquisition remain poorly understood. This work investigates the learning dynamics of language models on a synthetic factual recall task, uncovering three key findings: First, language models learn in three phases, exhibiting a performance plateau before acquiring precise factual knowledge. Mechanistically, this plateau coincides with the formation of attention-based circuits that support recall. Second, the training data distribution significantly impacts learning dynamics, as imbalanced distr",
+    "pdf_url": "https://arxiv.org/pdf/2503.21676v2"
+  },
+  {
+    "title": "Discriminating Similar Languages: Evaluations and Explorations",
+    "authors": [
+      "Cyril Goutte",
+      "Serge L\u00e9ger",
+      "Shervin Malmasi",
+      "Marcos Zampieri"
+    ],
+    "published": "2016-09-30",
+    "arxiv_id": "1610.00031v1",
+    "abstract": "We present an analysis of the performance of machine learning classifiers on discriminating between similar languages and language varieties. We carried out a number of experiments using the results of the two editions of the Discriminating between Similar Languages (DSL) shared task. We investigate the progress made between the two tasks, estimate an upper bound on possible performance using ensemble and oracle combination, and provide learning curves to help us understand which languages are more challenging. A number of difficult sentences are identified and investigated further with human ",
+    "pdf_url": "https://arxiv.org/pdf/1610.00031v1"
+  },
+  {
+    "title": "Are Compressed Language Models Less Subgroup Robust?",
+    "authors": [
+      "Leonidas Gee",
+      "Andrea Zugarini",
+      "Novi Quadrianto"
+    ],
+    "published": "2024-03-26",
+    "arxiv_id": "2403.17811v1",
+    "abstract": "To reduce the inference cost of large language models, model compression is increasingly used to create smaller scalable models. However, little is known about their robustness to minority subgroups defined by the labels and attributes of a dataset. In this paper, we investigate the effects of 18 different compression methods and settings on the subgroup robustness of BERT language models. We show that worst-group performance does not depend on model size alone, but also on the compression method used. Additionally, we find that model compression does not always worsen the performance on minor",
+    "pdf_url": "https://arxiv.org/pdf/2403.17811v1"
+  },
+  {
+    "title": "DogLayout: Denoising Diffusion GAN for Discrete and Continuous Layout Generation",
+    "authors": [
+      "Zhaoxing Gan",
+      "Guangnan Ye"
+    ],
+    "published": "2024-11-30",
+    "arxiv_id": "2412.00381v1",
+    "abstract": "Layout Generation aims to synthesize plausible arrangements from given elements. Currently, the predominant methods in layout generation are Generative Adversarial Networks (GANs) and diffusion models, each presenting its own set of challenges. GANs typically struggle with handling discrete data due to their requirement for differentiable generated samples and have historically circumvented the direct generation of discrete labels by treating them as fixed conditions. Conversely, diffusion-based models, despite achieving state-of-the-art performance across several metrics, require extensive sa",
+    "pdf_url": "https://arxiv.org/pdf/2412.00381v1"
+  },
+  {
+    "title": "On Convergence and Stability of GANs",
+    "authors": [
+      "Naveen Kodali",
+      "Jacob Abernethy",
+      "James Hays",
+      "Zsolt Kira"
+    ],
+    "published": "2017-05-19",
+    "arxiv_id": "1705.07215v5",
+    "abstract": "We propose studying GAN training dynamics as regret minimization, which is in contrast to the popular view that there is consistent minimization of a divergence between real and generated distributions. We analyze the convergence of GAN training from this new point of view to understand why mode collapse happens. We hypothesize the existence of undesirable local equilibria in this non-convex game to be responsible for mode collapse. We observe that these local equilibria often exhibit sharp gradients of the discriminator function around some real data points. We demonstrate that these degenera",
+    "pdf_url": "https://arxiv.org/pdf/1705.07215v5"
+  },
+  {
+    "title": "SCPAT-GAN: Structural Constrained and Pathology Aware Convolutional Transformer-GAN for Virtual Histology Staining of Human Coronary OCT images",
+    "authors": [
+      "Xueshen Li",
+      "Hongshan Liu",
+      "Xiaoyu Song",
+      "Brigitta C. Brott"
+    ],
+    "published": "2023-07-22",
+    "arxiv_id": "2307.12138v1",
+    "abstract": "There is a significant need for the generation of virtual histological information from coronary optical coherence tomography (OCT) images to better guide the treatment of coronary artery disease. However, existing methods either require a large pixel-wisely paired training dataset or have limited capability to map pathological regions. To address these issues, we proposed a structural constrained, pathology aware, transformer generative adversarial network, namely SCPAT-GAN, to generate virtual stained H&E histology from OCT images. The proposed SCPAT-GAN advances existing methods via a novel",
+    "pdf_url": "https://arxiv.org/pdf/2307.12138v1"
+  },
+  {
+    "title": "Taming Mode Collapse in Score Distillation for Text-to-3D Generation",
+    "authors": [
+      "Peihao Wang",
+      "Dejia Xu",
+      "Zhiwen Fan",
+      "Dilin Wang"
+    ],
+    "published": "2023-12-31",
+    "arxiv_id": "2401.00909v2",
+    "abstract": "Despite the remarkable performance of score distillation in text-to-3D generation, such techniques notoriously suffer from view inconsistency issues, also known as \"Janus\" artifact, where the generated objects fake each view with multiple front faces. Although empirically effective methods have approached this problem via score debiasing or prompt engineering, a more rigorous perspective to explain and tackle this problem remains elusive. In this paper, we reveal that the existing score distillation-based text-to-3D generation frameworks degenerate to maximal likelihood seeking on each view in",
+    "pdf_url": "https://arxiv.org/pdf/2401.00909v2"
+  },
+  {
+    "title": "Sequential Attention GAN for Interactive Image Editing",
+    "authors": [
+      "Yu Cheng",
+      "Zhe Gan",
+      "Yitong Li",
+      "Jingjing Liu"
+    ],
+    "published": "2018-12-20",
+    "arxiv_id": "1812.08352v4",
+    "abstract": "Most existing text-to-image synthesis tasks are static single-turn generation, based on pre-defined textual descriptions of images. To explore more practical and interactive real-life applications, we introduce a new task - Interactive Image Editing, where users can guide an agent to edit images via multi-turn textual commands on-the-fly. In each session, the agent takes a natural language description from the user as the input and modifies the image generated in the previous turn to a new design, following the user description. The main challenges in this sequential and interactive image gene",
+    "pdf_url": "https://arxiv.org/pdf/1812.08352v4"
+  },
+  {
+    "title": "Data-Efficient GAN Training Beyond (Just) Augmentations: A Lottery Ticket Perspective",
+    "authors": [
+      "Tianlong Chen",
+      "Yu Cheng",
+      "Zhe Gan",
+      "Jingjing Liu"
+    ],
+    "published": "2021-02-28",
+    "arxiv_id": "2103.00397v3",
+    "abstract": "Training generative adversarial networks (GANs) with limited real image data generally results in deteriorated performance and collapsed models. To conquer this challenge, we are inspired by the latest observation, that one can discover independently trainable and highly sparse subnetworks (a.k.a., lottery tickets) from GANs. Treating this as an inductive prior, we suggest a brand-new angle towards data-efficient GAN training: by first identifying the lottery ticket from the original GAN using the small training set of real images; and then focusing on training that sparse subnetwork by re-usi",
+    "pdf_url": "https://arxiv.org/pdf/2103.00397v3"
+  },
+  {
+    "title": "Alleviating Mode Collapse in GAN via Diversity Penalty Module",
+    "authors": [
+      "Sen Pei",
+      "Richard Yi Da Xu",
+      "Shiming Xiang",
+      "Gaofeng Meng"
+    ],
+    "published": "2021-08-05",
+    "arxiv_id": "2108.02353v4",
+    "abstract": "The vanilla GAN (Goodfellow et al. 2014) suffers from mode collapse deeply, which usually manifests as that the images generated by generators tend to have a high similarity amongst them, even though their corresponding latent vectors have been very different. In this paper, we introduce a pluggable diversity penalty module (DPM) to alleviate mode collapse of GANs. It reduces the similarity of image pairs in feature space, i.e., if two latent vectors are different, then we enforce the generator to generate two images with different features. The normalized Gram matrix is used to measure the si",
+    "pdf_url": "https://arxiv.org/pdf/2108.02353v4"
+  },
+  {
+    "title": "Diverse Image Generation via Self-Conditioned GANs",
+    "authors": [
+      "Steven Liu",
+      "Tongzhou Wang",
+      "David Bau",
+      "Jun-Yan Zhu"
+    ],
+    "published": "2020-06-18",
+    "arxiv_id": "2006.10728v2",
+    "abstract": "We introduce a simple but effective unsupervised method for generating realistic and diverse images. We train a class-conditional GAN model without using manually annotated class labels. Instead, our model is conditional on labels automatically derived from clustering in the discriminator's feature space. Our clustering step automatically discovers diverse modes, and explicitly requires the generator to cover them. Experiments on standard mode collapse benchmarks show that our method outperforms several competing methods when addressing mode collapse. Our method also performs well on large-sca",
+    "pdf_url": "https://arxiv.org/pdf/2006.10728v2"
+  },
+  {
+    "title": "Learning From Failure: Integrating Negative Examples when Fine-tuning Large Language Models as Agents",
+    "authors": [
+      "Renxi Wang",
+      "Haonan Li",
+      "Xudong Han",
+      "Yixuan Zhang"
+    ],
+    "published": "2024-02-18",
+    "arxiv_id": "2402.11651v2",
+    "abstract": "Large language models (LLMs) have achieved success in acting as agents, which interact with environments through tools such as search engines. However, LLMs are optimized for language generation instead of tool use during training or alignment, limiting their effectiveness as agents. To resolve this problem, previous work has first collected interaction trajectories between LLMs and environments, using only trajectories that successfully finished the task to fine-tune smaller models, making fine-tuning data scarce and acquiring it both difficult and costly. Discarding failed trajectories also ",
+    "pdf_url": "https://arxiv.org/pdf/2402.11651v2"
+  },
+  {
+    "title": "From Model-Based Screening to Data-Driven Surrogates: A Multi-Stage Workflow for Exploring Stochastic Agent-Based Models",
+    "authors": [
+      "Paul Saves",
+      "Matthieu Mastio",
+      "Nicolas Verstaevel",
+      "Benoit Gaudou"
+    ],
+    "published": "2026-04-03",
+    "arxiv_id": "2604.03350v1",
+    "abstract": "Systematic exploration of Agent-Based Models (ABMs) is challenged by the curse of dimensionality and their inherent stochasticity. We present a multi-stage pipeline integrating the systematic design of experiments with machine learning surrogates. Using a predator-prey case study, our methodology proceeds in two steps. First, an automated model-based screening identifies dominant variables, assesses outcome variability, and segments the parameter space. Second, we train Machine Learning models to map the remaining nonlinear interaction effects. This approach automates the discovery of unstable",
+    "pdf_url": "https://arxiv.org/pdf/2604.03350v1"
+  },
+  {
+    "title": "A Methodology to Engineer and Validate Dynamic Multi-level Multi-agent Based Simulations",
+    "authors": [
+      "Jean-Baptiste Soyez",
+      "Gildas Morvan",
+      "Daniel Dupont",
+      "Rochdi Merzouki"
+    ],
+    "published": "2013-11-20",
+    "arxiv_id": "1311.5108v1",
+    "abstract": "This article proposes a methodology to model and simulate complex systems, based on IRM4MLS, a generic agent-based meta-model able to deal with multi-level systems. This methodology permits the engineering of dynamic multi-level agent-based models, to represent complex systems over several scales and domains of interest. Its goal is to simulate a phenomenon using dynamically the lightest representation to save computer resources without loss of information. This methodology is based on two mechanisms: (1) the activation or deactivation of agents representing different domain parts of the same ",
+    "pdf_url": "https://arxiv.org/pdf/1311.5108v1"
+  },
+  {
+    "title": "Quantifying non deterministic drift in large language models",
+    "authors": [
+      "Claire Nicholson"
+    ],
+    "published": "2026-01-12",
+    "arxiv_id": "2601.19934v1",
+    "abstract": "Large language models (LLMs) are widely used for tasks ranging from summarisation to decision support. In practice, identical prompts do not always produce identical outputs, even when temperature and other decoding parameters are fixed. In this work, we conduct repeated-run experiments to empirically quantify baseline behavioural drift, defined as output variability observed when the same prompt is issued multiple times under operator-free conditions. We evaluate two publicly accessible models, gpt-4o-mini and llama3.1-8b, across five prompt categories using exact repeats, perturbed inputs, a",
+    "pdf_url": "https://arxiv.org/pdf/2601.19934v1"
+  },
+  {
+    "title": "Emergent Language: A Survey and Taxonomy",
+    "authors": [
+      "Jannik Peters",
+      "Constantin Waubert de Puiseau",
+      "Hasan Tercan",
+      "Arya Gopikrishnan"
+    ],
+    "published": "2024-09-04",
+    "arxiv_id": "2409.02645v2",
+    "abstract": "The field of emergent language represents a novel area of research within the domain of artificial intelligence, particularly within the context of multi-agent reinforcement learning. Although the concept of studying language emergence is not new, early approaches were primarily concerned with explaining human language formation, with little consideration given to its potential utility for artificial agents. In contrast, studies based on reinforcement learning aim to develop communicative capabilities in agents that are comparable to or even superior to human language. Thus, they extend beyond",
+    "pdf_url": "https://arxiv.org/pdf/2409.02645v2"
+  },
+  {
+    "title": "Retrospex: Language Agent Meets Offline Reinforcement Learning Critic",
+    "authors": [
+      "Yufei Xiang",
+      "Yiqun Shen",
+      "Yeqin Zhang",
+      "Cam-Tu Nguyen"
+    ],
+    "published": "2025-05-17",
+    "arxiv_id": "2505.11807v2",
+    "abstract": "Large Language Models (LLMs) possess extensive knowledge and commonsense reasoning capabilities, making them valuable for creating powerful agents. However, existing LLM agent frameworks have not fully utilized past experiences for improvement. This work introduces a new LLM-based agent framework called Retrospex, which addresses this challenge by analyzing past experiences in depth. Unlike previous approaches, Retrospex does not directly integrate experiences into the LLM's context. Instead, it combines the LLM's action likelihood with action values estimated by a Reinforcement Learning (RL) ",
+    "pdf_url": "https://arxiv.org/pdf/2505.11807v2"
+  },
+  {
+    "title": "Hierarchical Multi-agent Large Language Model Reasoning for Autonomous Functional Materials Discovery",
+    "authors": [
+      "Samuel Rothfarb",
+      "Megan C. Davis",
+      "Ivana Matanovic",
+      "Baikun Li"
+    ],
+    "published": "2025-12-15",
+    "arxiv_id": "2512.13930v1",
+    "abstract": "Artificial intelligence is reshaping scientific exploration, but most methods automate procedural tasks without engaging in scientific reasoning, limiting autonomy in discovery. We introduce Materials Agents for Simulation and Theory in Electronic-structure Reasoning (MASTER), an active learning framework where large language models autonomously design, execute, and interpret atomistic simulations. In MASTER, a multimodal system translates natural language into density functional theory workflows, while higher-level reasoning agents guide discovery through a hierarchy of strategies, including ",
+    "pdf_url": "https://arxiv.org/pdf/2512.13930v1"
+  },
+  {
+    "title": "Learning the Value Systems of Agents with Preference-based and Inverse Reinforcement Learning",
+    "authors": [
+      "Andr\u00e9s Holgado-S\u00e1nchez",
+      "Holger Billhardt",
+      "Alberto Fern\u00e1ndez",
+      "Sascha Ossowski"
+    ],
+    "published": "2026-02-04",
+    "arxiv_id": "2602.04518v1",
+    "abstract": "Agreement Technologies refer to open computer systems in which autonomous software agents interact with one another, typically on behalf of humans, in order to come to mutually acceptable agreements. With the advance of AI systems in recent years, it has become apparent that such agreements, in order to be acceptable to the involved parties, must remain aligned with ethical principles and moral values. However, this is notoriously difficult to ensure, especially as different human users (and their software agents) may hold different value systems, i.e. they may differently weigh the importance",
+    "pdf_url": "https://arxiv.org/pdf/2602.04518v1"
+  },
+  {
+    "title": "Emotion in Reinforcement Learning Agents and Robots: A Survey",
+    "authors": [
+      "Thomas M. Moerland",
+      "Joost Broekens",
+      "Catholijn M. Jonker"
+    ],
+    "published": "2017-05-15",
+    "arxiv_id": "1705.05172v1",
+    "abstract": "This article provides the first survey of computational models of emotion in reinforcement learning (RL) agents. The survey focuses on agent/robot emotions, and mostly ignores human user emotions. Emotions are recognized as functional in decision-making by influencing motivation and action selection. Therefore, computational emotion models are usually grounded in the agent's decision making architecture, of which RL is an important subclass. Studying emotions in RL-based agents is useful for three research fields. For machine learning (ML) researchers, emotion models may improve learning effic",
+    "pdf_url": "https://arxiv.org/pdf/1705.05172v1"
+  },
+  {
+    "title": "A Survey of Multi-Agent Deep Reinforcement Learning with Communication",
+    "authors": [
+      "Changxi Zhu",
+      "Mehdi Dastani",
+      "Shihan Wang"
+    ],
+    "published": "2022-03-16",
+    "arxiv_id": "2203.08975v2",
+    "abstract": "Communication is an effective mechanism for coordinating the behaviors of multiple agents, broadening their views of the environment, and to support their collaborations. In the field of multi-agent deep reinforcement learning (MADRL), agents can improve the overall learning performance and achieve their objectives by communication. Agents can communicate various types of messages, either to all agents or to specific agent groups, or conditioned on specific constraints. With the growing body of research work in MADRL with communication (Comm-MADRL), there is a lack of a systematic and structur",
+    "pdf_url": "https://arxiv.org/pdf/2203.08975v2"
+  },
+  {
+    "title": "Creative Problem Solving in Artificially Intelligent Agents: A Survey and Framework",
+    "authors": [
+      "Evana Gizzi",
+      "Lakshmi Nair",
+      "Sonia Chernova",
+      "Jivko Sinapov"
+    ],
+    "published": "2022-04-21",
+    "arxiv_id": "2204.10358v1",
+    "abstract": "Creative Problem Solving (CPS) is a sub-area within Artificial Intelligence (AI) that focuses on methods for solving off-nominal, or anomalous problems in autonomous systems. Despite many advancements in planning and learning, resolving novel problems or adapting existing knowledge to a new context, especially in cases where the environment may change in unpredictable ways post deployment, remains a limiting factor in the safe and useful integration of intelligent systems. The emergence of increasingly autonomous systems dictates the necessity for AI agents to deal with environmental uncertain",
+    "pdf_url": "https://arxiv.org/pdf/2204.10358v1"
+  },
+  {
+    "title": "Learning Sharing Behaviors with Arbitrary Numbers of Agents",
+    "authors": [
+      "Katherine Metcalf",
+      "Barry-John Theobald",
+      "Nicholas Apostoloff"
+    ],
+    "published": "2018-12-10",
+    "arxiv_id": "1812.04145v1",
+    "abstract": "We propose a method for modeling and learning turn-taking behaviors for accessing a shared resource. We model the individual behavior for each agent in an interaction and then use a multi-agent fusion model to generate a summary over the expected actions of the group to render the model independent of the number of agents. The individual behavior models are weighted finite state transducers (WFSTs) with weights dynamically updated during interactions, and the multi-agent fusion model is a logistic regression classifier.\n  We test our models in a multi-agent tower-building environment, where a ",
+    "pdf_url": "https://arxiv.org/pdf/1812.04145v1"
+  },
+  {
+    "title": "Open-Ended Learning Leads to Generally Capable Agents",
+    "authors": [
+      "Open Ended Learning Team",
+      "Adam Stooke",
+      "Anuj Mahajan",
+      "Catarina Barros"
+    ],
+    "published": "2021-07-27",
+    "arxiv_id": "2107.12808v2",
+    "abstract": "In this work we create agents that can perform well beyond a single, individual task, that exhibit much wider generalisation of behaviour to a massive, rich space of challenges. We define a universe of tasks within an environment domain and demonstrate the ability to train agents that are generally capable across this vast space and beyond. The environment is natively multi-agent, spanning the continuum of competitive, cooperative, and independent games, which are situated within procedurally generated physical 3D worlds. The resulting space is exceptionally diverse in terms of the challenges ",
+    "pdf_url": "https://arxiv.org/pdf/2107.12808v2"
+  },
+  {
+    "title": "Diffusion Augmented Agents: A Framework for Efficient Exploration and Transfer Learning",
+    "authors": [
+      "Norman Di Palo",
+      "Leonard Hasenclever",
+      "Jan Humplik",
+      "Arunkumar Byravan"
+    ],
+    "published": "2024-07-30",
+    "arxiv_id": "2407.20798v1",
+    "abstract": "We introduce Diffusion Augmented Agents (DAAG), a novel framework that leverages large language models, vision language models, and diffusion models to improve sample efficiency and transfer learning in reinforcement learning for embodied agents. DAAG hindsight relabels the agent's past experience by using diffusion models to transform videos in a temporally and geometrically consistent way to align with target instructions with a technique we call Hindsight Experience Augmentation. A large language model orchestrates this autonomous process without requiring human supervision, making it well-",
+    "pdf_url": "https://arxiv.org/pdf/2407.20798v1"
+  },
+  {
+    "title": "Creating Multimodal Interactive Agents with Imitation and Self-Supervised Learning",
+    "authors": [
+      "DeepMind Interactive Agents Team",
+      "Josh Abramson",
+      "Arun Ahuja",
+      "Arthur Brussee"
+    ],
+    "published": "2021-12-07",
+    "arxiv_id": "2112.03763v2",
+    "abstract": "A common vision from science fiction is that robots will one day inhabit our physical spaces, sense the world as we do, assist our physical labours, and communicate with us through natural language. Here we study how to design artificial agents that can interact naturally with humans using the simplification of a virtual environment. We show that imitation learning of human-human interactions in a simulated world, in conjunction with self-supervised learning, is sufficient to produce a multimodal interactive agent, which we call MIA, that successfully interacts with non-adversarial humans 75% ",
+    "pdf_url": "https://arxiv.org/pdf/2112.03763v2"
+  },
+  {
+    "title": "Privacy Measurement in Tabular Synthetic Data: State of the Art and Future Research Directions",
+    "authors": [
+      "Alexander Boudewijn",
+      "Andrea Filippo Ferraris",
+      "Daniele Panfilo",
+      "Vanessa Cocca"
+    ],
+    "published": "2023-11-29",
+    "arxiv_id": "2311.17453v1",
+    "abstract": "Synthetic data (SD) have garnered attention as a privacy enhancing technology. Unfortunately, there is no standard for quantifying their degree of privacy protection. In this paper, we discuss proposed quantification approaches. This contributes to the development of SD privacy standards; stimulates multi-disciplinary discussion; and helps SD researchers make informed modeling and evaluation decisions.",
+    "pdf_url": "https://arxiv.org/pdf/2311.17453v1"
+  },
+  {
+    "title": "On LLMs-Driven Synthetic Data Generation, Curation, and Evaluation: A Survey",
+    "authors": [
+      "Lin Long",
+      "Rui Wang",
+      "Ruixuan Xiao",
+      "Junbo Zhao"
+    ],
+    "published": "2024-06-14",
+    "arxiv_id": "2406.15126v1",
+    "abstract": "Within the evolving landscape of deep learning, the dilemma of data quantity and quality has been a long-standing problem. The recent advent of Large Language Models (LLMs) offers a data-centric solution to alleviate the limitations of real-world data with synthetic data generation. However, current investigations into this field lack a unified framework and mostly stay on the surface. Therefore, this paper provides an organization of relevant studies based on a generic workflow of synthetic data generation. By doing so, we highlight the gaps within existing research and outline prospective av",
+    "pdf_url": "https://arxiv.org/pdf/2406.15126v1"
+  },
+  {
+    "title": "FFPDG: Fast, Fair and Private Data Generation",
+    "authors": [
+      "Weijie Xu",
+      "Jinjin Zhao",
+      "Francis Iannacci",
+      "Bo Wang"
+    ],
+    "published": "2023-06-30",
+    "arxiv_id": "2307.00161v1",
+    "abstract": "Generative modeling has been used frequently in synthetic data generation. Fairness and privacy are two big concerns for synthetic data. Although Recent GAN [\\cite{goodfellow2014generative}] based methods show good results in preserving privacy, the generated data may be more biased. At the same time, these methods require high computation resources. In this work, we design a fast, fair, flexible and private data generation method. We show the effectiveness of our method theoretically and empirically. We show that models trained on data generated by the proposed method can perform well (in inf",
+    "pdf_url": "https://arxiv.org/pdf/2307.00161v1"
+  },
+  {
+    "title": "Active Amplification of the Terrestrial Albedo to Mitigate Climate Change: An Exploratory Study",
+    "authors": [
+      "Robert M. Hamwey"
+    ],
+    "published": "2005-12-19",
+    "arxiv_id": "0512170v1",
+    "abstract": "This study explores the potential to enhance the reflectance of solar insolation by the human settlement and grassland components of the Earth's terrestrial surface as a climate change mitigation measure. Preliminary estimates derived using a static radiative transfer model indicate that such efforts could amplify the planetary albedo enough to offset the current global annual average level of radiative forcing caused by anthropogenic greenhouse gases by as much as 30 percent or 0.76 W/m2. Terrestrial albedo amplification may thus extend, by about 25 years, the time available to advance the de",
+    "pdf_url": "https://arxiv.org/pdf/physics/0512170v1"
+  },
+  {
+    "title": "Epistemic diversity across language models mitigates knowledge collapse",
+    "authors": [
+      "Damian Hodel",
+      "Jevin D. West"
+    ],
+    "published": "2025-12-17",
+    "arxiv_id": "2512.15011v2",
+    "abstract": "As artificial intelligence (AI) becomes more widely used, concerns are growing that model collapse could lead to knowledge collapse, i.e. a degradation to a narrow and inaccurate set of ideas. Prior work has demonstrated single-model collapse, defined as performance decay in an AI model trained on its own outputs. Inspired by ecology, we ask whether increasing AI ecosystem diversity (i.e., the number of distinct models) can mitigate such collapse. To study the effect of diversity on model performance, we extend the single-model approach by segmenting the training data across an increasing numb",
+    "pdf_url": "https://arxiv.org/pdf/2512.15011v2"
+  },
+  {
+    "title": "Collapse. What else?",
+    "authors": [
+      "Nicolas Gisin"
+    ],
+    "published": "2017-01-28",
+    "arxiv_id": "1701.08300v2",
+    "abstract": "We present the quantum measurement problem as a serious physics problem. Serious because without a resolution, quantum theory is not complete, as it does not tell how one should - in principle - perform measurements. It is physical in the sense that the solution will bring new physics, i.e. new testable predictions, hence it is not merely a matter of interpretation of a frozen formalism. I argue that the two popular ways around the measurement problem, many-worlds and Bohmian-like mechanics, do, de facto, introduce effective collapses when \"I\" interact with the quantum system. Hence, surprisin",
+    "pdf_url": "https://arxiv.org/pdf/1701.08300v2"
+  },
+  {
+    "title": "Mapping AI Risk Mitigations: Evidence Scan and Preliminary AI Risk Mitigation Taxonomy",
+    "authors": [
+      "Alexander K. Saeri",
+      "Sophia Lloyd George",
+      "Jess Graham",
+      "Clelia D. Lacarriere"
+    ],
+    "published": "2025-12-12",
+    "arxiv_id": "2512.11931v1",
+    "abstract": "Organizations and governments that develop, deploy, use, and govern AI must coordinate on effective risk mitigation. However, the landscape of AI risk mitigation frameworks is fragmented, uses inconsistent terminology, and has gaps in coverage. This paper introduces a preliminary AI Risk Mitigation Taxonomy to organize AI risk mitigations and provide a common frame of reference. The Taxonomy was developed through a rapid evidence scan of 13 AI risk mitigation frameworks published between 2023-2025, which were extracted into a living database of 831 AI risk mitigations. The mitigations were ite",
+    "pdf_url": "https://arxiv.org/pdf/2512.11931v1"
+  },
+  {
+    "title": "A Fast Geometric Regularizer to Mitigate Event Collapse in the Contrast Maximization Framework",
+    "authors": [
+      "Shintaro Shiba",
+      "Yoshimitsu Aoki",
+      "Guillermo Gallego"
+    ],
+    "published": "2022-12-14",
+    "arxiv_id": "2212.07350v1",
+    "abstract": "Event cameras are emerging vision sensors and their advantages are suitable for various applications such as autonomous robots. Contrast maximization (CMax), which provides state-of-the-art accuracy on motion estimation using events, may suffer from an overfitting problem called event collapse. Prior works are computationally expensive or cannot alleviate the overfitting, which undermines the benefits of the CMax framework. We propose a novel, computationally efficient regularizer based on geometric principles to mitigate event collapse. The experiments show that the proposed regularizer achie",
+    "pdf_url": "https://arxiv.org/pdf/2212.07350v1"
+  },
+  {
+    "title": "Collapse models and spacetime symmetries",
+    "authors": [
+      "Daniel J. Bedingham"
+    ],
+    "published": "2016-12-30",
+    "arxiv_id": "1612.09470v1",
+    "abstract": "A picture of dynamical collapse of the wave function which is relativistic and time symmetric is presented. The part of the model which exhibits these features is the set of collapse outcomes. These play the role of matter distributed in space and time. It is argued that the dynamically collapsing quantum state, which is both foliation dependent and follows a time-asymmetric dynamics, is not fundamental: it represents a state of information about the past matter distribution for the purpose of estimating the future matter distribution. It is also argued from the point of view of collapse model",
+    "pdf_url": "https://arxiv.org/pdf/1612.09470v1"
+  },
+  {
+    "title": "Stronger Tests of the Collapse Locality Loophole in Bell Experiments",
+    "authors": [
+      "Adrian Kent"
+    ],
+    "published": "2018-07-23",
+    "arxiv_id": "1807.08791v3",
+    "abstract": "Several versions of quantum theory assume some form of localized collapse. If measurement outcomes are indeed defined by localized collapses, then a loophole-free demonstration of Bell non-locality needs to ensure space-like separated collapses associated with the measurements of the entangled systems. This collapse locality loophole remains largely untested, with one significant exception probing Diosi's and Penrose's gravitationally induced collapse hypotheses. I describe here techniques that allow much stronger experimental tests. These apply to all the well known types of collapse postulat",
+    "pdf_url": "https://arxiv.org/pdf/1807.08791v3"
+  },
+  {
+    "title": "Structural Learning of Diverse Ranking",
+    "authors": [
+      "Yadong Zhu",
+      "Yanyan Lan",
+      "Jiafeng Guo",
+      "Xueqi Cheng"
+    ],
+    "published": "2015-04-17",
+    "arxiv_id": "1504.04596v2",
+    "abstract": "Relevance and diversity are both crucial criteria for an effective search system. In this paper, we propose a unified learning framework for simultaneously optimizing both relevance and diversity. Specifically, the problem is formalized as a structural learning framework optimizing Diversity-Correlated Evaluation Measures (DCEM), such as ERR-IA, a-NDCG and NRBP. Within this framework, the discriminant function is defined to be a bi-criteria objective maximizing the sum of the relevance scores and dissimilarities (or diversity) among the documents. Relevance and diversity features are utilized ",
+    "pdf_url": "https://arxiv.org/pdf/1504.04596v2"
+  }
+]

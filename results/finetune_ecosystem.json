@@ -1,0 +1,2570 @@
+[
+  {
+    "cfg": {
+      "n": 1,
+      "iters": 6,
+      "base_model": "distilgpt2",
+      "block_size": 64,
+      "batch_size": 16,
+      "lr": 5e-05,
+      "seed": 0,
+      "ecosystem_token_budget": 80000,
+      "diversity_sample": 32,
+      "test_max_blocks": 80,
+      "device": "cuda"
+    },
+    "history": [
+      {
+        "iter": 0,
+        "phase": "post_initial",
+        "perplexity_per_agent": [
+          66.41219895184342
+        ],
+        "mean_perplexity": 66.41219895184342
+      },
+      {
+        "iter": 1,
+        "perplexity_per_agent": [
+          89.03848561305838
+        ],
+        "mean_perplexity": 89.03848561305838,
+        "std_perplexity": 0.0,
+        "median_perplexity": 89.03848561305838,
+        "train_loss_per_agent": [
+          2.9667603969573975
+        ],
+        "mean_train_loss": 2.9667603969573975,
+        "distinct_2": 0.7542297417631345,
+        "mean_pairwise_dist": 0.9127741456031799,
+        "frobenius": 25.310749053955078,
+        "hsd": 22.193255298917183,
+        "n_diversity_samples": 28,
+        "pooled_blocks": 1252,
+        "per_agent_blocks": [
+          1252
+        ]
+      },
+      {
+        "iter": 2,
+        "perplexity_per_agent": [
+          129.21163913919872
+        ],
+        "mean_perplexity": 129.21163913919872,
+        "std_perplexity": 0.0,
+        "median_perplexity": 129.21163913919872,
+        "train_loss_per_agent": [
+          2.352375190469283
+        ],
+        "mean_train_loss": 2.352375190469283,
+        "distinct_2": 0.7234664070107109,
+        "mean_pairwise_dist": 0.8931322693824768,
+        "frobenius": 27.540599822998047,
+        "hsd": 22.654115594695284,
+        "n_diversity_samples": 31,
+        "pooled_blocks": 1261,
+        "per_agent_blocks": [
+          1261
+        ]
+      },
+      {
+        "iter": 3,
+        "perplexity_per_agent": [
+          182.6800223546365
+        ],
+        "mean_perplexity": 182.6800223546365,
+        "std_perplexity": 0.0,
+        "median_perplexity": 182.6800223546365,
+        "train_loss_per_agent": [
+          2.0339859023690225
+        ],
+        "mean_train_loss": 2.0339859023690225,
+        "distinct_2": 0.640877598152425,
+        "mean_pairwise_dist": 0.9304112195968628,
+        "frobenius": 24.91059112548828,
+        "hsd": 20.785378495337525,
+        "n_diversity_samples": 27,
+        "pooled_blocks": 1269,
+        "per_agent_blocks": [
+          1269
+        ]
+      },
+      {
+        "iter": 4,
+        "perplexity_per_agent": [
+          242.68908521126426
+        ],
+        "mean_perplexity": 242.68908521126426,
+        "std_perplexity": 0.0,
+        "median_perplexity": 242.68908521126426,
+        "train_loss_per_agent": [
+          1.6734403252601624
+        ],
+        "mean_train_loss": 1.6734403252601624,
+        "distinct_2": 0.45260663507109006,
+        "mean_pairwise_dist": 0.9210445284843445,
+        "frobenius": 28.30687141418457,
+        "hsd": 24.558748936602584,
+        "n_diversity_samples": 31,
+        "pooled_blocks": 1268,
+        "per_agent_blocks": [
+          1268
+        ]
+      },
+      {
+        "iter": 5,
+        "perplexity_per_agent": [
+          336.97870748754497
+        ],
+        "mean_perplexity": 336.97870748754497,
+        "std_perplexity": 0.0,
+        "median_perplexity": 336.97870748754497,
+        "train_loss_per_agent": [
+          1.2726174015551805
+        ],
+        "mean_train_loss": 1.2726174015551805,
+        "distinct_2": 0.47368421052631576,
+        "mean_pairwise_dist": 0.894639253616333,
+        "frobenius": 25.868741989135742,
+        "hsd": 19.37202459588226,
+        "n_diversity_samples": 29,
+        "pooled_blocks": 1266,
+        "per_agent_blocks": [
+          1266
+        ]
+      },
+      {
+        "iter": 6,
+        "perplexity_per_agent": [
+          454.3470428695707
+        ],
+        "mean_perplexity": 454.3470428695707,
+        "std_perplexity": 0.0,
+        "median_perplexity": 454.3470428695707,
+        "train_loss_per_agent": [
+          1.0769744716584682
+        ],
+        "mean_train_loss": 1.0769744716584682,
+        "distinct_2": 0.486090775988287,
+        "mean_pairwise_dist": 0.8783482313156128,
+        "frobenius": 25.46394157409668,
+        "hsd": 18.99128098967284,
+        "n_diversity_samples": 29,
+        "pooled_blocks": 1271,
+        "per_agent_blocks": [
+          1271
+        ]
+      }
+    ],
+    "wall_seconds": 188.43838453292847
+  },
+  {
+    "cfg": {
+      "n": 1,
+      "iters": 6,
+      "base_model": "distilgpt2",
+      "block_size": 64,
+      "batch_size": 16,
+      "lr": 5e-05,
+      "seed": 1,
+      "ecosystem_token_budget": 80000,
+      "diversity_sample": 32,
+      "test_max_blocks": 80,
+      "device": "cuda"
+    },
+    "history": [
+      {
+        "iter": 0,
+        "phase": "post_initial",
+        "perplexity_per_agent": [
+          66.48039810186486
+        ],
+        "mean_perplexity": 66.48039810186486
+      },
+      {
+        "iter": 1,
+        "perplexity_per_agent": [
+          86.1285559537975
+        ],
+        "mean_perplexity": 86.1285559537975,
+        "std_perplexity": 0.0,
+        "median_perplexity": 86.1285559537975,
+        "train_loss_per_agent": [
+          2.952896030643318
+        ],
+        "mean_train_loss": 2.952896030643318,
+        "distinct_2": 0.8050964187327824,
+        "mean_pairwise_dist": 0.955321192741394,
+        "frobenius": 30.27672004699707,
+        "hsd": 26.639304379735385,
+        "n_diversity_samples": 32,
+        "pooled_blocks": 1249,
+        "per_agent_blocks": [
+          1249
+        ]
+      },
+      {
+        "iter": 2,
+        "perplexity_per_agent": [
+          121.70143860167956
+        ],
+        "mean_perplexity": 121.70143860167956,
+        "std_perplexity": 0.0,
+        "median_perplexity": 121.70143860167956,
+        "train_loss_per_agent": [
+          2.3288111520718924
+        ],
+        "mean_train_loss": 2.3288111520718924,
+        "distinct_2": 0.7026496565260059,
+        "mean_pairwise_dist": 0.9181941151618958,
+        "frobenius": 27.312255859375,
+        "hsd": 23.303380422079577,
+        "n_diversity_samples": 30,
+        "pooled_blocks": 1264,
+        "per_agent_blocks": [
+          1264
+        ]
+      },
+      {
+        "iter": 3,
+        "perplexity_per_agent": [
+          178.56644885654504
+        ],
+        "mean_perplexity": 178.56644885654504,
+        "std_perplexity": 0.0,
+        "median_perplexity": 178.56644885654504,
+        "train_loss_per_agent": [
+          2.0063434481620788
+        ],
+        "mean_train_loss": 2.0063434481620788,
+        "distinct_2": 0.5891276864728192,
+        "mean_pairwise_dist": 0.8665065765380859,
+        "frobenius": 23.2580509185791,
+        "hsd": 19.11514927397544,
+        "n_diversity_samples": 27,
+        "pooled_blocks": 1269,
+        "per_agent_blocks": [
+          1269
+        ]
+      },
+      {
+        "iter": 4,
+        "perplexity_per_agent": [
+          253.87442307691427
+        ],
+        "mean_perplexity": 253.87442307691427,
+        "std_perplexity": 0.0,
+        "median_perplexity": 253.87442307691427,
+        "train_loss_per_agent": [
+          1.5518610715866088
+        ],
+        "mean_train_loss": 1.5518610715866088,
+        "distinct_2": 0.5142857142857142,
+        "mean_pairwise_dist": 0.8963171243667603,
+        "frobenius": 26.722064971923828,
+        "hsd": 21.56611561838869,
+        "n_diversity_samples": 30,
+        "pooled_blocks": 1269,
+        "per_agent_blocks": [
+          1269
+        ]
+      },
+      {
+        "iter": 5,
+        "perplexity_per_agent": [
+          387.44926210492156
+        ],
+        "mean_perplexity": 387.44926210492156,
+        "std_perplexity": 0.0,
+        "median_perplexity": 387.44926210492156,
+        "train_loss_per_agent": [
+          1.3011853836476803
+        ],
+        "mean_train_loss": 1.3011853836476803,
+        "distinct_2": 0.55,
+        "mean_pairwise_dist": 0.9044531583786011,
+        "frobenius": 26.893352508544922,
+        "hsd": 23.104155720557667,
+        "n_diversity_samples": 30,
+        "pooled_blocks": 1270,
+        "per_agent_blocks": [
+          1270
+        ]
+      },
+      {
+        "iter": 6,
+        "perplexity_per_agent": [
+          536.0932903648411
+        ],
+        "mean_perplexity": 536.0932903648411,
+        "std_perplexity": 0.0,
+        "median_perplexity": 536.0932903648411,
+        "train_loss_per_agent": [
+          1.025089180469513
+        ],
+        "mean_train_loss": 1.025089180469513,
+        "distinct_2": 0.38995215311004783,
+        "mean_pairwise_dist": 0.8264787793159485,
+        "frobenius": 18.3676700592041,
+        "hsd": 12.095446801596676,
+        "n_diversity_samples": 22,
+        "pooled_blocks": 1269,
+        "per_agent_blocks": [
+          1269
+        ]
+      }
+    ],
+    "wall_seconds": 186.03448796272278
+  },
+  {
+    "cfg": {
+      "n": 2,
+      "iters": 6,
+      "base_model": "distilgpt2",
+      "block_size": 64,
+      "batch_size": 16,
+      "lr": 5e-05,
+      "seed": 0,
+      "ecosystem_token_budget": 80000,
+      "diversity_sample": 32,
+      "test_max_blocks": 80,
+      "device": "cuda"
+    },
+    "history": [
+      {
+        "iter": 0,
+        "phase": "post_initial",
+        "perplexity_per_agent": [
+          69.65075451617395,
+          69.35786374214291
+        ],
+        "mean_perplexity": 69.50430912915843
+      },
+      {
+        "iter": 1,
+        "perplexity_per_agent": [
+          87.81811213378329,
+          88.50998223590224
+        ],
+        "mean_perplexity": 88.16404718484276,
+        "std_perplexity": 0.3459350510594774,
+        "median_perplexity": 88.16404718484276,
+        "train_loss_per_agent": [
+          3.0665378142625856,
+          3.064488545442239
+        ],
+        "mean_train_loss": 3.0655131798524122,
+        "distinct_2": 0.7723387723387724,
+        "mean_pairwise_dist": 0.940237820148468,
+        "frobenius": 58.20015335083008,
+        "hsd": 43.62125987845447,
+        "n_diversity_samples": 62,
+        "pooled_blocks": 1242,
+        "per_agent_blocks": [
+          621,
+          621
+        ]
+      },
+      {
+        "iter": 2,
+        "perplexity_per_agent": [
+          116.90848218065344,
+          116.85608124861437
+        ],
+        "mean_perplexity": 116.8822817146339,
+        "std_perplexity": 0.026200466019531632,
+        "median_perplexity": 116.8822817146339,
+        "train_loss_per_agent": [
+          2.4118103861808775,
+          2.3967616319656373
+        ],
+        "mean_train_loss": 2.4042860090732576,
+        "distinct_2": 0.6877133105802048,
+        "mean_pairwise_dist": 0.9271240234375,
+        "frobenius": 51.86358642578125,
+        "hsd": 38.02762299695761,
+        "n_diversity_samples": 56,
+        "pooled_blocks": 1258,
+        "per_agent_blocks": [
+          629,
+          629
+        ]
+      },
+      {
+        "iter": 3,
+        "perplexity_per_agent": [
+          152.49437634258922,
+          153.7801246109626
+        ],
+        "mean_perplexity": 153.1372504767759,
+        "std_perplexity": 0.6428741341866839,
+        "median_perplexity": 153.1372504767759,
+        "train_loss_per_agent": [
+          2.0156556248664854,
+          2.0518641114234923
+        ],
+        "mean_train_loss": 2.0337598681449887,
+        "distinct_2": 0.4934131736526946,
+        "mean_pairwise_dist": 0.8986853957176208,
+        "frobenius": 49.58693313598633,
+        "hsd": 31.96080923515466,
+        "n_diversity_samples": 55,
+        "pooled_blocks": 1269,
+        "per_agent_blocks": [
+          635,
+          634
+        ]
+      },
+      {
+        "iter": 4,
+        "perplexity_per_agent": [
+          194.38904377531648,
+          204.40421368198446
+        ],
+        "mean_perplexity": 199.39662872865046,
+        "std_perplexity": 5.007584953333989,
+        "median_perplexity": 199.39662872865046,
+        "train_loss_per_agent": [
+          1.5887443602085114,
+          1.6088134527206421
+        ],
+        "mean_train_loss": 1.5987789064645768,
+        "distinct_2": 0.5325144508670521,
+        "mean_pairwise_dist": 0.9208685755729675,
+        "frobenius": 48.76673889160156,
+        "hsd": 35.96268456854083,
+        "n_diversity_samples": 53,
+        "pooled_blocks": 1270,
+        "per_agent_blocks": [
+          635,
+          635
+        ]
+      },
+      {
+        "iter": 5,
+        "perplexity_per_agent": [
+          243.9327671788369,
+          259.79490362858394
+        ],
+        "mean_perplexity": 251.86383540371042,
+        "std_perplexity": 7.931068224873513,
+        "median_perplexity": 251.86383540371042,
+        "train_loss_per_agent": [
+          1.1574989140033722,
+          1.112270574271679
+        ],
+        "mean_train_loss": 1.1348847441375256,
+        "distinct_2": 0.43732327992459946,
+        "mean_pairwise_dist": 0.8988164663314819,
+        "frobenius": 41.381710052490234,
+        "hsd": 28.41067745831228,
+        "n_diversity_samples": 46,
+        "pooled_blocks": 1270,
+        "per_agent_blocks": [
+          635,
+          635
+        ]
+      },
+      {
+        "iter": 6,
+        "perplexity_per_agent": [
+          312.0621827799751,
+          301.39123058881455
+        ],
+        "mean_perplexity": 306.7267066843948,
+        "std_perplexity": 5.335476095580276,
+        "median_perplexity": 306.7267066843948,
+        "train_loss_per_agent": [
+          0.5973833620548248,
+          0.630225096642971
+        ],
+        "mean_train_loss": 0.6138042293488979,
+        "distinct_2": 0.3462757527733756,
+        "mean_pairwise_dist": 0.8794132471084595,
+        "frobenius": 40.64674758911133,
+        "hsd": 25.37981546070223,
+        "n_diversity_samples": 46,
+        "pooled_blocks": 1269,
+        "per_agent_blocks": [
+          635,
+          634
+        ]
+      }
+    ],
+    "wall_seconds": 187.6299228668213
+  },
+  {
+    "cfg": {
+      "n": 2,
+      "iters": 6,
+      "base_model": "distilgpt2",
+      "block_size": 64,
+      "batch_size": 16,
+      "lr": 5e-05,
+      "seed": 1,
+      "ecosystem_token_budget": 80000,
+      "diversity_sample": 32,
+      "test_max_blocks": 80,
+      "device": "cuda"
+    },
+    "history": [
+      {
+        "iter": 0,
+        "phase": "post_initial",
+        "perplexity_per_agent": [
+          69.52592188705641,
+          69.99329393095866
+        ],
+        "mean_perplexity": 69.75960790900754
+      },
+      {
+        "iter": 1,
+        "perplexity_per_agent": [
+          87.62730300546055,
+          87.52309107557407
+        ],
+        "mean_perplexity": 87.57519704051731,
+        "std_perplexity": 0.05210596494323738,
+        "median_perplexity": 87.57519704051731,
+        "train_loss_per_agent": [
+          3.047286767225999,
+          3.100252090356289
+        ],
+        "mean_train_loss": 3.073769428791144,
+        "distinct_2": 0.7677304964539007,
+        "mean_pairwise_dist": 0.9451177716255188,
+        "frobenius": 54.65684127807617,
+        "hsd": 42.961892889122076,
+        "n_diversity_samples": 58,
+        "pooled_blocks": 1235,
+        "per_agent_blocks": [
+          618,
+          617
+        ]
+      },
+      {
+        "iter": 2,
+        "perplexity_per_agent": [
+          117.25353882117068,
+          118.00187923737828
+        ],
+        "mean_perplexity": 117.62770902927448,
+        "std_perplexity": 0.37417020810379853,
+        "median_perplexity": 117.62770902927448,
+        "train_loss_per_agent": [
+          2.3540373623371122,
+          2.4076937198638917
+        ],
+        "mean_train_loss": 2.380865541100502,
+        "distinct_2": 0.6587939698492462,
+        "mean_pairwise_dist": 0.9330593943595886,
+        "frobenius": 54.95145797729492,
+        "hsd": 40.281405069380035,
+        "n_diversity_samples": 59,
+        "pooled_blocks": 1259,
+        "per_agent_blocks": [
+          630,
+          629
+        ]
+      },
+      {
+        "iter": 3,
+        "perplexity_per_agent": [
+          151.73280973240296,
+          156.96763215031814
+        ],
+        "mean_perplexity": 154.35022094136053,
+        "std_perplexity": 2.6174112089575914,
+        "median_perplexity": 154.35022094136053,
+        "train_loss_per_agent": [
+          1.989921870827675,
+          1.970050075650215
+        ],
+        "mean_train_loss": 1.979985973238945,
+        "distinct_2": 0.6124807395993837,
+        "mean_pairwise_dist": 0.9187179803848267,
+        "frobenius": 43.16020202636719,
+        "hsd": 30.24917433024637,
+        "n_diversity_samples": 47,
+        "pooled_blocks": 1266,
+        "per_agent_blocks": [
+          633,
+          633
+        ]
+      },
+      {
+        "iter": 4,
+        "perplexity_per_agent": [
+          187.82049151286944,
+          200.4376317424216
+        ],
+        "mean_perplexity": 194.1290616276455,
+        "std_perplexity": 6.308570114776074,
+        "median_perplexity": 194.1290616276455,
+        "train_loss_per_agent": [
+          1.6166866958141326,
+          1.660044503211975
+        ],
+        "mean_train_loss": 1.6383655995130537,
+        "distinct_2": 0.5327181208053692,
+        "mean_pairwise_dist": 0.9042369723320007,
+        "frobenius": 44.4366455078125,
+        "hsd": 29.40803058000482,
+        "n_diversity_samples": 49,
+        "pooled_blocks": 1268,
+        "per_agent_blocks": [
+          634,
+          634
+        ]
+      },
+      {
+        "iter": 5,
+        "perplexity_per_agent": [
+          257.103455563895,
+          253.43687169310257
+        ],
+        "mean_perplexity": 255.27016362849878,
+        "std_perplexity": 1.8332919353962183,
+        "median_perplexity": 255.27016362849878,
+        "train_loss_per_agent": [
+          1.352334940433502,
+          1.3640449583530425
+        ],
+        "mean_train_loss": 1.3581899493932723,
+        "distinct_2": 0.42482100238663484,
+        "mean_pairwise_dist": 0.9008737206459045,
+        "frobenius": 45.1590690612793,
+        "hsd": 29.258375274172487,
+        "n_diversity_samples": 50,
+        "pooled_blocks": 1269,
+        "per_agent_blocks": [
+          635,
+          634
+        ]
+      },
+      {
+        "iter": 6,
+        "perplexity_per_agent": [
+          295.01704334989506,
+          325.2299205667305
+        ],
+        "mean_perplexity": 310.1234819583128,
+        "std_perplexity": 15.106438608417733,
+        "median_perplexity": 310.1234819583128,
+        "train_loss_per_agent": [
+          1.014357817173004,
+          1.0269200086593628
+        ],
+        "mean_train_loss": 1.0206389129161835,
+        "distinct_2": 0.38685344827586204,
+        "mean_pairwise_dist": 0.8606656789779663,
+        "frobenius": 43.344390869140625,
+        "hsd": 24.891067652950877,
+        "n_diversity_samples": 50,
+        "pooled_blocks": 1268,
+        "per_agent_blocks": [
+          634,
+          634
+        ]
+      }
+    ],
+    "wall_seconds": 189.88110971450806
+  },
+  {
+    "cfg": {
+      "n": 4,
+      "iters": 6,
+      "base_model": "distilgpt2",
+      "block_size": 64,
+      "batch_size": 16,
+      "lr": 5e-05,
+      "seed": 0,
+      "ecosystem_token_budget": 80000,
+      "diversity_sample": 32,
+      "test_max_blocks": 80,
+      "device": "cuda"
+    },
+    "history": [
+      {
+        "iter": 0,
+        "phase": "post_initial",
+        "perplexity_per_agent": [
+          74.354066651449,
+          75.98881596864689,
+          74.76341748900302,
+          74.81809244882298
+        ],
+        "mean_perplexity": 74.98109813948048
+      },
+      {
+        "iter": 1,
+        "perplexity_per_agent": [
+          92.51162024888268,
+          90.57055151805194,
+          89.86772064529602,
+          92.34124978042405
+        ],
+        "mean_perplexity": 91.32278554816367,
+        "std_perplexity": 1.132879875101809,
+        "median_perplexity": 91.455900649238,
+        "train_loss_per_agent": [
+          3.0958717622255025,
+          3.136713642823069,
+          3.080982986249422,
+          3.0741617679595947
+        ],
+        "mean_train_loss": 3.096932539814397,
+        "distinct_2": 0.7194188101315531,
+        "mean_pairwise_dist": 0.9535643458366394,
+        "frobenius": 120.32569885253906,
+        "hsd": 73.63162712539147,
+        "n_diversity_samples": 126,
+        "pooled_blocks": 1213,
+        "per_agent_blocks": [
+          304,
+          303,
+          303,
+          303
+        ]
+      },
+      {
+        "iter": 2,
+        "perplexity_per_agent": [
+          121.15793484299954,
+          121.44486084243957,
+          116.26658724333814,
+          121.27611720299313
+        ],
+        "mean_perplexity": 120.03637503294259,
+        "std_perplexity": 2.178875243671709,
+        "median_perplexity": 121.21702602299634,
+        "train_loss_per_agent": [
+          2.471447539329529,
+          2.4491872072219847,
+          2.4171859979629517,
+          2.413938271999359
+        ],
+        "mean_train_loss": 2.4379397541284558,
+        "distinct_2": 0.6518312471024571,
+        "mean_pairwise_dist": 0.9185981154441833,
+        "frobenius": 109.619384765625,
+        "hsd": 63.95292942651113,
+        "n_diversity_samples": 119,
+        "pooled_blocks": 1235,
+        "per_agent_blocks": [
+          309,
+          309,
+          309,
+          308
+        ]
+      },
+      {
+        "iter": 3,
+        "perplexity_per_agent": [
+          158.35491931300197,
+          149.5159125092451,
+          156.94114567813827,
+          155.54345027609153
+        ],
+        "mean_perplexity": 155.08885694411921,
+        "std_perplexity": 3.36758450982577,
+        "median_perplexity": 156.2422979771149,
+        "train_loss_per_agent": [
+          2.058084547519684,
+          2.0533386409282683,
+          2.1066848635673523,
+          2.085135966539383
+        ],
+        "mean_train_loss": 2.075811004638672,
+        "distinct_2": 0.5757575757575758,
+        "mean_pairwise_dist": 0.8988820314407349,
+        "frobenius": 105.56185150146484,
+        "hsd": 58.823900562958976,
+        "n_diversity_samples": 117,
+        "pooled_blocks": 1258,
+        "per_agent_blocks": [
+          315,
+          315,
+          314,
+          314
+        ]
+      },
+      {
+        "iter": 4,
+        "perplexity_per_agent": [
+          191.18301136027085,
+          193.5579884315826,
+          183.95137288690248,
+          195.17324237648518
+        ],
+        "mean_perplexity": 190.9664037638103,
+        "std_perplexity": 4.291601660747982,
+        "median_perplexity": 192.37049989592674,
+        "train_loss_per_agent": [
+          1.716278213262558,
+          1.688362717628479,
+          1.7520459294319153,
+          1.7444315969944
+        ],
+        "mean_train_loss": 1.725279614329338,
+        "distinct_2": 0.49260598093986196,
+        "mean_pairwise_dist": 0.9086549282073975,
+        "frobenius": 104.03809356689453,
+        "hsd": 56.3381044269514,
+        "n_diversity_samples": 114,
+        "pooled_blocks": 1269,
+        "per_agent_blocks": [
+          318,
+          317,
+          317,
+          317
+        ]
+      },
+      {
+        "iter": 5,
+        "perplexity_per_agent": [
+          236.4845207287449,
+          228.29731753075464,
+          234.7884223583921,
+          236.59893117445492
+        ],
+        "mean_perplexity": 234.04229794808663,
+        "std_perplexity": 3.39346162479106,
+        "median_perplexity": 235.63647154356852,
+        "train_loss_per_agent": [
+          1.5352999329566956,
+          1.537052822113037,
+          1.573861563205719,
+          1.5032189249992371
+        ],
+        "mean_train_loss": 1.537358310818672,
+        "distinct_2": 0.3935169048448937,
+        "mean_pairwise_dist": 0.8765782117843628,
+        "frobenius": 94.3784408569336,
+        "hsd": 46.22509334490258,
+        "n_diversity_samples": 107,
+        "pooled_blocks": 1271,
+        "per_agent_blocks": [
+          318,
+          318,
+          318,
+          317
+        ]
+      },
+      {
+        "iter": 6,
+        "perplexity_per_agent": [
+          286.85373567851974,
+          280.9676467962417,
+          294.1230178578999,
+          272.23621889236887
+        ],
+        "mean_perplexity": 283.5451548062576,
+        "std_perplexity": 8.021431810682824,
+        "median_perplexity": 283.9106912373807,
+        "train_loss_per_agent": [
+          1.2892441153526306,
+          1.3472163736820222,
+          1.273262804746628,
+          1.3167950510978699
+        ],
+        "mean_train_loss": 1.3066295862197876,
+        "distinct_2": 0.37561631555356345,
+        "mean_pairwise_dist": 0.8680914640426636,
+        "frobenius": 83.04792022705078,
+        "hsd": 40.92806741123649,
+        "n_diversity_samples": 95,
+        "pooled_blocks": 1272,
+        "per_agent_blocks": [
+          318,
+          318,
+          318,
+          318
+        ]
+      }
+    ],
+    "wall_seconds": 190.53510642051697
+  },
+  {
+    "cfg": {
+      "n": 4,
+      "iters": 6,
+      "base_model": "distilgpt2",
+      "block_size": 64,
+      "batch_size": 16,
+      "lr": 5e-05,
+      "seed": 1,
+      "ecosystem_token_budget": 80000,
+      "diversity_sample": 32,
+      "test_max_blocks": 80,
+      "device": "cuda"
+    },
+    "history": [
+      {
+        "iter": 0,
+        "phase": "post_initial",
+        "perplexity_per_agent": [
+          75.24704288188117,
+          74.59854728797147,
+          74.5075810229862,
+          75.3896165322359
+        ],
+        "mean_perplexity": 74.93569693126868
+      },
+      {
+        "iter": 1,
+        "perplexity_per_agent": [
+          90.97686033824994,
+          89.80635573125979,
+          90.66906153715736,
+          92.31093010041486
+        ],
+        "mean_perplexity": 90.94080192677048,
+        "std_perplexity": 0.8999114444083233,
+        "median_perplexity": 90.82296093770364,
+        "train_loss_per_agent": [
+          3.0656530141830443,
+          3.112371563911438,
+          3.1308651328086854,
+          3.016838824748993
+        ],
+        "mean_train_loss": 3.08143213391304,
+        "distinct_2": 0.7448261147855771,
+        "mean_pairwise_dist": 0.9553165435791016,
+        "frobenius": 117.62374877929688,
+        "hsd": 74.40716140780155,
+        "n_diversity_samples": 123,
+        "pooled_blocks": 1220,
+        "per_agent_blocks": [
+          305,
+          305,
+          305,
+          305
+        ]
+      },
+      {
+        "iter": 2,
+        "perplexity_per_agent": [
+          118.90824170140868,
+          115.21830435224399,
+          118.89685407822955,
+          117.20786296911533
+        ],
+        "mean_perplexity": 117.5578157752494,
+        "std_perplexity": 1.5176012671140793,
+        "median_perplexity": 118.05235852367244,
+        "train_loss_per_agent": [
+          2.4433808445930483,
+          2.4475394248962403,
+          2.4641694903373716,
+          2.455698251724243
+        ],
+        "mean_train_loss": 2.452697002887726,
+        "distinct_2": 0.6087256027554535,
+        "mean_pairwise_dist": 0.9304539561271667,
+        "frobenius": 112.86627960205078,
+        "hsd": 66.5773703085685,
+        "n_diversity_samples": 121,
+        "pooled_blocks": 1259,
+        "per_agent_blocks": [
+          315,
+          315,
+          315,
+          314
+        ]
+      },
+      {
+        "iter": 3,
+        "perplexity_per_agent": [
+          148.35827027389044,
+          147.9753149957934,
+          153.68478001615378,
+          150.69377187971065
+        ],
+        "mean_perplexity": 150.17803429138706,
+        "std_perplexity": 2.276332808089336,
+        "median_perplexity": 149.52602107680053,
+        "train_loss_per_agent": [
+          2.1276113092899323,
+          2.1133823156356812,
+          2.165051746368408,
+          2.123179483413696
+        ],
+        "mean_train_loss": 2.1323062136769293,
+        "distinct_2": 0.5806361607142857,
+        "mean_pairwise_dist": 0.9077876210212708,
+        "frobenius": 107.48246765136719,
+        "hsd": 60.15300521584073,
+        "n_diversity_samples": 118,
+        "pooled_blocks": 1265,
+        "per_agent_blocks": [
+          317,
+          316,
+          316,
+          316
+        ]
+      },
+      {
+        "iter": 4,
+        "perplexity_per_agent": [
+          187.08835140277122,
+          186.83814908863002,
+          185.53595160964997,
+          183.88082859177223
+        ],
+        "mean_perplexity": 185.83582017320586,
+        "std_perplexity": 1.2733235031422037,
+        "median_perplexity": 186.18705034914,
+        "train_loss_per_agent": [
+          1.8071722209453582,
+          1.7988504350185395,
+          1.834913855791092,
+          1.7415494918823242
+        ],
+        "mean_train_loss": 1.7956215009093284,
+        "distinct_2": 0.5421848739495798,
+        "mean_pairwise_dist": 0.905595600605011,
+        "frobenius": 97.32936096191406,
+        "hsd": 52.75934531915292,
+        "n_diversity_samples": 107,
+        "pooled_blocks": 1269,
+        "per_agent_blocks": [
+          318,
+          317,
+          317,
+          317
+        ]
+      },
+      {
+        "iter": 5,
+        "perplexity_per_agent": [
+          224.64115040817802,
+          221.1762877890435,
+          242.58952584719404,
+          231.23132079165308
+        ],
+        "mean_perplexity": 229.90957120901714,
+        "std_perplexity": 8.163252547448886,
+        "median_perplexity": 227.93623559991556,
+        "train_loss_per_agent": [
+          1.5804221749305725,
+          1.5937277972698212,
+          1.608499401807785,
+          1.5444475829601287
+        ],
+        "mean_train_loss": 1.5817742392420768,
+        "distinct_2": 0.4490674318507891,
+        "mean_pairwise_dist": 0.8868546485900879,
+        "frobenius": 98.97962951660156,
+        "hsd": 49.809061540212305,
+        "n_diversity_samples": 111,
+        "pooled_blocks": 1271,
+        "per_agent_blocks": [
+          318,
+          318,
+          318,
+          317
+        ]
+      },
+      {
+        "iter": 6,
+        "perplexity_per_agent": [
+          260.5866097020626,
+          275.4809150998123,
+          269.7310023315821,
+          260.68406434395104
+        ],
+        "mean_perplexity": 266.620647869352,
+        "std_perplexity": 6.32121983548766,
+        "median_perplexity": 265.20753333776656,
+        "train_loss_per_agent": [
+          1.2687762439250947,
+          1.2630384683609008,
+          1.2598283171653748,
+          1.2388590097427368
+        ],
+        "mean_train_loss": 1.2576255097985267,
+        "distinct_2": 0.32279133722928843,
+        "mean_pairwise_dist": 0.8756530284881592,
+        "frobenius": 100.53539276123047,
+        "hsd": 46.78213610431322,
+        "n_diversity_samples": 114,
+        "pooled_blocks": 1271,
+        "per_agent_blocks": [
+          318,
+          318,
+          318,
+          317
+        ]
+      }
+    ],
+    "wall_seconds": 192.08594489097595
+  },
+  {
+    "cfg": {
+      "n": 8,
+      "iters": 6,
+      "base_model": "distilgpt2",
+      "block_size": 64,
+      "batch_size": 16,
+      "lr": 5e-05,
+      "seed": 0,
+      "ecosystem_token_budget": 80000,
+      "diversity_sample": 32,
+      "test_max_blocks": 80,
+      "device": "cuda"
+    },
+    "history": [
+      {
+        "iter": 0,
+        "phase": "post_initial",
+        "perplexity_per_agent": [
+          79.2015148256773,
+          81.51742282293347,
+          80.37293799536803,
+          81.70964038734542,
+          79.71154952954826,
+          81.06602209759767,
+          81.93029040453705,
+          82.32790349727122
+        ],
+        "mean_perplexity": 80.97966019503481
+      },
+      {
+        "iter": 1,
+        "perplexity_per_agent": [
+          93.16020231634758,
+          94.68918036125643,
+          97.78651452764119,
+          95.74903062953183,
+          94.45032687033923,
+          96.82000967365515,
+          95.18524340335428,
+          96.28354298145013
+        ],
+        "mean_perplexity": 95.51550634544698,
+        "std_perplexity": 1.368282389948732,
+        "median_perplexity": 95.46713701644305,
+        "train_loss_per_agent": [
+          3.0314505338668822,
+          2.9943065881729125,
+          3.059074115753174,
+          3.0693063497543336,
+          3.088885021209717,
+          3.0261497497558594,
+          3.0375266551971434,
+          3.0683256149291993
+        ],
+        "mean_train_loss": 3.046878078579903,
+        "distinct_2": 0.7241295051924251,
+        "mean_pairwise_dist": 0.9513027667999268,
+        "frobenius": 229.9757843017578,
+        "hsd": 106.04172667068613,
+        "n_diversity_samples": 241,
+        "pooled_blocks": 1180,
+        "per_agent_blocks": [
+          148,
+          148,
+          148,
+          148,
+          147,
+          147,
+          147,
+          147
+        ]
+      },
+      {
+        "iter": 2,
+        "perplexity_per_agent": [
+          116.39178874751093,
+          119.07256362484905,
+          117.61648833860205,
+          120.24009181391436,
+          117.7144347842516,
+          119.67219004858323,
+          121.6024824611482,
+          120.76434682240794
+        ],
+        "mean_perplexity": 119.13429833015843,
+        "std_perplexity": 1.6623036487521694,
+        "median_perplexity": 119.37237683671614,
+        "train_loss_per_agent": [
+          2.4105130434036255,
+          2.410002517700195,
+          2.338382434844971,
+          2.3938392400741577,
+          2.350617551803589,
+          2.4684852600097655,
+          2.415911602973938,
+          2.450860095024109
+        ],
+        "mean_train_loss": 2.404826468229294,
+        "distinct_2": 0.5945785281179408,
+        "mean_pairwise_dist": 0.9349955320358276,
+        "frobenius": 221.49273681640625,
+        "hsd": 97.79205178835092,
+        "n_diversity_samples": 236,
+        "pooled_blocks": 1232,
+        "per_agent_blocks": [
+          154,
+          154,
+          154,
+          154,
+          154,
+          154,
+          154,
+          154
+        ]
+      },
+      {
+        "iter": 3,
+        "perplexity_per_agent": [
+          143.39464864327698,
+          144.97556601384775,
+          151.12704087148862,
+          156.07069255429988,
+          151.61240256826423,
+          144.6193398738011,
+          145.83135376540667,
+          145.75277288295808
+        ],
+        "mean_perplexity": 147.9229771466679,
+        "std_perplexity": 4.17514724627212,
+        "median_perplexity": 145.79206332418238,
+        "train_loss_per_agent": [
+          2.0953842639923095,
+          2.069646692276001,
+          2.0475036978721617,
+          2.0237131118774414,
+          2.1949158906936646,
+          2.0367551922798155,
+          2.0717238664627073,
+          2.0794155836105346
+        ],
+        "mean_train_loss": 2.0773822873830796,
+        "distinct_2": 0.4659391154508903,
+        "mean_pairwise_dist": 0.9046381711959839,
+        "frobenius": 224.72421264648438,
+        "hsd": 84.35835473693119,
+        "n_diversity_samples": 247,
+        "pooled_blocks": 1255,
+        "per_agent_blocks": [
+          157,
+          157,
+          157,
+          157,
+          157,
+          157,
+          157,
+          156
+        ]
+      },
+      {
+        "iter": 4,
+        "perplexity_per_agent": [
+          178.27906616746662,
+          177.78027573555227,
+          179.09620106848658,
+          175.52523665853428,
+          171.46139823816182,
+          182.97770137473975,
+          179.79727952128195,
+          186.50984661217126
+        ],
+        "mean_perplexity": 178.92837567204933,
+        "std_perplexity": 4.2387460257383704,
+        "median_perplexity": 178.6876336179766,
+        "train_loss_per_agent": [
+          1.901622188091278,
+          1.8746050953865052,
+          1.9340870141983033,
+          1.8588583946228028,
+          1.9259061336517334,
+          1.8820048213005065,
+          1.8734519839286805,
+          1.8644514203071594
+        ],
+        "mean_train_loss": 1.889373381435871,
+        "distinct_2": 0.42801339285714285,
+        "mean_pairwise_dist": 0.8976595997810364,
+        "frobenius": 207.83981323242188,
+        "hsd": 75.33933766070213,
+        "n_diversity_samples": 230,
+        "pooled_blocks": 1259,
+        "per_agent_blocks": [
+          158,
+          158,
+          158,
+          157,
+          157,
+          157,
+          157,
+          157
+        ]
+      },
+      {
+        "iter": 5,
+        "perplexity_per_agent": [
+          200.94414545263572,
+          211.96187560104582,
+          210.10856502399054,
+          210.31532860542538,
+          216.3051463803523,
+          213.43923011437937,
+          204.6312733387496,
+          219.70258324065287
+        ],
+        "mean_perplexity": 210.92601846965397,
+        "std_perplexity": 5.630887102225229,
+        "median_perplexity": 211.1386021032356,
+        "train_loss_per_agent": [
+          1.6640012383460998,
+          1.6870965838432312,
+          1.716265571117401,
+          1.702959942817688,
+          1.7240421056747437,
+          1.6284234046936035,
+          1.7505639314651489,
+          1.574342954158783
+        ],
+        "mean_train_loss": 1.6809619665145874,
+        "distinct_2": 0.37658428390367554,
+        "mean_pairwise_dist": 0.8755685091018677,
+        "frobenius": 194.19668579101562,
+        "hsd": 65.11029064095945,
+        "n_diversity_samples": 220,
+        "pooled_blocks": 1272,
+        "per_agent_blocks": [
+          159,
+          159,
+          159,
+          159,
+          159,
+          159,
+          159,
+          159
+        ]
+      },
+      {
+        "iter": 6,
+        "perplexity_per_agent": [
+          244.14627754292385,
+          233.7786925238554,
+          231.63389264376417,
+          235.5936766475608,
+          237.08763756331462,
+          256.1405942513361,
+          246.35981195455557,
+          253.96489885771143
+        ],
+        "mean_perplexity": 242.33818524812773,
+        "std_perplexity": 8.703685181245083,
+        "median_perplexity": 240.61695755311922,
+        "train_loss_per_agent": [
+          1.6201786398887634,
+          1.5703360080718993,
+          1.5518033742904662,
+          1.5760626435279845,
+          1.570622408390045,
+          1.5012746572494506,
+          1.5750276088714599,
+          1.5241486787796021
+        ],
+        "mean_train_loss": 1.5611817523837088,
+        "distinct_2": 0.351628664495114,
+        "mean_pairwise_dist": 0.8708658814430237,
+        "frobenius": 197.60296630859375,
+        "hsd": 64.44950897088769,
+        "n_diversity_samples": 225,
+        "pooled_blocks": 1275,
+        "per_agent_blocks": [
+          160,
+          160,
+          160,
+          159,
+          159,
+          159,
+          159,
+          159
+        ]
+      }
+    ],
+    "wall_seconds": 205.58565306663513
+  },
+  {
+    "cfg": {
+      "n": 8,
+      "iters": 6,
+      "base_model": "distilgpt2",
+      "block_size": 64,
+      "batch_size": 16,
+      "lr": 5e-05,
+      "seed": 1,
+      "ecosystem_token_budget": 80000,
+      "diversity_sample": 32,
+      "test_max_blocks": 80,
+      "device": "cuda"
+    },
+    "history": [
+      {
+        "iter": 0,
+        "phase": "post_initial",
+        "perplexity_per_agent": [
+          81.11094425743457,
+          80.54718828764368,
+          81.02082540523014,
+          81.58878147165916,
+          81.35331163582023,
+          80.52839557814829,
+          80.81070864180042,
+          81.92676464693433
+        ],
+        "mean_perplexity": 81.11086499058385
+      },
+      {
+        "iter": 1,
+        "perplexity_per_agent": [
+          95.06859098031312,
+          96.95153283450628,
+          97.65395875649946,
+          94.96292363853448,
+          93.74259170935379,
+          97.05065687426966,
+          96.56039447563104,
+          95.60468404170791
+        ],
+        "mean_perplexity": 95.94941666385196,
+        "std_perplexity": 1.2366114884518635,
+        "median_perplexity": 96.08253925866947,
+        "train_loss_per_agent": [
+          2.9676745653152468,
+          3.05952570438385,
+          2.9914138078689576,
+          3.0517706155776976,
+          2.944014644622803,
+          3.0087995767593383,
+          3.0260374784469604,
+          2.946490216255188
+        ],
+        "mean_train_loss": 2.999465826153755,
+        "distinct_2": 0.7222669889873757,
+        "mean_pairwise_dist": 0.9453590512275696,
+        "frobenius": 227.567138671875,
+        "hsd": 107.35035914520614,
+        "n_diversity_samples": 240,
+        "pooled_blocks": 1173,
+        "per_agent_blocks": [
+          147,
+          147,
+          147,
+          147,
+          147,
+          146,
+          146,
+          146
+        ]
+      },
+      {
+        "iter": 2,
+        "perplexity_per_agent": [
+          119.94068086360342,
+          122.84985460137936,
+          122.0079356749999,
+          117.21019915528511,
+          115.68319741250897,
+          118.14464348735203,
+          121.78633385581779,
+          121.3471403875693
+        ],
+        "mean_perplexity": 119.87124817981447,
+        "std_perplexity": 2.4210089948227727,
+        "median_perplexity": 120.64391062558636,
+        "train_loss_per_agent": [
+          2.4177964687347413,
+          2.4208557844161986,
+          2.292643976211548,
+          2.342966103553772,
+          2.3940159559249876,
+          2.339940106868744,
+          2.3371386766433715,
+          2.3749293804168703
+        ],
+        "mean_train_loss": 2.3650358065962793,
+        "distinct_2": 0.6039778745439567,
+        "mean_pairwise_dist": 0.9202663898468018,
+        "frobenius": 219.16319274902344,
+        "hsd": 90.42143169867806,
+        "n_diversity_samples": 237,
+        "pooled_blocks": 1214,
+        "per_agent_blocks": [
+          152,
+          152,
+          152,
+          152,
+          152,
+          152,
+          151,
+          151
+        ]
+      },
+      {
+        "iter": 3,
+        "perplexity_per_agent": [
+          146.32668687909495,
+          153.55709782517732,
+          150.40322437777616,
+          149.56683275401727,
+          150.74866219201937,
+          144.2506236719071,
+          147.77774810588957,
+          147.28303700058873
+        ],
+        "mean_perplexity": 148.7392391008088,
+        "std_perplexity": 2.7321321409598323,
+        "median_perplexity": 148.67229042995342,
+        "train_loss_per_agent": [
+          2.11700679063797,
+          2.1338753700256348,
+          2.159985935688019,
+          2.1120877861976624,
+          2.2238756656646728,
+          2.090588021278381,
+          2.164537262916565,
+          2.2017502307891847
+        ],
+        "mean_train_loss": 2.150463382899761,
+        "distinct_2": 0.5210455764075067,
+        "mean_pairwise_dist": 0.8951349854469299,
+        "frobenius": 209.03868103027344,
+        "hsd": 78.28062010209763,
+        "n_diversity_samples": 232,
+        "pooled_blocks": 1244,
+        "per_agent_blocks": [
+          156,
+          156,
+          156,
+          156,
+          155,
+          155,
+          155,
+          155
+        ]
+      },
+      {
+        "iter": 4,
+        "perplexity_per_agent": [
+          182.43094840611536,
+          186.95328614819482,
+          186.488227809197,
+          179.42376908628307,
+          178.52584255627312,
+          176.38700504744892,
+          180.5167117734196,
+          184.15331113165652
+        ],
+        "mean_perplexity": 181.85988774482354,
+        "std_perplexity": 3.5664625033824118,
+        "median_perplexity": 181.4738300897675,
+        "train_loss_per_agent": [
+          1.9406967043876648,
+          1.9260303735733033,
+          1.9291734933853149,
+          1.8949808597564697,
+          1.8999698042869568,
+          1.9827680468559266,
+          1.9406320810317994,
+          1.8657299757003785
+        ],
+        "mean_train_loss": 1.9224976673722267,
+        "distinct_2": 0.4388275276125743,
+        "mean_pairwise_dist": 0.8737348914146423,
+        "frobenius": 210.583251953125,
+        "hsd": 66.79665495017727,
+        "n_diversity_samples": 239,
+        "pooled_blocks": 1263,
+        "per_agent_blocks": [
+          158,
+          158,
+          158,
+          158,
+          158,
+          158,
+          158,
+          157
+        ]
+      },
+      {
+        "iter": 5,
+        "perplexity_per_agent": [
+          212.08571905309503,
+          224.3028827100405,
+          211.59544538723537,
+          205.2617332835489,
+          209.65514016703173,
+          214.13475652900377,
+          203.1039832229137,
+          198.90010530595964
+        ],
+        "mean_perplexity": 209.87997070735358,
+        "std_perplexity": 7.261042353408426,
+        "median_perplexity": 210.62529277713355,
+        "train_loss_per_agent": [
+          1.7749972105026246,
+          1.760751760005951,
+          1.7127731680870055,
+          1.6875150084495545,
+          1.7232246041297912,
+          1.7364866375923156,
+          1.815515673160553,
+          1.7163753151893615
+        ],
+        "mean_train_loss": 1.7409549221396445,
+        "distinct_2": 0.3786818851251841,
+        "mean_pairwise_dist": 0.869351863861084,
+        "frobenius": 185.95822143554688,
+        "hsd": 60.667792750175096,
+        "n_diversity_samples": 212,
+        "pooled_blocks": 1269,
+        "per_agent_blocks": [
+          159,
+          159,
+          159,
+          159,
+          159,
+          158,
+          158,
+          158
+        ]
+      },
+      {
+        "iter": 6,
+        "perplexity_per_agent": [
+          244.93585286997583,
+          243.15970683224694,
+          264.40042716749826,
+          240.46761086138633,
+          260.84429772298864,
+          252.3842710670149,
+          244.31193252507921,
+          236.66554898452299
+        ],
+        "mean_perplexity": 248.39620600383915,
+        "std_perplexity": 9.24352433953075,
+        "median_perplexity": 244.62389269752754,
+        "train_loss_per_agent": [
+          1.5796313643455506,
+          1.5337446928024292,
+          1.5594978332519531,
+          1.5902153253555298,
+          1.5234633088111877,
+          1.4856273770332336,
+          1.6349905848503112,
+          1.586125636100769
+        ],
+        "mean_train_loss": 1.5616620153188705,
+        "distinct_2": 0.33272273105745215,
+        "mean_pairwise_dist": 0.8649267554283142,
+        "frobenius": 193.5432586669922,
+        "hsd": 63.334629862200046,
+        "n_diversity_samples": 222,
+        "pooled_blocks": 1274,
+        "per_agent_blocks": [
+          160,
+          160,
+          159,
+          159,
+          159,
+          159,
+          159,
+          159
+        ]
+      }
+    ],
+    "wall_seconds": 195.11862444877625
+  },
+  {
+    "cfg": {
+      "n": 16,
+      "iters": 6,
+      "base_model": "distilgpt2",
+      "block_size": 64,
+      "batch_size": 16,
+      "lr": 5e-05,
+      "seed": 0,
+      "ecosystem_token_budget": 80000,
+      "diversity_sample": 32,
+      "test_max_blocks": 80,
+      "device": "cuda"
+    },
+    "history": [
+      {
+        "iter": 0,
+        "phase": "post_initial",
+        "perplexity_per_agent": [
+          84.30025336583181,
+          84.23296551227205,
+          86.46786973353613,
+          86.17575750409303,
+          86.29893800944052,
+          85.08430939256905,
+          87.45480083108687,
+          86.40452694032462,
+          85.43543050925696,
+          84.79899605926508,
+          85.20777842650573,
+          86.34569151077163,
+          85.82428862070137,
+          86.14115488170178,
+          86.72345275542934,
+          85.16155985322017
+        ],
+        "mean_perplexity": 85.75361086912538
+      },
+      {
+        "iter": 1,
+        "perplexity_per_agent": [
+          93.97597858931312,
+          92.55059124285067,
+          94.2908063108481,
+          93.35860313246832,
+          95.62526689908275,
+          93.67627821316904,
+          95.80852379937689,
+          93.54515684581763,
+          92.42707006823055,
+          91.27603036155156,
+          93.384491044125,
+          94.03675106773986,
+          95.45859093311279,
+          95.48434633045683,
+          92.81591908302921,
+          91.9182794717615
+        ],
+        "mean_perplexity": 93.72704271205836,
+        "std_perplexity": 1.3221634646713283,
+        "median_perplexity": 93.61071752949334,
+        "train_loss_per_agent": [
+          2.920922327041626,
+          2.965147352218628,
+          2.9578108310699465,
+          3.0375587940216064,
+          2.9571035385131834,
+          2.969068098068237,
+          2.985662651062012,
+          2.9552203178405763,
+          3.0628787517547607,
+          3.0206811904907225,
+          3.059490966796875,
+          3.0028571605682375,
+          3.0530002117156982,
+          3.0605113983154295,
+          3.0457321643829345,
+          2.995052671432495
+        ],
+        "mean_train_loss": 3.0030436515808105,
+        "distinct_2": 0.7264790350373349,
+        "mean_pairwise_dist": 0.9522870182991028,
+        "frobenius": 244.53079223632812,
+        "hsd": 111.2067378478139,
+        "n_diversity_samples": 256,
+        "pooled_blocks": 1151,
+        "per_agent_blocks": [
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          71
+        ]
+      },
+      {
+        "iter": 2,
+        "perplexity_per_agent": [
+          108.79957334039833,
+          110.39192091694484,
+          110.85895837130063,
+          109.98487647601694,
+          107.40075851034113,
+          107.49081532114674,
+          107.77769071267394,
+          109.31027334658067,
+          108.16617573446025,
+          107.16344038337907,
+          107.81106753968807,
+          109.78607525880831,
+          109.9943536733931,
+          110.00502764315371,
+          110.1777908732468,
+          107.2703529751975
+        ],
+        "mean_perplexity": 108.89932194229563,
+        "std_perplexity": 1.253595965752529,
+        "median_perplexity": 109.05492334348949,
+        "train_loss_per_agent": [
+          2.6285377502441407,
+          2.5740089416503906,
+          2.4390713691711428,
+          2.4904781341552735,
+          2.579626178741455,
+          2.543359661102295,
+          2.4867687225341797,
+          2.411152982711792,
+          2.4603539943695067,
+          2.3284709453582764,
+          2.6335521697998048,
+          2.4806034088134767,
+          2.534284543991089,
+          2.5022215843200684,
+          2.4534760475158692,
+          2.501317596435547
+        ],
+        "mean_train_loss": 2.5029552519321445,
+        "distinct_2": 0.605448059669225,
+        "mean_pairwise_dist": 0.9269731044769287,
+        "frobenius": 238.29466247558594,
+        "hsd": 101.69632406676834,
+        "n_diversity_samples": 256,
+        "pooled_blocks": 1180,
+        "per_agent_blocks": [
+          74,
+          74,
+          74,
+          74,
+          74,
+          74,
+          74,
+          74,
+          74,
+          74,
+          74,
+          74,
+          73,
+          73,
+          73,
+          73
+        ]
+      },
+      {
+        "iter": 3,
+        "perplexity_per_agent": [
+          120.53268631460882,
+          127.38686309997863,
+          124.16285164894326,
+          128.96834037593354,
+          127.40818560351823,
+          124.27398560222862,
+          126.78881291513727,
+          124.55087355002692,
+          123.25094483119214,
+          119.86304760637472,
+          123.92646233541716,
+          128.66089085824188,
+          134.960425270374,
+          126.54782540409381,
+          128.23151270204048,
+          118.51896663615764
+        ],
+        "mean_perplexity": 125.5020421721417,
+        "std_perplexity": 3.919918772972281,
+        "median_perplexity": 125.54934947706036,
+        "train_loss_per_agent": [
+          2.249106025695801,
+          2.3035999298095704,
+          2.2580947875976562,
+          2.251069116592407,
+          2.233302640914917,
+          2.2991714000701906,
+          2.3291139125823976,
+          2.2521541595458983,
+          2.2799779415130614,
+          2.2056211471557616,
+          2.2707271575927734,
+          2.3479132652282715,
+          2.1930145978927613,
+          2.1776284694671633,
+          2.258351755142212,
+          2.24085955619812
+        ],
+        "mean_train_loss": 2.2593566164374352,
+        "distinct_2": 0.533419689119171,
+        "mean_pairwise_dist": 0.9130914211273193,
+        "frobenius": 234.84988403320312,
+        "hsd": 94.23481682235331,
+        "n_diversity_samples": 256,
+        "pooled_blocks": 1226,
+        "per_agent_blocks": [
+          77,
+          77,
+          77,
+          77,
+          77,
+          77,
+          77,
+          77,
+          77,
+          77,
+          76,
+          76,
+          76,
+          76,
+          76,
+          76
+        ]
+      },
+      {
+        "iter": 4,
+        "perplexity_per_agent": [
+          131.8969896406096,
+          147.3428886509456,
+          144.454636871545,
+          140.5698921024787,
+          134.59422342222442,
+          148.1063502176491,
+          136.27093211648523,
+          145.34803770087976,
+          141.61034993029216,
+          150.87763151855728,
+          148.91291591289465,
+          155.0702249423226,
+          141.46445617672057,
+          141.37267227121038,
+          142.06075808070617,
+          136.3793797853615
+        ],
+        "mean_perplexity": 142.89577120880517,
+        "std_perplexity": 6.082108041614328,
+        "median_perplexity": 141.83555400549915,
+        "train_loss_per_agent": [
+          1.9899176120758058,
+          2.1064461708068847,
+          1.9960314512252808,
+          1.9526092529296875,
+          1.9348095655441284,
+          2.0170111894607543,
+          1.9726386785507202,
+          1.9384294271469116,
+          2.043976402282715,
+          1.9302910327911378,
+          2.0521524429321287,
+          1.9717652797698975,
+          2.1006895780563353,
+          1.9540096282958985,
+          2.030388593673706,
+          2.015045428276062
+        ],
+        "mean_train_loss": 2.0003882333636285,
+        "distinct_2": 0.45213259156235514,
+        "mean_pairwise_dist": 0.90334552526474,
+        "frobenius": 232.57839965820312,
+        "hsd": 87.24247832261042,
+        "n_diversity_samples": 256,
+        "pooled_blocks": 1251,
+        "per_agent_blocks": [
+          79,
+          79,
+          79,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78
+        ]
+      },
+      {
+        "iter": 5,
+        "perplexity_per_agent": [
+          161.2109601151627,
+          166.3973686002189,
+          159.32551722555272,
+          163.64021345635743,
+          157.403484751986,
+          154.2241646820191,
+          164.17961492124948,
+          157.60087765849823,
+          157.93958498689165,
+          154.24776909098685,
+          169.41882931529034,
+          161.00276171164245,
+          167.3440120857001,
+          163.79756188825354,
+          160.9664334147553,
+          161.5488867589304
+        ],
+        "mean_perplexity": 161.26550254146844,
+        "std_perplexity": 4.2759823300251725,
+        "median_perplexity": 161.10686091340256,
+        "train_loss_per_agent": [
+          1.8234094858169556,
+          1.8111300468444824,
+          1.7514533281326294,
+          1.7846225261688233,
+          1.908311915397644,
+          1.8547802448272706,
+          1.859891700744629,
+          1.9856510639190674,
+          1.8121443510055542,
+          1.9104748010635375,
+          1.6947021961212159,
+          1.9345725774765015,
+          1.8670877933502197,
+          1.8748291730880737,
+          1.7991716384887695,
+          1.842615556716919
+        ],
+        "mean_train_loss": 1.8446780249476433,
+        "distinct_2": 0.4216090768437339,
+        "mean_pairwise_dist": 0.8892913460731506,
+        "frobenius": 229.37771606445312,
+        "hsd": 76.77620021528223,
+        "n_diversity_samples": 256,
+        "pooled_blocks": 1254,
+        "per_agent_blocks": [
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78
+        ]
+      },
+      {
+        "iter": 6,
+        "perplexity_per_agent": [
+          181.63813688173138,
+          195.41280584454844,
+          177.22845282460958,
+          180.19563319908056,
+          172.38275615644332,
+          177.88641682257375,
+          171.53579068512576,
+          184.28059783632784,
+          185.7922016579562,
+          180.14283206230925,
+          179.02798822283566,
+          188.35171292719494,
+          184.6732050463643,
+          173.11650473294785,
+          175.46525293286982,
+          174.5819296161126
+        ],
+        "mean_perplexity": 180.10701359056446,
+        "std_perplexity": 6.243182650332668,
+        "median_perplexity": 179.58541014257247,
+        "train_loss_per_agent": [
+          1.752156138420105,
+          1.6657328128814697,
+          1.735555076599121,
+          1.948490595817566,
+          1.75734224319458,
+          1.682070755958557,
+          1.7085042715072631,
+          1.6979159593582154,
+          1.670177173614502,
+          1.8576591968536378,
+          1.7326072216033936,
+          1.7931973218917847,
+          1.7176509380340577,
+          1.7909379959106446,
+          1.845565176010132,
+          1.8243873596191407
+        ],
+        "mean_train_loss": 1.7612468898296356,
+        "distinct_2": 0.3826291079812207,
+        "mean_pairwise_dist": 0.8823526501655579,
+        "frobenius": 227.5125732421875,
+        "hsd": 75.69723964684968,
+        "n_diversity_samples": 256,
+        "pooled_blocks": 1271,
+        "per_agent_blocks": [
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          80,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79
+        ]
+      }
+    ],
+    "wall_seconds": 200.7025830745697
+  },
+  {
+    "cfg": {
+      "n": 16,
+      "iters": 6,
+      "base_model": "distilgpt2",
+      "block_size": 64,
+      "batch_size": 16,
+      "lr": 5e-05,
+      "seed": 1,
+      "ecosystem_token_budget": 80000,
+      "diversity_sample": 32,
+      "test_max_blocks": 80,
+      "device": "cuda"
+    },
+    "history": [
+      {
+        "iter": 0,
+        "phase": "post_initial",
+        "perplexity_per_agent": [
+          85.57248783634228,
+          86.79215068386175,
+          86.59733116976251,
+          84.92902036587017,
+          86.07505107349876,
+          85.41432024093218,
+          85.20622433419257,
+          85.5920352526009,
+          85.7159896999167,
+          87.2757005302095,
+          86.17015687330387,
+          86.08053264522032,
+          86.58262597872488,
+          84.92012762159987,
+          85.55768333422363,
+          86.10065388779
+        ],
+        "mean_perplexity": 85.91138072050312
+      },
+      {
+        "iter": 1,
+        "perplexity_per_agent": [
+          93.96084705238067,
+          95.188030258814,
+          93.00653715187616,
+          94.36749660052338,
+          95.07346205393914,
+          94.93087855264771,
+          94.16744117317924,
+          93.65652349393837,
+          94.57083601133655,
+          94.65736982836803,
+          92.52836043282699,
+          93.27558497694348,
+          93.52344302930835,
+          93.10367883577648,
+          92.86510283569164,
+          95.21443000238419
+        ],
+        "mean_perplexity": 94.0056263931209,
+        "std_perplexity": 0.863899292903678,
+        "median_perplexity": 94.06414411277996,
+        "train_loss_per_agent": [
+          2.9600560665130615,
+          2.89717698097229,
+          2.9602057456970217,
+          2.9806761741638184,
+          3.057384729385376,
+          3.0008026599884032,
+          2.8449938774108885,
+          2.8786369800567626,
+          3.0532514095306396,
+          2.9759788513183594,
+          2.9747774600982666,
+          2.809282970428467,
+          3.1303712368011474,
+          2.9928451061248778,
+          2.934532403945923,
+          2.9431630611419677
+        ],
+        "mean_train_loss": 2.9621334820985794,
+        "distinct_2": 0.7024934532619834,
+        "mean_pairwise_dist": 0.955443263053894,
+        "frobenius": 245.2858123779297,
+        "hsd": 113.25780835121034,
+        "n_diversity_samples": 256,
+        "pooled_blocks": 1154,
+        "per_agent_blocks": [
+          73,
+          73,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72
+        ]
+      },
+      {
+        "iter": 2,
+        "perplexity_per_agent": [
+          111.19211647463945,
+          109.87774447127946,
+          108.72754410121658,
+          109.10622708634362,
+          111.01667752971557,
+          106.8888875416523,
+          108.13217851135428,
+          106.9973756940843,
+          111.64834515918417,
+          107.83254293484246,
+          110.4681184236701,
+          104.40990902331728,
+          110.0066642352525,
+          110.09468264532566,
+          107.15460564223085,
+          106.0917544772036
+        ],
+        "mean_perplexity": 108.72783587195701,
+        "std_perplexity": 1.9912249059345903,
+        "median_perplexity": 108.91688559378011,
+        "train_loss_per_agent": [
+          2.3534926891326906,
+          2.532542657852173,
+          2.393407392501831,
+          2.4558926105499266,
+          2.3884591579437258,
+          2.3909743309020994,
+          2.3797515392303468,
+          2.503098154067993,
+          2.3254283666610718,
+          2.3952598571777344,
+          2.3383238315582275,
+          2.5465104579925537,
+          2.3087807178497313,
+          2.5336889266967773,
+          2.3949119567871096,
+          2.4761868953704833
+        ],
+        "mean_train_loss": 2.4197943463921545,
+        "distinct_2": 0.5889112003569835,
+        "mean_pairwise_dist": 0.9388808012008667,
+        "frobenius": 241.2461395263672,
+        "hsd": 104.3519138780472,
+        "n_diversity_samples": 256,
+        "pooled_blocks": 1174,
+        "per_agent_blocks": [
+          74,
+          74,
+          74,
+          74,
+          74,
+          74,
+          73,
+          73,
+          73,
+          73,
+          73,
+          73,
+          73,
+          73,
+          73,
+          73
+        ]
+      },
+      {
+        "iter": 3,
+        "perplexity_per_agent": [
+          124.2889522259813,
+          124.52231297155365,
+          128.66789111716827,
+          122.57427579975666,
+          122.89651900551091,
+          127.8951801468188,
+          126.2939440935233,
+          121.56855461758347,
+          134.4666276528876,
+          125.70380009888025,
+          126.25632321390972,
+          127.0146931010502,
+          128.81018131915295,
+          125.66369149151197,
+          130.05949140508395,
+          128.47347044869122
+        ],
+        "mean_perplexity": 126.57224429431652,
+        "std_perplexity": 3.1139508713905615,
+        "median_perplexity": 126.27513365371651,
+        "train_loss_per_agent": [
+          2.2112353324890135,
+          2.2486522674560545,
+          2.336893081665039,
+          2.1998878479003907,
+          2.349067449569702,
+          2.2512973308563233,
+          2.2369588375091554,
+          2.2987258434295654,
+          2.1783801555633544,
+          2.217704010009766,
+          2.1822489738464355,
+          2.2499318599700926,
+          2.1439193725585937,
+          2.159324526786804,
+          2.2766302585601808,
+          2.237834024429321
+        ],
+        "mean_train_loss": 2.236168198287487,
+        "distinct_2": 0.5279157795126568,
+        "mean_pairwise_dist": 0.9112560749053955,
+        "frobenius": 234.46182250976562,
+        "hsd": 92.45605018183527,
+        "n_diversity_samples": 256,
+        "pooled_blocks": 1219,
+        "per_agent_blocks": [
+          77,
+          77,
+          77,
+          76,
+          76,
+          76,
+          76,
+          76,
+          76,
+          76,
+          76,
+          76,
+          76,
+          76,
+          76,
+          76
+        ]
+      },
+      {
+        "iter": 4,
+        "perplexity_per_agent": [
+          145.8031589100692,
+          147.622107484594,
+          143.3893154225103,
+          146.67710264726875,
+          149.94367143778743,
+          149.48508784033862,
+          144.76724128740707,
+          139.58433107581754,
+          142.92246486490083,
+          146.01958186153433,
+          146.87237515904144,
+          141.2881025796057,
+          146.77619717294021,
+          136.20372787233825,
+          143.5317052100455,
+          141.89183074170774
+        ],
+        "mean_perplexity": 144.54862509799418,
+        "std_perplexity": 3.523073622285957,
+        "median_perplexity": 145.28520009873813,
+        "train_loss_per_agent": [
+          2.007885789871216,
+          2.1008235454559325,
+          2.036202812194824,
+          1.9656384706497192,
+          1.9302814245223998,
+          2.0138391256332397,
+          2.024644112586975,
+          2.1282962799072265,
+          1.9965565919876098,
+          1.989150834083557,
+          2.116188097000122,
+          2.1593783378601072,
+          2.1850364923477175,
+          2.1199378490448,
+          2.0755213022232057,
+          2.0894381999969482
+        ],
+        "mean_train_loss": 2.0586762040853497,
+        "distinct_2": 0.4702430846605197,
+        "mean_pairwise_dist": 0.8959150910377502,
+        "frobenius": 230.74847412109375,
+        "hsd": 83.76387935746524,
+        "n_diversity_samples": 256,
+        "pooled_blocks": 1242,
+        "per_agent_blocks": [
+          78,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78,
+          77,
+          77,
+          77,
+          77,
+          77,
+          77
+        ]
+      },
+      {
+        "iter": 5,
+        "perplexity_per_agent": [
+          163.16688819128663,
+          164.08474291304788,
+          158.58261188167896,
+          157.2082206303845,
+          152.2092187961531,
+          167.8051240841989,
+          165.9870535757232,
+          162.59064110295543,
+          164.223759032196,
+          170.94436992461306,
+          156.20881074239273,
+          164.9097680809968,
+          159.9000657857071,
+          171.15689530357193,
+          162.51312645056467,
+          159.12711377529507
+        ],
+        "mean_perplexity": 162.53865064192286,
+        "std_perplexity": 5.032619754314895,
+        "median_perplexity": 162.87876464712105,
+        "train_loss_per_agent": [
+          1.856635284423828,
+          1.984349799156189,
+          1.946637177467346,
+          1.9826581478118896,
+          1.9443929195404053,
+          1.9227638483047484,
+          1.9578991174697875,
+          1.8988658428192138,
+          1.8499602317810058,
+          1.8923117160797118,
+          1.78632709980011,
+          1.956282663345337,
+          1.900339961051941,
+          1.8871914863586425,
+          1.8919570207595826,
+          1.9254174709320069
+        ],
+        "mean_train_loss": 1.9114993616938591,
+        "distinct_2": 0.43149626577388617,
+        "mean_pairwise_dist": 0.8823279142379761,
+        "frobenius": 227.68521118164062,
+        "hsd": 74.7784258524271,
+        "n_diversity_samples": 256,
+        "pooled_blocks": 1258,
+        "per_agent_blocks": [
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          78,
+          78,
+          78,
+          78,
+          78,
+          78
+        ]
+      },
+      {
+        "iter": 6,
+        "perplexity_per_agent": [
+          184.8033845663838,
+          184.66927325180302,
+          173.52454686377817,
+          202.48313421080712,
+          177.35622170465638,
+          183.79568354986313,
+          181.66483693529867,
+          175.4221230153056,
+          168.58667164328608,
+          183.92496384149268,
+          184.80371942694586,
+          176.28972747731805,
+          177.3942569280521,
+          173.47799778660672,
+          172.5393743110475,
+          194.1225889862562
+        ],
+        "mean_perplexity": 180.92865653118133,
+        "std_perplexity": 8.33130585515745,
+        "median_perplexity": 179.52954693167538,
+        "train_loss_per_agent": [
+          1.8086838722229004,
+          1.7645586252212524,
+          1.839223575592041,
+          1.7231649875640869,
+          1.8194407224655151,
+          1.7537758827209473,
+          1.8424673080444336,
+          1.7419757604599,
+          1.7652294874191283,
+          1.716042160987854,
+          1.7208453178405763,
+          1.6957316637039184,
+          1.7584466457366943,
+          1.8299947261810303,
+          1.8139880657196046,
+          1.773361897468567
+        ],
+        "mean_train_loss": 1.7729331687092782,
+        "distinct_2": 0.4325227151256013,
+        "mean_pairwise_dist": 0.882122278213501,
+        "frobenius": 227.42823791503906,
+        "hsd": 77.20970737002331,
+        "n_diversity_samples": 256,
+        "pooled_blocks": 1261,
+        "per_agent_blocks": [
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          79,
+          78,
+          78,
+          78
+        ]
+      }
+    ],
+    "wall_seconds": 204.78846645355225
+  }
+]

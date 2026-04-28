@@ -1,0 +1,33 @@
+Resource finding phase completed successfully.
+Timestamp: 2026-04-28T05:35:00Z
+Research topic: How Many Agents to Avoid Collapse?
+Domain: artificial_intelligence
+
+Papers downloaded: 67 PDFs (from arXiv via paper-finder, relevance >= 2/3)
+Datasets downloaded: 2 (WikiText-2 raw v1, TinyStories 5K subset)
+Repositories cloned: 4 (Collapse-or-Thrive, ce_llms, linguistic-diversity, nanoGPT)
+
+Key deliverables:
+- literature_review.md (comprehensive synthesis with deep reading of 8 papers)
+- resources.md (catalog of papers, datasets, code with experiment recommendations)
+- papers/README.md (per-paper breakdown)
+- datasets/README.md (download/loading instructions; data excluded from git)
+- code/README.md (per-repo guide)
+
+Most directly relevant paper to the research question:
+  Hodel & West 2026, "Epistemic diversity across language models mitigates
+  knowledge collapse" (arXiv 2512.15011) - their experimental recipe (segmented
+  WikiText-2, M=1/2/4/16 OPT-125m models, 10 iterations) is fully spec'd in the
+  paper but no code released; our experiment runner can reimplement and extend
+  beyond M=16 to characterize the minimum viable population.
+
+Experimental scaffold available:
+- code/KoyejoLab-Collapse-or-Thrive/ - single-model baseline (Gerstgrasser style)
+- code/ce_llms/ - iterative chain with rotated base models, dataset clustering
+- code/linguistic-diversity/ - diversity metric library
+- datasets/wikitext2/ - canonical WikiText-2 raw v1, ready to use
+
+Environment:
+- Python 3.12 venv at .venv/, activate with `source .venv/bin/activate`
+- Dependencies: pypdf, requests, arxiv, httpx, datasets, transformers, torch, accelerate
+- Listed in pyproject.toml (project name: research-workspace)

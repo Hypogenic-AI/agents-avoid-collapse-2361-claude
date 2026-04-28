@@ -1,0 +1,15 @@
+PDF: papers/2404.01413_is_model_collapse_inevitable_breaking_the.pdf
+Total pages: 29
+Pages per chunk: 3
+
+Chunks:
+  2404.01413_is_model_collapse_inevitable_breaking_the_chunk_001.pdf: pages 1-3
+  2404.01413_is_model_collapse_inevitable_breaking_the_chunk_002.pdf: pages 4-6
+  2404.01413_is_model_collapse_inevitable_breaking_the_chunk_003.pdf: pages 7-9
+  2404.01413_is_model_collapse_inevitable_breaking_the_chunk_004.pdf: pages 10-12
+  2404.01413_is_model_collapse_inevitable_breaking_the_chunk_005.pdf: pages 13-15
+  2404.01413_is_model_collapse_inevitable_breaking_the_chunk_006.pdf: pages 16-18
+  2404.01413_is_model_collapse_inevitable_breaking_the_chunk_007.pdf: pages 19-21
+  2404.01413_is_model_collapse_inevitable_breaking_the_chunk_008.pdf: pages 22-24
+  2404.01413_is_model_collapse_inevitable_breaking_the_chunk_009.pdf: pages 25-27
+  2404.01413_is_model_collapse_inevitable_breaking_the_chunk_010.pdf: pages 28-29

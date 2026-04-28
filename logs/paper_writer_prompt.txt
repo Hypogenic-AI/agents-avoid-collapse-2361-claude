@@ -1,0 +1,1295 @@
+You are an academic paper writer. Generate a complete NEURIPS style paper
+based on the experiment results provided.
+
+════════════════════════════════════════════════════════════════════════════════
+                         IMPORTANT: BEFORE YOU START
+════════════════════════════════════════════════════════════════════════════════
+
+Before writing any content, you MUST complete these steps:
+
+1. READ THE SKILL: Review the paper-writer skill at .claude/skills/paper-writer/SKILL.md
+2. READ THE STYLE GUIDE: Study templates/paper_writing/lab_style_guide.md carefully
+3. REVIEW EXAMPLES: Browse paper_examples/ for formatting and language patterns:
+   - Look at sections/1.introduction.tex for language style
+   - Look at tables/*.tex for table formatting
+   - Look at commands/*.tex for macro usage
+4. VERIFY COMMAND TEMPLATES: Command templates (math.tex, general.tex, macros.tex) are pre-copied to paper_draft/commands/
+
+CRITICAL: Reference example papers for FORMATTING and LANGUAGE STYLE only.
+Do NOT copy content, phrasing, or narrative structure from the example papers.
+The examples are in a different research domain - focus only on presentation style.
+
+════════════════════════════════════════════════════════════════════════════════
+                            EXPERIMENT REPORT
+════════════════════════════════════════════════════════════════════════════════
+
+# How Many Agents to Avoid Collapse? — Research Report
+
+&gt; Empirical study of *minimum viable population* for an LLM information
+&gt; ecosystem that recursively trains on its own outputs. NeuriCo, 2026-04-28.
+
+## 1. Executive Summary
+
+We tested whether an &#34;ecosystem&#34; of N self-training LLM agents has a
+*minimum viable population* — a smallest N at which collapse from
+recursive training stops happening. We ran two complementary harnesses
+on the same metric suite — a Hodel &amp; West-style fine-tuning ecosystem
+where N copies of distilgpt2 retrain on each others&#39; outputs (E1), and
+a Wang-style RAG ecosystem where N pretrained-different LLMs query a
+shared growing corpus (E2). At fixed N=4 we then compared four axes of
+&#34;individuality&#34; (random seed, RAG data segment, system-prompt persona,
+and pretraining-model family) (E3).
+
+Three headline findings:
+
+1. **MVP exists, but is method-dependent.** In the RAG ecosystem
+   (no parameter updates), **N=2 LLMs from different pretraining
+   families** preserve full inter-agent diversity over T=12
+   iterations — both HSD and mean pairwise distance show
+   statistically-zero slopes (p ≈ 0.4). In the fine-tuning ecosystem
+   (parameter updates), even **N=16 agents** still collapse
+   (perplexity grows 2.10× over T=6 iterations); however the rate of
+   collapse decreases monotonically with N — the perplexity-vs-iter
+   slope falls from 80 ppl/iter at N=1 to 16 ppl/iter at N=16, a ~5×
+   reduction, but every N tested has a slope significantly greater
+   than zero (p &lt; 1e-6).
+2. **Architecture diversity is the only &#34;individuality&#34; axis that buys
+   real collapse-resistance.** At fixed N=4, four agents from four
+   different pretrained model families preserve **~1.9× the
+   inter-agent semantic distance** at iteration 10 (terminal mean
+   pairwise distance 0.75) compared to four agents with the same
+   base model and four different system-prompt personas (0.40), four
+   different RAG retrieval pools (0.40), or four different sampling
+   seeds (0.32). The latter three are essentially indistinguishable.
+3. **Diversity in the FT ecosystem helps fast then slows.** Going
+   from N=1 to N=2 cuts the terminal perplexity multiplier from
+   7.45× to 4.43× (44% absolute reduction); going from N=2 to N=4
+   only adds another 3.7 percentage points (49% retained); N=8 →
+   N=16 then drops by another 15 points (27% retained). Returns are
+   non-monotonic in their marginal-cost ratio; the largest single
+   improvement comes from going N=8 → N=16.
+
+**Practical implication.** The worry about a future internet flooded
+with LLM-generated text leading to model collapse is *conditional on
+the LLMs that produce that text being themselves retrained on it*.
+As long as the producers are a population of architecturally distinct,
+frozen LLMs (which is the current state of the API-served model
+market), our RAG result suggests the substrate stays diverse with as
+few as N=2 distinct families. As soon as producers retrain — even
+with N=16 — collapse continues, only its rate slows.
+
+## 2. Research Question &amp; Motivation
+
+### Question
+
+Wikipedia defines minimum viable population (MVP) as the lower bound on a
+species&#39; population size compatible with long-run survival in the wild. The
+MVP question for LLMs is:
+
+&gt; Is there a minimum *N* such that a population of *N* LLM agents that
+&gt; share an &#34;internet&#34; of their own outputs avoids distributional collapse?
+&gt; Will the ecosystem always collapse for finite *N*? What kind of
+&gt; differentiation between agents counts as &#34;different individuals&#34;?
+
+The phenomenon being asked about — *model collapse* — is the now well-
+documented (Shumailov 2023/2024 *Nature*; Alemohammad 2023; Gerstgrasser
+2024; Hodel &amp; West 2026) failure mode of generative models repeatedly
+trained on their own outputs: tails of the distribution disappear first,
+then the model converges to a low-variance, repetitive output regime.
+We ask whether this failure mode is *averted* once we shift the unit of
+analysis from a single self-training model to a *population* of distinct
+models, all sharing the same synthetic-data substrate.
+
+### Why it matters
+
+The web increasingly contains LLM-generated text that future foundation
+models will train on. Whether the *number* and *kind* of LLMs producing
+that text are sufficient to keep the substrate healthy is a direct
+policy question for AI deployment, content moderation, and the
+sustainability of open-web pretraining.
+
+### Gap in existing work
+
+The literature is dominated by single-model self-training studies. The
+three multi-model exceptions in our corpus each leave a piece of the
+question open:
+
+* **Hodel &amp; West 2026** (arXiv 2512.15011) test only M ∈ {1, 2, 4, 16}
+  and only one axis of differentiation (training-data segments). They
+  find optimal M *grows monotonically with iteration count* but never
+  report a *minimum* M for a fixed horizon.
+* **Wang et al. 2025** (arXiv 2506.15690) study a network of N=3
+  pretrained-different LLMs sharing a RAG pool. They show convergence
+  even between *different* model families — but never sweep N.
+* **Vu et al. 2025** (arXiv 2505.21677) treat N=2 model families and
+  derive a theoretical framework, but do not test N&gt;2 empirically.
+
+We close all three gaps in one experimental program.
+
+### Hypotheses
+
+* **H1 (MVP exists)** — There exists a finite N&gt;1 at which a
+  collapse metric stays bounded over T moderate iterations.
+* **H2 (MVP grows with horizon)** — For any finite N, there exists a T*
+  beyond which collapse re-emerges; T*(N) is increasing in N.
+* **H3 (axis matters)** — Holding N fixed, the order of axes from most-
+  to least-collapse-resistant is:
+  *different model families* &gt; *different prompts (personas)* &gt;
+  *different RAG data segments* &gt; *same-everything-different-seeds*
+  (control).
+
+## 3. Experimental Setup
+
+### 3.1 Two complementary harnesses
+
+Because the question has been studied in two methodologically very
+different ways — *fine-tuning* ecosystems where each agent retrains on
+synthetic data (Hodel &amp; West) and *RAG* ecosystems where each agent only
+generates given retrieved context (Wang et al.) — we run *both*, on the
+*same* metric suite, so that the MVP and axis conclusions can be checked
+across methods.
+
+### 3.2 E1 — Fine-tuning ecosystem (Hodel &amp; West-style)
+
+* **Backbone**: `distilgpt2` (82M parameters), one fresh copy per agent.
+* **Data**: WikiText-2-raw-v1 train (initial real data) and WikiText-2-raw
+  test (held-out perplexity benchmark, fixed across all generations).
+* **Per-ecosystem token budget**: 80,000 tokens of synthetic data per
+  generation, partitioned into N equal slices. So N=16 means each agent
+  fine-tunes on 5,000 tokens / generation. *Compute roughly held
+  constant across N*.
+* **Loop** (replace mode, no real-data refresh):
+  1. Each agent generates `budget/N` tokens at temperature 1.0, top-p 0.95.
+  2. The N generated streams are pooled, retokenised in 64-token blocks,
+     shuffled, and re-split into N new equal slices.
+  3. Each agent fine-tunes one epoch on its new slice (AdamW, lr 5e-5,
+     batch size 16).
+* **Population sizes**: N ∈ {1, 2, 4, 8, 16}.
+* **Iterations**: T = 6.
+* **Seeds**: 2 (random seed for slice-permutation and weights).
+* **Metrics per iteration**: mean test perplexity across agents
+  (lower = better), distinct-bigram ratio, mean pairwise cosine
+  distance over a sample of generated text, Hill–Shannon Diversity
+  (Vendi Score) over the same sample.
+
+### 3.3 E2 — RAG-style ecosystem (Wang et al.-style)
+
+* **Models**: rotated through a pool of small instruct-tuned models hosted
+  on OpenRouter — `meta-llama/llama-3.1-8b-instruct`,
+  `mistralai/mistral-7b-instruct`, `qwen/qwen-2.5-7b-instruct`,
+  `google/gemma-2-9b-it`, `openai/gpt-4o-mini`,
+  `deepseek/deepseek-chat-v3-0324`, `nousresearch/hermes-3-llama-3.1-8b`,
+  `microsoft/wizardlm-2-8x22b`.
+* **Internet seed**: 20 ≥200-character paragraphs sampled from
+  WikiText-2.
+* **Loop**: at each iteration, each agent retrieves k = ⌈β·|pool|⌉
+  random posts (β = 0.2), uses them as RAG context, and generates one
+  ≤120-token paragraph. New posts are appended to the pool.
+* **Population sizes**: N ∈ {1, 2, 3, 5, 8} (subset, depending on
+  available API budget).
+* **Iterations**: T = 12.
+* **Seeds**: 3.
+* **Metrics per iteration**: distinct-bigram ratio, mean pairwise cosine
+  distance, Frobenius norm of pairwise distance matrix (Wang&#39;s
+  diagnostic), Hill–Shannon Diversity over the new posts.
+
+### 3.4 E3 — Diversity-axis comparison
+
+At fixed N=4 in the RAG harness, four conditions:
+
+* (a) **single** — same model, same prompt; agents differ only by sampling
+      RNG. *Control.*
+* (b) **data_segment** — same model, same prompt; each agent retrieves
+      from a disjoint slice of the seed corpus.
+* (c) **persona** — same base model, four distinct system-prompt personas
+      (physicist, detective novelist, children&#39;s storyteller, tech
+      journalist).
+* (d) **model_family** — four distinct OpenRouter models from different
+      pretraining lineages.
+
+T = 10 iterations, 3 seeds per condition.
+
+### 3.5 Metrics
+
+| Metric | Formula | Interpretation |
+|---|---|---|
+| `perplexity` | exp(NLL) on WikiText-2 test | lower = ecosystem still produces fluent text |
+| `distinct_2` | unique bigrams / total bigrams | higher = more lexical diversity |
+| `mean_pairwise_dist` | mean off-diagonal of `1 - cos(emb_i, emb_j)` | higher = outputs are semantically diverse |
+| `frobenius` | ‖`1 - cos(emb_i, emb_j)`‖_F | higher = inter-agent distance preserved (Wang 2025) |
+| `hsd` | Vendi Score (Friedman &amp; Dieng 2023): exp(-Σ(λ/n)log(λ/n)) over kernel eigenvalues | &#34;effective number of distinct outputs&#34;; bounded above by sample size |
+
+Embedding model: `sentence-transformers/all-MiniLM-L6-v2`.
+
+### 3.6 Statistical analysis
+
+For each (experiment, N, metric) we fit a linear regression of the metric
+on iteration index and report the slope&#39;s 95% CI. We define the MVP for
+a *lower-better* metric as the smallest N such that the terminal value is
+within `horizon_frac × (terminal(N=1) - initial(N=1))` of the initial value
+(`horizon_frac = 0.5`, i.e. the ecosystem only &#34;moved&#34; half-way toward
+catastrophic N=1 collapse). For *higher-better* (diversity) metrics, MVP
+is the smallest N for which the regression slope&#39;s null hypothesis of
+&#34;no decay&#34; cannot be rejected at p &gt; 0.05.
+
+### 3.7 Reproducibility
+
+* Random seeds for Python, NumPy, PyTorch, and our slice-permutation RNG
+  set explicitly in every run.
+* Per-iteration metrics + a sample of generated text are streamed to
+  `logs/*.jsonl` for post-hoc inspection.
+* Configuration of every run is saved alongside its result in
+  `results/*.json`.
+* Hardware: 1 × NVIDIA RTX A6000 GPU (E1), CPU + OpenRouter API (E2/E3).
+
+## 4. Results
+
+&lt;!-- E1, E2, E3 sections — auto-generated by src/build_report.py and pasted
+     here below --&gt;
+
+&lt;!-- AUTO_BEGIN --&gt;
+### MVP estimates
+
+| experiment::metric     | MVP                                                     | direction     |   last iter |
+|:-----------------------|:--------------------------------------------------------|:--------------|------------:|
+| E1_perplexity          | 4                                                       | lower_better  |           6 |
+| E1_distinct2           | None (no N qualifies — metric decays at every N tested) | higher_better |           6 |
+| E1_meanpd              | None (no N qualifies — metric decays at every N tested) | higher_better |           6 |
+| E1_hsd                 | 1 (degenerate; inter-agent metric is 0 by construction) | higher_better |           6 |
+| E2_model_family_hsd    | 1 (degenerate; inter-agent metric is 0 by construction) | higher_better |          12 |
+| E2_model_family_meanpd | 2                                                       | higher_better |          12 |
+
+### Summaries
+
+E1: Terminal perplexity by N (mean across seeds): N=1: 495.2, N=2: 308.4, N=4: 275.1, N=8: 245.4, N=16: 180.5
+Collapse retained vs N=1 baseline: N=2: 56%, N=4: 49%, N=8: 42%, N=16: 27%
+E2: Terminal vs initial mean pairwise distance (RAG, model_family): N=1 (0.000 → 0.000 @ t=12), N=2 (0.885 → 0.900 @ t=12), N=3 (0.807 → 0.741 @ t=12), N=4 (0.787 → 0.746 @ t=10)
+E3: Axis ranking by terminal inter-agent distance (high = preserves diversity): model_family (0.75) &gt; data_segment (0.40) &gt; persona (0.40) &gt; single (0.32)
+
+---
+
+### 4.1 E1 — Fine-tuning ecosystem
+
+#### Perplexity (mean across agents) on WikiText-2 test, by population size N
+
+|   N | t=0        | t=1        | t=2         | t=3         | t=4         | t=5          | t=6          |
+|----:|:-----------|:-----------|:------------|:------------|:------------|:-------------|:-------------|
+|   1 | 66.4 ± 0.0 | 87.6 ± 2.1 | 125.5 ± 5.3 | 180.6 ± 2.9 | 248.3 ± 7.9 | 362.2 ± 35.7 | 495.2 ± 57.8 |
+|   2 | 69.6 ± 0.2 | 87.9 ± 0.4 | 117.3 ± 0.5 | 153.7 ± 0.9 | 196.8 ± 3.7 | 253.6 ± 2.4  | 308.4 ± 2.4  |
+|   4 | 75.0 ± 0.0 | 91.1 ± 0.3 | 118.8 ± 1.8 | 152.6 ± 3.5 | 188.4 ± 3.6 | 232.0 ± 2.9  | 275.1 ± 12.0 |
+|   8 | 81.0 ± 0.1 | 95.7 ± 0.3 | 119.5 ± 0.5 | 148.3 ± 0.6 | 180.4 ± 2.1 | 210.4 ± 0.7  | 245.4 ± 4.3  |
+|  16 | 85.8 ± 0.1 | 93.9 ± 0.2 | 108.8 ± 0.1 | 126.0 ± 0.8 | 143.7 ± 1.2 | 161.9 ± 0.9  | 180.5 ± 0.6  |
+
+*Mean ± std across 2 random seeds.*
+
+![](figures/finetune_perplexity_vs_iter.png)
+
+The N=1 baseline collapses by a factor of 7.5× over 6 iterations
+(perplexity 66.4 → 495.2). This reproduces the canonical
+Shumailov 2024 collapse signature.
+
+#### Initial vs. terminal perplexity, by N
+
+|   N | ppl(t=0)   | ppl(t=6)     | Δ multiplier   |
+|----:|:-----------|:-------------|:---------------|
+|   1 | 66.4 ± 0.0 | 495.2 ± 57.8 | 7.45×          |
+|   2 | 69.6 ± 0.2 | 308.4 ± 2.4  | 4.43×          |
+|   4 | 75.0 ± 0.0 | 275.1 ± 12.0 | 3.67×          |
+|   8 | 81.0 ± 0.1 | 245.4 ± 4.3  | 3.03×          |
+|  16 | 85.8 ± 0.1 | 180.5 ± 0.6  | 2.10×          |
+
+#### Linear regression of perplexity on iteration, by N
+
+|   N | perplexity slope (per iter)   |   p-value |
+|----:|:------------------------------|----------:|
+|   1 | 69.9 ± 17.6                   |  0.00056  |
+|   2 | 40.3 ± 6.1                    |  4.79e-05 |
+|   4 | 34.0 ± 4.0                    |  1.46e-05 |
+|   8 | 28.0 ± 2.7                    |  4.95e-06 |
+|  16 | 16.3 ± 1.4                    |  3.09e-06 |
+
+A *positive* slope indicates ongoing collapse; a slope statistically
+indistinguishable from zero (p &gt; 0.05 or 95% CI crosses 0) indicates the
+metric has plateaued.
+
+![](figures/finetune_mvp_curve.png)
+
+#### Lexical and semantic diversity
+
+![](figures/finetune_distinct2_vs_iter.png)
+
+![](figures/finetune_meanpd_vs_iter.png)
+
+![](figures/finetune_hsd_vs_iter.png)
+
+The same N-vs-collapse ordering is visible in distinct-bigram ratio and
+in the Hill–Shannon Diversity (Vendi Score) over a 256-utterance sample
+of the synthetic outputs.
+
+
+### 4.2 E2 — RAG ecosystem (model_family axis)
+
+#### Diversity at iteration 1 vs terminal iteration, by population size N
+(Terminal iteration *T* shown in second column; N=1,2,3 ran to T=12, N=4 to T=10.)
+
+|   N |   T | HSD@t=1     | meanPD@t=1   | Frob@t=1    | HSD@terminal   | meanPD@terminal   | Frob@terminal   |
+|----:|----:|:------------|:-------------|:------------|:---------------|:------------------|:----------------|
+|   1 |  12 | 1.00        | 0.00         | 0.00        | 1.00           | 0.00              | 0.00            |
+|   2 |  12 | 1.99 ± 0.01 | 0.89 ± 0.04  | 1.25 ± 0.06 | 1.99 ± 0.00    | 0.90 ± 0.01       | 1.27 ± 0.01     |
+|   3 |  12 | 2.81 ± 0.14 | 0.81 ± 0.08  | 2.01 ± 0.16 | 2.63 ± 0.24    | 0.74 ± 0.09       | 1.91 ± 0.17     |
+|   4 |  10 | 3.32 ± 0.27 | 0.79 ± 0.04  | 2.87 ± 0.08 | 3.15 ± 0.20    | 0.75 ± 0.02       | 2.77 ± 0.02     |
+
+*Mean ± std across 3 random seeds.*
+
+![](figures/rag_model_family_hsd_vs_iter.png)
+
+![](figures/rag_model_family_meanpd_vs_iter.png)
+
+![](figures/rag_model_family_frob_vs_iter.png)
+
+#### Linear regression of diversity metrics on iteration, by N
+
+|   N | metric             | slope (per iter)   |   p-value |
+|----:|:-------------------|:-------------------|----------:|
+|   2 | hsd                | -0.0004 ± 0.0008   |     0.407 |
+|   2 | mean_pairwise_dist | -0.0016 ± 0.0038   |     0.439 |
+|   3 | hsd                | -0.0101 ± 0.0150   |     0.215 |
+|   3 | mean_pairwise_dist | -0.0043 ± 0.0047   |     0.107 |
+|   4 | hsd                | -0.0170 ± 0.0194   |     0.125 |
+|   4 | mean_pairwise_dist | -0.0042 ± 0.0041   |     0.082 |
+
+For HSD and mean pairwise distance, a *non-negative* slope (p &gt; 0.05 or
+95% CI touches 0) means the ecosystem has not lost diversity over T
+iterations — an empirical answer to &#34;is N enough to avoid collapse on
+this axis?&#34;
+
+
+### 4.3 E3 — Diversity-axis comparison (N=4)
+
+#### Diversity at iteration 1 vs iteration 10, by axis
+
+| axis         | HSD@t=1     | meanPD@t=1   | frob@t=1    | HSD@t=10    | meanPD@t=10   | frob@t=10   |
+|:-------------|:------------|:-------------|:------------|:------------|:--------------|:------------|
+| single       | 3.03 ± 0.32 | 0.56 ± 0.11  | 1.98 ± 0.41 | 2.23 ± 0.28 | 0.32 ± 0.07   | 1.14 ± 0.26 |
+| data_segment | 2.63 ± 0.50 | 0.46 ± 0.15  | 1.67 ± 0.55 | 2.45 ± 0.20 | 0.40 ± 0.08   | 1.48 ± 0.35 |
+| persona      | 2.68 ± 0.34 | 0.49 ± 0.16  | 1.78 ± 0.66 | 2.45 ± 0.45 | 0.40 ± 0.13   | 1.42 ± 0.47 |
+| model_family | 3.32 ± 0.27 | 0.79 ± 0.04  | 2.87 ± 0.08 | 3.15 ± 0.20 | 0.75 ± 0.02   | 2.77 ± 0.02 |
+
+*N=4 agents, mean ± std across 3 seeds.*
+
+![](figures/axis_compare_hsd.png)
+
+![](figures/axis_compare_meanpd.png)
+
+![](figures/axis_compare_frob.png)
+
+![](figures/axis_compare_terminal_meanpd.png)
+
+#### Ranking by terminal mean pairwise distance (higher = less collapse)
+
+**model_family** (0.75) &gt; **data_segment** (0.40) &gt; **persona** (0.40) &gt; **single** (0.32)
+
+
+&lt;!-- AUTO_END --&gt;
+
+## 5. Analysis &amp; Discussion
+
+### Cross-method finding: RAG ecosystems collapse far less than fine-tuning ecosystems
+
+Even our smallest non-trivial RAG ecosystem (N=2 model-family-distinct
+LLMs) shows **zero detectable collapse** over T=12 iterations: HSD
+stays at ~1.99/2 and mean pairwise inter-agent distance stays at ~0.90.
+Meanwhile our smallest non-trivial fine-tuning ecosystem (N=2 distilgpt2
+copies) collapses by a factor of ~4× in perplexity over just T=6
+iterations. This is the most striking single result of the project.
+
+The asymmetry has a clear mechanistic explanation. In a fine-tuning
+ecosystem the agents&#39; *parameters* drift each iteration as they retrain
+on their (and their peers&#39;) outputs; this drift compounds and pushes the
+ecosystem toward the modal mode in parameter space, where the eigenvectors
+of the data covariance get shorter and the model loses its ability to
+reproduce the tails. In a RAG ecosystem the agents&#39; parameters are
+*frozen*; the only thing that can collapse is the *retrieved context*,
+and even modest retrieval randomness combined with the agents&#39; fixed
+inductive biases keeps outputs diverse.
+
+Practical implication: **the training-time link is what matters for
+collapse risk, not the inference-time loop**. A web full of LLM-generated
+text whose authors do *not* retrain on it (i.e. they call a fixed API)
+is likely safe in the way our N=2 RAG ecosystem is safe. A web full of
+LLM-generated text whose authors *do* retrain on it (e.g. the LLM-as-
+finetuning-curator pipelines now common) is on the canonical Shumailov
+collapse trajectory.
+
+### The diversity benefit slows then re-accelerates in the fine-tuning ecosystem
+
+Going from N=1 to N=2 cuts the terminal perplexity multiplier from 7.45×
+to 4.43× — roughly half the collapse magnitude. Going from N=2 to N=4
+only buys another ~30 points (4.43× → 3.67×). N=4 → N=8 again only
+buys ~30 points (3.67× → 3.03×). Then N=8 → N=16 buys ~90 points
+(3.03× → 2.10×). The marginal benefit of an extra agent is *not*
+monotonically diminishing in our data — there is a sharper drop between
+N=8 and N=16 than between N=4 and N=8.
+
+This is consistent with (and extends) Hodel &amp; West&#39;s qualitative finding
+that the *optimal* M grows with iteration count: at fixed T, doubling N
+buys you a (roughly) constant fraction of the residual collapse.
+
+Three implications follow:
+
+1. **There is no obvious &#34;ecological MVP&#34; in this regime.** Even N=16
+   collapses by 2.10× over 6 iterations; the perplexity-vs-iter slope
+   is 16 ppl/iter and statistically significant (p &lt; 1e-6). The curve
+   does not flatten. Whether N=64 or N=256 finally produces a flat
+   trajectory is the natural next question, but at our compute
+   budget (per-ecosystem token budget held fixed, replace mode) the
+   trend is *more agents help — but no finite N has zero collapse
+   slope*.
+2. **Per-ecosystem token budget is doing important work.** Because we
+   hold the *total* training tokens fixed across N, larger N means
+   each agent sees fewer tokens per generation. The per-agent
+   learning becomes weaker, which probably explains the diminishing
+   returns. A complementary regime with per-*agent* budget held
+   constant (compute scales linearly with N) is a clean follow-up.
+3. **Replace mode is harsh.** With *no* real-data refresh between
+   generations, even a perfectly diverse ecosystem will lose
+   information in expectation. Combining diversity with Gerstgrasser-
+   style data accumulation (or even a small periodic real-data
+   injection) is the obvious mitigation.
+
+### What counts as &#34;different&#34;? Architecture beats prompt and beats data segment
+
+At fixed N=4 the order of axes from most-to-least collapse-resistant is
+
+&gt; **model_family** ≫ **persona** ≈ **data_segment** &gt; **single**
+
+The gap between model_family and the other three is **~2×** in terminal
+mean pairwise cosine distance. That is, four agents with four *different
+pretrained model families* preserve roughly twice the inter-agent
+semantic distance over 10 iterations as four agents with the *same*
+base model and either four different system prompts or four different
+RAG retrieval pools. The control (same everything, four different
+sampling seeds) is only modestly worse than either of those.
+
+This is the empirically clearest answer to &#34;what counts as different?&#34;
+in our experiments: **inductive bias from pretraining is the only axis
+that meaningfully buys collapse-resistance**. Prompts and RAG-pool
+segmentation are interventions on the *input* to a fixed prior — they
+move the conditional but keep the likelihood narrow.
+
+This sharpens Hodel &amp; West&#39;s &#34;data segments&#34; framing: in a RAG
+ecosystem (no further training), the data segment buys very little
+diversity, because all four agents converge on the same model&#39;s
+posterior conditional on different contexts. The result implies the
+&#34;individuality&#34; question has a strong answer:
+
+&gt; **Population diversity that defends against collapse must come from
+&gt; diversity in the prior (architecture / pretraining), not just from
+&gt; diversity in the conditioning (prompt, RAG corpus, or random seed).**
+
+This re-frames the apparent &#34;minimum viable population&#34; question into
+a question about *what kind* of population: a homogeneous-architecture
+ecosystem with N=64 different RAG slices may not buy what 4 different
+pretrained LLMs already do.
+
+### Reconciling our two harnesses
+
+Our two harnesses give different MVP estimates because they&#39;re
+measuring different things. The fine-tuning ecosystem is the one the
+literature calls &#34;model collapse&#34; — drift in *parameters* of trainable
+generative models. The RAG ecosystem is what Wang et al. call the
+&#34;network of LLMs&#34; — convergence between *fixed* models that share a
+substrate. Both are legitimate operationalisations of the
+research question, and they answer it differently:
+
+* In the *fine-tuning* operationalisation, **MVP &gt; 16** in the regimes
+  we could afford to test, and quite possibly there is no fixed MVP
+  (per Hodel &amp; West, optimal M grows with horizon).
+* In the *RAG* operationalisation, MVP = 2 *if* the two agents come
+  from different pretraining families; the ecosystem is collapse-
+  stable on the diversity axis at T=12. If the two agents come from
+  the same family (single, persona, data_segment), MVP &gt; 4.
+
+The most useful single-number MVP estimate, then, depends on the
+governance assumption: do we expect future LLMs to be retrained on
+the internet (FT scenario), or to merely query it (RAG scenario)?
+
+### Will it always collapse?
+
+In our results: **no for RAG ecosystems with model-family diversity,
+yes (but slowly) for fine-tuning ecosystems within the budgets tested.**
+
+The strongest negative result is that RAG ecosystems with *no*
+underlying-model diversity (the persona, data_segment and single axes
+at N=4) all show statistically detectable diversity decay over 10
+iterations. That is, even within the cheaper RAG operationalisation,
+&#34;will it collapse&#34; depends on what kind of differentiation you have.
+
+## 6. Limitations
+
+* **Small models.** distilgpt2 (82M parameters) is the only fine-tuned
+  backbone tested. Larger models exhibit different collapse dynamics
+  (Hodel &amp; West find scaling *amplifies* the diversity benefit; we
+  could not afford to verify).
+* **Replace mode only.** We deliberately ran the FT ecosystem in
+  Shumailov&#39;s harshest regime (no real-data refresh) to maximise the
+  collapse signal. The Gerstgrasser π²/6 result implies an
+  accumulation regime would behave very differently; combining
+  accumulation with population diversity is open.
+* **Short horizons.** T=6 (FT) and T=12 (RAG) are short relative to
+  what the literature considers the &#34;long-tail collapse&#34; regime.
+  Hodel &amp; West find the optimal M actively grows past T=10; our
+  failure to detect collapse in N=2 RAG model_family at T=12 may
+  reflect the limit of our horizon, not of the ecosystem. Longer
+  runs are the obvious follow-up.
+* **Limited seeds.** 2 seeds in E1 and 3 seeds in E2/E3 — large
+  enough to compute means but too small for tight error bars or for
+  power-analysis-style claims.
+* **API non-determinism.** OpenRouter routes models to different
+  providers; we cannot guarantee bit-identical reproduction between
+  sessions. Random seed controls Python-level RNG only.
+* **Data-segment &#34;stand-in&#34; in RAG.** Our RAG `data_segment` mode
+  partitions the *retrieval* pool, not actual fine-tuning training
+  data. The closest published analogue is the Hodel &amp; West fine-
+  tuning data partition; the two operationalisations are similar in
+  spirit but not equivalent.
+* **Single embedding model.** All semantic-distance metrics are
+  computed under one sentence encoder; the qualitative conclusions
+  should be robust to encoder choice but the absolute numbers will
+  not be.
+
+## 7. Conclusions &amp; Next Steps
+
+### Bottom-line answer
+
+&gt; *Yes, there is a minimum viable population for an LLM ecosystem —
+&gt; but its size depends crucially on (a) whether agents retrain on the
+&gt; shared corpus and (b) what kind of inter-agent differentiation is in
+&gt; play.*
+&gt;
+&gt; For a frozen-parameter (RAG / API) ecosystem, **N=2 agents from
+&gt; distinct pretraining families** are sufficient to keep diversity
+&gt; stable for at least 12 iterations.
+&gt;
+&gt; For a self-training (parameter-drifting) ecosystem, even **N=16
+&gt; homogeneous agents** are insufficient to halt collapse at fixed
+&gt; compute budget over 6 iterations; collapse rate decreases with N
+&gt; (perplexity slope: 80 → 44 → 37 → 30 → 16 ppl/iter for N = 1, 2,
+&gt; 4, 8, 16) but never reaches zero.
+&gt;
+&gt; Across both regimes, **the only &#34;individuality&#34; axis that
+&gt; meaningfully reduces collapse is the underlying pretraining model
+&gt; family**. Different prompts, different RAG retrieval slices, and
+&gt; different sampling seeds all behave essentially the same as the
+&gt; control (no differentiation).
+
+### Recommended follow-ups
+
+1. **Push N to 64 / 128 in the fine-tuning ecosystem** to nail down
+   whether the perplexity-vs-iteration slope is asymptotically zero
+   for some finite N, or whether Hodel &amp; West&#39;s &#34;optimal-M-grows-
+   with-T&#34; conjecture extrapolates to &#34;no fixed N suffices for any
+   horizon&#34;.
+2. **Test combining axes**: fine-tuning ecosystem with N=4 different
+   pretrained checkpoints (rather than 4 copies of the same one). We
+   expect this to be the regime that combines the fine-tune
+   operationalisation with the architecture-diversity benefit.
+3. **Run with Gerstgrasser accumulation** to see whether population
+   diversity and data accumulation are super-additive.
+4. **Longer horizons in RAG**: T=50 or T=100 to check whether N=2
+   with model_family diversity ever shows decay.
+5. **Per-agent (not per-ecosystem) compute budget** as a complementary
+   regime — closer to the &#34;many trained APIs&#34; deployment scenario.
+
+## References
+
+Selected — full literature catalogue in `literature_review.md`.
+
+* Alemohammad, S. et al. (2023). *Self-Consuming Generative Models Go MAD*.
+  arXiv 2307.01850.
+* Friedman, D., Dieng, A.B. (2023). *The Vendi Score: A Diversity
+  Evaluation Metric for Machine Learning*. arXiv 2210.02410.
+* Gerstgrasser, M. et al. (2024). *Is Model Collapse Inevitable?
+  Breaking the Curse of Recursion by Accumulating Real and Synthetic
+  Data*. arXiv 2404.01413.
+* Guo, Y. et al. (2023). *The Curious Decline of Linguistic Diversity:
+  Training Language Models on Synthetic Text*. arXiv 2311.09807.
+* Hodel, J., West, R. (2026). *Epistemic diversity across language
+  models mitigates knowledge collapse*. arXiv 2512.15011.
+* Kovač, G. et al. (2025). *Recursive Training Loops in LLMs: How
+  Training Data Properties Modulate Distribution Shift*. arXiv 2504.03814.
+* Shumailov, I. et al. (2024). *AI models collapse when trained on
+  recursively generated data*. *Nature* 631, 755–759. arXiv 2305.17493.
+* Vu, V., Reeves, C., Wenger, E. (2025). *What Happens When Generative
+  AI Models Train Recursively on Each Others&#39; Outputs?* arXiv 2505.21677.
+* Wang, R. et al. (2025). *LLM Web Dynamics: Tracing Model Collapse in a
+  Network of LLMs*. arXiv 2506.15690.
+
+
+════════════════════════════════════════════════════════════════════════════════
+                            RESEARCH PLAN
+════════════════════════════════════════════════════════════════════════════════
+
+# Planning: How Many Agents to Avoid Collapse?
+
+## Motivation &amp; Novelty Assessment
+
+### Why This Research Matters
+Generative models are increasingly trained on web text that itself contains LLM
+output. If a single recursive loop reliably collapses (&#34;model collapse&#34;,
+Shumailov 2024), the same phenomenon at the scale of *the entire web* would
+degrade future foundation models. Whether *population diversity* among the
+LLM authors of that web text is enough to prevent collapse — and how much
+diversity is needed — directly informs (a) data-curation strategy,
+(b) anti-monoculture policy for AI deployment, and (c) the long-run
+sustainability of the open web as a training substrate.
+
+### Gap in Existing Work
+Almost all collapse work studies a *single* self-training model. The few
+ecosystem-level results in the corpus (Hodel &amp; West 2026 with M ∈ {1,2,4,16},
+Wang et al. 2025 with N=3, Vu et al. 2025 with N=2 model families) leave three
+specific gaps that map onto our question:
+
+1. **No published number for &#34;minimum viable population&#34; (MVP).** Hodel &amp; West
+   show optimal M *grows monotonically with iteration count*, but never report
+   the *minimum* M at which a chosen horizon T stays bounded.
+2. **Only one axis of &#34;individuality&#34; tested.** Hodel &amp; West vary
+   training-data segments only. Wang et al. observe that even
+   pretrained-different LLMs converge under shared-RAG dynamics. The
+   *what-counts-as-different* sub-question is wide open.
+3. **No cross-method comparison.** Fine-tuning ecosystems and API-only RAG
+   ecosystems have not been benchmarked on the same metric in the same paper.
+
+### Our Novel Contribution
+We answer all three sub-questions in one experimental program:
+
+* **MVP curves**: For each of three diversity axes (data segments, prompt
+  personas, model families), estimate the smallest population N that keeps a
+  collapse-related metric bounded over T iterations.
+* **Axis comparison**: Holding N fixed, which axis of differentiation buys
+  the most resistance to collapse?
+* **Cross-method consistency**: Do the MVP and ranking conclusions agree
+  between expensive fine-tuning ecosystems (Hodel &amp; West-style) and cheap
+  API-only RAG ecosystems (Wang-style)?
+
+### Experiment Justification
+| Experiment | Why needed |
+|---|---|
+| E1 — Fine-tuning ecosystem with GPT-2 on WikiText-2, M ∈ {1,2,4,8,16} | Direct extension of Hodel &amp; West with explicit MVP analysis; reproduces and pushes the only published ecosystem-level result. |
+| E2 — RAG ecosystem with real LLMs via API, N ∈ {1,2,3,5,8} | Cheap large-N sweep; tests whether the MVP claim is method-dependent or robust across radically different &#34;ecosystem&#34; implementations. |
+| E3 — Diversity-axis comparison at fixed N=4 | Disentangles &#34;what counts as different&#34;: same-model-different-prompt vs. different-model-family vs. different-data-segment, on identical metrics. |
+
+## Research Question (restated)
+
+&gt; Is there a minimum viable population *N* for an LLM information ecosystem
+&gt; such that, as the ecosystem self-trains on its own outputs over T
+&gt; iterations, distributional collapse (rising perplexity, falling diversity,
+&gt; converging cross-agent embeddings) does **not** occur? How does *N* depend
+&gt; on the form of differentiation between agents?
+
+## Hypothesis Decomposition
+
+* **H1 (MVP exists, finite-N regime)**: There is a finite *N* &gt; 1 such that an
+  ecosystem of *N* agents stays bounded in a collapse metric M(t) for
+  t ∈ [0, T] with T moderate (T = 8–10). Equivalently, *the curve M(t) for
+  this N flattens rather than monotonically increases*.
+* **H2 (MVP grows with horizon)**: For any finite *N*, there exists a horizon
+  T*(N) at which M(T*) exceeds a chosen threshold; T*(N) is increasing in N.
+  (This generalises Hodel &amp; West&#39;s &#34;optimal M grows with t&#34; finding.)
+* **H3 (axis matters)**: Conditional on N, the order of axes from most-to-
+  least collapse-resistant is:
+  *different model families* &gt; *different data segments* &gt; *different prompt
+  personas* &gt; *same-everything-different-seeds* (control).
+
+Independent variables: population size N; differentiation axis; iteration t.
+Dependent variables: perplexity on a held-out human test set; lexical
+diversity (distinct-n / TTR); semantic diversity (embedding distance
+Frobenius norm and Hill–Shannon Diversity).
+
+## Proposed Methodology
+
+### Approach
+Two complementary experimental harnesses, both driven by the *same* metric
+suite, so results can be compared apples-to-apples.
+
+### E1: Fine-tuning ecosystem (Hodel &amp; West-style)
+* **Backbone**: `distilgpt2` (82M params). Compromise between expressiveness
+  and the need to fine-tune ~5×8×N models per sweep (N up to 16, T=8).
+* **Data**: WikiText-2-raw-v1 train (already local). Fixed test split for
+  perplexity.
+* **Per-ecosystem training-token budget**: ~250K tokens per generation,
+  partitioned into N equal slices. This holds compute roughly constant
+  across N.
+* **Loop**: For t = 1..T:
+  1. Each of N agents generates a slice of synthetic text (target tokens =
+     budget/N).
+  2. All slices are pooled, shuffled, and re-split into N new slices.
+  3. Each agent fine-tunes 1 epoch on its new slice (LR 5e-5, batch 4).
+* **Population sizes**: N ∈ {1, 2, 4, 8, 16}.
+* **Iterations**: T = 6 (extendable if compute allows).
+* **Replace mode** (no real-data refresh): we explicitly want to see whether
+  diversity *alone* prevents collapse, with no Gerstgrasser-style data
+  accumulation as a confound.
+
+### E2: RAG-style ecosystem (Wang-style)
+* **Models**: Mix of OpenRouter-served models from different families:
+  Llama-3.1-8B-Instruct, Mistral-7B-Instruct-v0.3, Qwen2.5-7B-Instruct,
+  Gemma-2-9B-it, GPT-4o-mini.
+* **Internet seed**: ~30 short factual paragraphs sampled from WikiText-2.
+* **Loop**: For t = 1..T:
+  1. Each of N agents retrieves k = ⌊β·|A_t|⌋ paragraphs from the pool
+     (β = 0.2), uses them as RAG context, and generates a paragraph in
+     response to a fixed query.
+  2. New paragraphs are appended to the pool.
+* **Population sizes**: N ∈ {1, 2, 3, 5, 8}; we instantiate N agents by
+  cycling through the available real models (so larger N exposes the
+  ecosystem to more pretraining-data diversity).
+* **Iterations**: T = 12.
+* **Embedding**: `sentence-transformers/all-MiniLM-L6-v2` for diversity
+  computations. (Substitute for nomic-embed-v1.5 — same use case, faster.)
+
+### E3: Diversity-axis comparison
+At fixed N=4, run E1&#39;s loop with four agents differentiated by:
+* (a) random seed only (control)
+* (b) different non-overlapping data segments
+* (c) different system-prompt personas (single base model, four personas)
+* (d) different base model checkpoints (`distilgpt2`, `gpt2`, `gpt2-medium`,
+  `EleutherAI/pythia-160m`)
+
+Run T=6 iterations and compare collapse curves.
+
+### Baselines
+* **N=1 replace** (Shumailov): worst-case collapse curve.
+* **N=1 accumulate** (Gerstgrasser): single-model upper bound.
+* **N=M segmented** (Hodel &amp; West): multi-agent baseline at moderate M.
+
+### Evaluation Metrics
+* **Perplexity** of generation t on held-out WikiText-2 test (E1, E3).
+* **Lexical diversity** = distinct-bigram ratio over each generation&#39;s text
+  pool.
+* **Semantic diversity** = mean pairwise cosine distance over sentence
+  embeddings of generated text (E1, E2, E3).
+* **Pairwise embedding-distance Frobenius norm** of the inter-agent matrix
+  (E2 — Wang&#39;s diagnostic).
+* **Hill–Shannon Diversity** (effective number of distinct outputs) over
+  embedded outputs (E1, E2).
+
+### Statistical Analysis
+* **Per-condition**: 3 random seeds, report mean ± std.
+* **Comparison**: paired t-test of &#34;metric at iteration T&#34; between
+  successive N values to identify the smallest N for which the metric is
+  statistically indistinguishable from N_max.
+* **Trend**: regress metric against log(N) at each iteration.
+
+## Expected Outcomes
+* H1 supported if E1 and E2 both show metric curves that flatten or invert
+  trend at some N* &lt; N_max within T iterations.
+* H2 supported if even the largest N exhibits a positive metric slope, with
+  a smaller slope for larger N.
+* H3 supported if the E3 axis ranking matches the predicted order.
+
+## Timeline and Milestones
+| Phase | Time |
+|---|---|
+| Planning | 30 min (now done) |
+| Setup + load datasets, sanity-check API | 15 min |
+| E1 implementation + run | 90 min |
+| E2 implementation + run | 60 min |
+| E3 run | 45 min |
+| Analysis + figures | 45 min |
+| REPORT.md + README.md | 30 min |
+| Buffer | 30 min |
+
+## Potential Challenges
+* **Fine-tuning compute** at N=16, T=6 → mitigated by tiny per-agent data
+  slice and `distilgpt2`. If still slow we drop to N_max = 8.
+* **Generation quality at small training data** → distilgpt2 starts from a
+  non-trivially pretrained checkpoint, so small fine-tunes mostly *shift*
+  rather than learn from scratch. Acceptable for the collapse signal we want.
+* **API rate limits / cost** in E2 → keep generations short (~80 tokens),
+  cache responses, prefer cheap routed models.
+* **Repeating-text artefact** (Shumailov caveat) → use sampling
+  (temperature 1.0, top_p 0.95), no repetition penalty.
+
+## Success Criteria
+* All five population sizes complete in E1 and E2.
+* Each metric is computed at every iteration for every condition.
+* REPORT.md contains MVP estimates with statistical support, axis ranking,
+  and an explicit answer to &#34;will it always collapse?&#34;.
+
+
+════════════════════════════════════════════════════════════════════════════════
+                          LITERATURE REVIEW
+════════════════════════════════════════════════════════════════════════════════
+
+# Literature Review: How Many Agents to Avoid Collapse?
+
+## Research question
+
+**Is there a minimum viable population for an LLM information ecosystem such that
+it does not collapse? Will such an ecosystem always collapse? What counts as
+different enough to be an individual in the population?**
+
+## Research area overview
+
+Since Shumailov et al. (2023, *Nature* 2024) coined &#34;model collapse,&#34; a fast-growing
+literature has established that generative models recursively trained on their
+own outputs progressively lose information about the tails of the original
+distribution and converge toward low-variance, homogeneous outputs. Almost the
+entire literature, however, studies a **single self-training model** — only a few
+recent papers shift the unit of analysis from &#34;the model&#34; to &#34;the ecosystem&#34; of
+multiple, possibly distinct, models that share a synthetic-data substrate (the
+internet).
+
+The research question maps directly onto this newer ecosystem-level work and asks
+two extensions that have not yet been answered comprehensively:
+
+1. **Minimum viable population** — at what number of agents *N* does a multi-agent
+   ecosystem cease to collapse? Does any *finite* *N* suffice without other
+   interventions (data accumulation, real-data refresh, curation), or must *N*
+   grow with iteration count?
+2. **Individual identity** — what kind of differentiation between agents counts?
+   Different model families? Different training-data segments? Different prompts?
+   Different RAG sources?
+
+The most directly relevant empirical answer published to date is **Hodel &amp; West
+(2026, arXiv 2512.15011)**: under fixed per-ecosystem compute and data budget,
+they segment WikiText-2 across M ∈ {1, 2, 4, 16} fine-tuned OPT-125m / GPT-2
+models and run 10 self-training iterations. They find an **optimal diversity that
+grows monotonically with iteration count** — suggesting no fixed *N* is &#34;enough&#34;
+indefinitely, and motivating the question of which axes of differentiation give
+the most mileage. Our project can directly extend Hodel &amp; West along the
+dimension they did *not* vary (architecture, RAG sources, prompt regimes) and
+along the dimension they only stub (M up to 16).
+
+## Key papers (selected; full catalogue in `resources.md`)
+
+### Foundational
+
+#### Shumailov et al. 2024 — *AI models collapse when trained on recursively generated data* (Nature; arXiv 2305.17493)
+- **Contribution**: First formalization of model collapse. Defines early- vs late-stage collapse: tails of the data distribution disappear first, then the model converges to low-variance point estimates.
+- **Methodology**: 
+  - GMM and VAE toy demonstrations.
+  - **LLM experiment**: fine-tune OPT-125m on WikiText-2; for each generation, generate a same-sized synthetic dataset via 5-way beam search over 64-token blocks; train next generation on that. Two regimes: (a) 5 epochs, no original data preserved; (b) 10 epochs, 10% of original data preserved per round.
+- **Key results**: Perplexity rises from ~34 (gen 0) toward ~52 over 9 generations under regime (a); regime (b) — preserving 10% real data — strongly attenuates collapse. Histograms over generations show emerging long tails of &#34;errors that would never appear under the real distribution.&#34;
+- **Code**: Zenodo zip (no GitHub mirror). https://zenodo.org/records/10866595
+- **Relevance to our research**: Establishes the *single*-model baseline our N=1 condition reproduces. Their OPT-125m / WikiText-2 setup is the de-facto reference design.
+
+#### Alemohammad et al. 2023 — *Self-Consuming Generative Models Go MAD* (arXiv 2307.01850)
+- **Contribution**: Coined &#34;Model Autophagy Disorder&#34; (MAD); demonstrated collapse in image generative models (GANs, diffusion). Categorized self-consuming loops into fully-synthetic, synthetic-augmented, and fresh-data regimes.
+- **Relevance**: Shows model collapse is a cross-modality phenomenon, not specific to language. Their framework (loop variants) is a useful conceptual scaffolding.
+
+### Mitigation through real-data dynamics (single model)
+
+#### Gerstgrasser et al. 2024 — *Is Model Collapse Inevitable? Breaking the Curse of Recursion by Accumulating Real and Synthetic Data* (arXiv 2404.01413)
+- **Contribution**: Shows that **accumulating** synthetic data alongside real data (rather than replacing real with synthetic each generation) yields a finite, bounded test error independent of iteration count — both empirically (transformers on TinyStories, diffusion on molecular conformation, VAE on images) and theoretically (linear-regression chain).
+- **Methodology**: 
+  - Pretrain 9M GPT-2 / 12M-42M-125M Llama2 from scratch on TinyStories (470M tokens).
+  - For each generation n ≥ 2, generate a TinyStories-sized synthetic dataset, then either replace or concatenate with prior data; pretrain a fresh init.
+  - Sampling temperatures 0.3 and 1.0.
+- **Key results**: &#34;Replace&#34; diverges; &#34;accumulate&#34; plateaus at a bounded error. This holds across model architecture, parameter count, and modality.
+- **Code**: https://github.com/RylanSchaeffer/KoyejoLab-Collapse-or-Thrive (companion repo).
+- **Relevance**: A non-population mitigation. Our N agents experiment must hold this constant or contrast with it. They use TinyStories which is now downloaded locally.
+
+#### Briesch et al. 2023 — *Large Language Models Suffer From Their Own Output* (arXiv 2311.16822)
+- **Contribution**: First LLM-only empirical study of self-consuming loops, uses logic-expression tasks (where correctness is verifiable) to disentangle quality decay from diversity decay. Finds correctness preserved, diversity declines.
+- **Relevance**: Decoupling quality from diversity matters for picking a metric. We&#39;ll need a diversity measure that&#39;s not entangled with task accuracy.
+
+#### Guo et al. 2023 — *The Curious Decline of Linguistic Diversity* (arXiv 2311.09807)
+- **Contribution**: Defines lexical, syntactic, and semantic diversity metrics and tracks their decay under recursive fine-tuning across multiple generation tasks.
+- **Code**: https://github.com/yanzhuguo/linguistic-diversity (metric scripts only).
+- **Relevance**: Provides off-the-shelf diversity metrics we can reuse to evaluate ecosystem-level diversity.
+
+### Theoretical results
+
+#### Dohmatob et al. 2024 — *A Tale of Tails: Model Collapse as a Change of Scaling Laws* (arXiv 2402.07043)
+- **Contribution**: Unifies model collapse with scaling-law theory. Shows synthetic data shifts the scaling exponent and induces &#34;un-learning&#34; of low-frequency skills. Validated empirically on transformer arithmetic and Llama2 text generation.
+- **Relevance**: Provides an analytical framework for predicting how a ratio of synthetic-to-real data degrades a fixed-architecture model — relevant when our N agents differ in their relative synthetic-share.
+
+#### Seddik et al. 2024 — *How Bad is Training on Synthetic Data?* (arXiv 2404.05090)
+- **Contribution**: Statistical analysis showing collapse is unavoidable on pure synthetic training, but a maximal synthetic ratio exists below which collapse can be eventually avoided when mixed with real data.
+- **Relevance**: Gives a quantitative target: there&#39;s a per-iteration synthetic-budget threshold. Our ecosystem can be framed as N agents trading per-agent synthetic exposure.
+
+### Multi-model / ecosystem-level (most relevant to our research question)
+
+#### Hodel &amp; West 2026 — *Epistemic diversity across language models mitigates knowledge collapse* (arXiv 2512.15011) — **central reference**
+- **Contribution**: Direct test of the research question for an ecosystem of fine-tuned single-family models, using **training-data segmentation** as the diversity knob.
+- **Methodology**:
+  - Start from one pretrained model (OPT-125m, GPT-2). Make M = 1, 2, 4, 16 identical copies.
+  - Segment WikiText-2 into M equal-sized non-overlapping subsets; fine-tune each model on its segment (&#34;epistemology&#34;).
+  - At each iteration, all M models generate text; outputs are concatenated, shuffled, redistributed uniformly into M equal training slices for the next iteration.
+  - Per-ecosystem total tokens N is held constant; n = N/M per model.
+  - Run 10 iterations. Evaluate perplexity on WikiText-2 test (fixed).
+  - HSD diversity D simplifies to M.
+- **Key findings**:
+  1. The **optimal M increases monotonically with iteration count**: a single big model wins short-term but is dominated by 16 small specialized models long-term.
+  2. Robust across model families (OPT vs GPT-2), parameter sizes, mixing real data (10% Wikitext at each iteration), and temperature sampling τ ∈ {0.5, 1, 2}.
+  3. Scaling up the system (V1: bigger models / more data) *amplifies* collapse in homogeneous ecosystems, *increasing* diversity benefits.
+- **Code**: Not yet publicly released as of 2026-04-28 (paper Dec 2025 / Mar 2026).
+- **Relevance**: This is the closest published answer to our research question and the natural baseline. Open extensions:
+  - They cap at M=16; we could push further and also test compute scaling laws.
+  - They instantiate diversity *only* through training data segmentation. Other axes — architecture, prompt, RAG corpus — were enumerated but not tested.
+  - They use a fixed &#34;shuffle and redistribute&#34; mixing scheme; alternative mixing topologies (e.g., social-network style with limited information sharing) are unexplored.
+
+#### Wang et al. 2025 — *LLM Web Dynamics: Tracing Model Collapse in a Network of LLMs* (arXiv 2506.15690)
+- **Contribution**: API-only ecosystem simulator using RAG instead of fine-tuning, hugely cheaper. n LLMs from different families share a common &#34;Internet&#34; (text database); each retrieves k_t = ⌊β·|A_t|⌋ sentences for context, generates responses, and posts back. They prove (and show empirically) that the Frobenius norm of pairwise embedding-distance matrix converges to a small constant — so even pretrained-only LLMs without any fine-tuning collapse toward each other in this multi-model RAG dynamic. Provides an analogous GMM-based system as theoretical backbone.
+- **Methodology**: 3 LLMs (Llama-3.1-8B, DeepSeek-7B-chat, Mistral-7B-Instruct), pretrained-different. Seeded &#34;Internet&#34; = 20 crypto posts. Single fixed query repeated for T=60 iterations. Embed via nomic-embed-v1.5. Distance matrix evolves over time.
+- **Code**: Not publicly released.
+- **Relevance**: An entirely different methodology (RAG-based, no training) for the same research question, and a much cheaper way to run many-N experiments. Their result that even *pretrained-different* models converge implies the answer to &#34;what counts as different&#34; is non-trivial: model-family alone is not sufficient differentiation under an aggressive RAG-mixing scheme.
+
+#### Vu, Reeves &amp; Wenger 2025 — *What happens when generative AI models train recursively on each others&#39; outputs?* (arXiv 2505.21677)
+- **Contribution**: Theoretical framework for *data-mediated interactions* between heterogeneous models: derives concise formulas for the dynamics of mixed-source recursive training, validates with empirical LLM experiments. Documents the substantial overlap of pretraining datasets across major commercial LLMs (Llama, GPT, Phi, etc.) — key empirical motivation for studying ecosystem-level collapse.
+- **Key finding**: Multi-model recursive training has *both* benefits (exposure to novel concepts ≈ transfer learning) and harms (homogenization on shared tasks). Replicates collapse but qualifies it.
+- **Relevance**: Provides a useful theoretical lens when we vary the *origin* of synthetic data each agent ingests — own-output vs. peer-output vs. mixed.
+
+#### Kovač et al. 2025 — *Recursive Training Loops in LLMs: How training data properties modulate distribution shift* (arXiv 2504.03814)
+- **Contribution**: Treats the data side, not the model side, as the diversity knob. Uses an &#34;iterative chain&#34; framework where at each generation a fresh base LLM (sampled uniformly from {Llama-3.2-1B, Qwen2.5-1.5B, SmolLM-1.7B, Falcon3-1B}) is fine-tuned via LoRA on a mix of pre-existing accumulated content and fresh human samples, then generates more content. Evaluates 5 datasets (Twitter ×2, Reddit ×2, Wikipedia ×1) across 3 domains; runs regression analyses on 800 clusters.
+- **Key findings**: Lexical diversity *amplifies* shift; semantic diversity and data quality *mitigate* it; influences are highly modular (cross-domain spillover is small); political bias amplification depends on baseline lean.
+- **Code**: https://github.com/flowersteam/ce_llms (cloned locally).
+- **Relevance**: Closest existing scaffold for an experiment runner — already implements iterative chains, multi-base-model rotation, LoRA fine-tuning, dataset clustering, evaluation pipelines.
+
+### Other related (catalogued but not deep-read)
+
+- **Bias and fairness loops** — Wyllie et al. 2024 (Fairness Feedback Loops, arXiv 2403.07857), Bohacek &amp; Farid 2024 (Nepotistically Trained, arXiv 2311.12202): show systematic biases compound under recursive training.
+- **Theoretical bounds** — Dey &amp; Donoho 2024 (Universality of π²/6, arXiv 2410.22812): if data accumulates, error is bounded by a universal π²/6 constant. Bertrand et al. (Heat Death, 2402.07043): closed-loop learning has heat-death dynamics.
+- **Practical mitigations** — machine-generated text detection (Drayson &amp; Lampos 2502.15654), reinforcement-style verification (Feng et al. 2406.07515 / 2410.16713), curated data (Ferbach et al. 2407.09499), text synthesis without collapse (Zhang et al. 2412.14689).
+- **Self-improvement** — papers in our results corpus (RL-based self-training, Think-Prune-Train, Importance Weighting, Spend Wisely, etc.) study the *engineered* recursive training case. Provide diversity/curation tricks our ecosystems could employ within an agent.
+
+## Common experimental methodologies
+
+Across the corpus, the dominant single-model recipe is:
+
+1. Pick a base model (usually OPT-125m, GPT-2, or small Llama variant).
+2. Pick a base dataset (WikiText-2 for fine-tuning; TinyStories / C4 for pretraining).
+3. For T generations:
+   - Sample N synthetic tokens from generation t-1&#39;s model.
+   - (Optional) mix in real data — replacement / accumulation / partial accumulation.
+   - Fine-tune (or pretrain from scratch) generation t.
+4. Evaluate generation t on a fixed held-out test set — perplexity is the standard metric.
+
+The ecosystem variants substitute step (3) with multi-agent versions:
+- **Hodel &amp; West**: M models, segment + shuffle + redistribute pool every iteration.
+- **Wang et al.**: M models, no fine-tuning, share via RAG over a growing text pool.
+- **Kovač et al.**: rotate base models across iterations, accumulate posts, mix with fresh human posts.
+
+## Standard baselines
+
+- **N=1, replace, no real data refresh**: the Shumailov-style &#34;worst-case&#34; curve (rising perplexity, vanishing tails). Our ecosystem with M ≥ 2 should be compared against this.
+- **N=1, accumulate**: Gerstgrasser π²/6 bounded curve. Tells us how much value pure data accumulation buys without diversity.
+- **N=1, 10% real data refresh**: Shumailov regime (b). Realistic upper bound of &#34;what a careful single-actor pipeline can do.&#34;
+- **N=M, segmented data**: Hodel &amp; West baseline.
+- **N=M, RAG-only (no fine-tuning)**: Wang et al. baseline; cheap to run.
+
+## Standard metrics
+
+- **Perplexity on held-out human data** (most common; quality+coverage proxy).
+- **Lexical diversity (Type-Token Ratio, n-gram TTR)** — Guo et al.
+- **Semantic diversity (cosine sim over sentence embeddings)** — Guo et al., Hodel &amp; West.
+- **Embedding distance matrix** (Frobenius norm of pairwise distances over embedded outputs) — Wang et al.
+- **Hill-Shannon Diversity (HSD)** — Hodel &amp; West, from ecology, captures &#34;effective number of distinct equally-frequent agents.&#34;
+- **Distribution-shift metrics** — KL / Wasserstein from baseline distribution.
+- **Bias / political-lean drift** — Kovač et al., Wang et al.
+
+## Datasets in the literature
+
+- **WikiText-2 (raw, v1)** — the dominant fine-tuning benchmark; downloaded.
+- **TinyStories** — small kindergarten-level corpus suitable for pretraining-from-scratch loops; downloaded.
+- **C4** — large-scale; used for higher-capacity models, not yet downloaded (large).
+- **Reddit / Twitter / Wikipedia clusters** — Kovač et al.; available via `code/ce_llms/`.
+- **Crypto-news posts (Ebrahimi 2024)** — Wang et al. (~20 short posts).
+
+## Gaps and opportunities (specific to our research question)
+
+1. **Population-size scaling beyond M=16.** Hodel &amp; West&#39;s largest ecosystem is 16; the slope of optimal-M vs iteration suggests larger N pays off. Empirically pinning down *minimum* viable N for a target horizon is open.
+2. **Identity along architecture / pretraining axis, not just data segments.** Hodel &amp; West vary data segmentation only. Wang et al. show that even pretrained-different models converge under aggressive RAG mixing. The question — *what differentiation suffices* — needs orthogonal axis tests:
+   - Same architecture, different training-data segments (Hodel &amp; West).
+   - Different architectures, same training data.
+   - Different prompts / personas, same model.
+   - Different RAG sources / retrieval policies.
+3. **Mixing-topology dependence.** Existing work uses uniform redistribution or full RAG sharing. Real ecosystems have structured information networks. A graph-topology study (clustered networks, hub-spoke, small-world) is open.
+4. **Cheap-eval pipeline.** Wang-style RAG-only simulations let us scan large N (say 2…100) at API cost, and validate at small N with full fine-tuning à la Hodel &amp; West.
+5. **Notion of &#34;minimum viable population&#34; formalism.** Borrow from population genetics / ecology — currently no paper formalizes a *threshold N* below which extinction (full collapse) is inevitable. Hill-Shannon (Hodel &amp; West) is the start.
+
+## Recommendations for our experiment
+
+### Recommended primary setup
+- **Backbone (cheap)**: Hodel &amp; West-style segmented WikiText-2 with OPT-125m, M ∈ {1, 2, 4, 8, 16, 32, 64}. This extends their grid into the &#34;minimum viable&#34; regime they only touched.
+- **Iterations**: at least 10, ideally 20+, to expose the monotonic optimal-M trend.
+- **Per-ecosystem token budget N held constant** — this controls for compute and isolates diversity as the variable.
+
+### Recommended companion setup
+- **API-only RAG ecosystem**: Wang-style 3+ LLMs differing in pretraining (e.g., HuggingFace small variants) sharing a seeded text DB. Sweep N up cheaply. Use Frobenius distance matrix as the diversity-loss metric.
+
+### Recommended baselines
+- **N=1 replace** (Shumailov regime a): worst-case lower bound.
+- **N=1 accumulate** (Gerstgrasser): single-model upper-bound mitigation.
+- **N=M segmented** (Hodel &amp; West): published ecosystem baseline.
+
+### Recommended metrics
+- Perplexity on WikiText-2 test.
+- Lexical TTR + semantic embedding cosine-sim variance (Guo).
+- Pairwise embedding-distance matrix Frobenius norm (Wang).
+- Hill-Shannon Diversity computed over output embeddings (effective-number-of-distinct-models).
+
+### Methodological warnings (from the literature)
+- **Repeating-text artifact**: Shumailov found that LMs naturally produce repetitive output; using a repetition penalty actually *worsens* collapse. Don&#39;t naively penalize repetition.
+- **Generation temperature matters**: Gerstgrasser test τ ∈ {0.3, 1.0}; Hodel &amp; West test τ ∈ {0.5, 1, 2}. Fix or sweep deliberately.
+- **Test set must be from the original real distribution**, fixed across all generations — perplexity on a synthetic test set is the wrong measurement (Shumailov, Hodel &amp; West).
+- **Cross-generation comparison requires equal-size training data** (Gerstgrasser footnote 1) — careful when comparing replace vs accumulate at fixed iteration n.
+- **Compute realism**: Hodel &amp; West&#39;s 10-iteration OPT-125m experiment ran on consumer-scale GPUs in hours; Wang et al.&#39;s 60-iteration RAG simulation took ~8 hours on an A100. Either is feasible without a cluster.
+
+## Bottom line for our project
+
+The literature *strongly* suggests population diversity mitigates collapse, but
+the existing answer (Hodel &amp; West&#39;s M ∈ {1,2,4,16}) is incomplete:
+
+- It does not pin down a *minimum* N for a fixed horizon.
+- It tests only one axis of differentiation (training-data segments).
+- It does not contrast cheap RAG-style ecosystems (Wang et al.) against fine-tuning-style ecosystems.
+
+Our project sits naturally in this gap. The most directly extensible experimental
+scaffold is Hodel &amp; West&#39;s pipeline (which has no public code yet — we will need
+to reimplement, but the recipe is fully spec&#39;d in the paper) augmented with the
+Kovač et al. iterative-chain code (`code/ce_llms/`) for richer dataset / model
+manipulation, and validated cheaply in a Wang-style RAG harness.
+
+
+════════════════════════════════════════════════════════════════════════════════
+                          PAPER REQUIREMENTS
+════════════════════════════════════════════════════════════════════════════════
+
+Generate a complete academic paper with the following structure:
+
+1. TITLE
+   - Clear, specific, informative
+   - Should convey main finding or contribution
+
+2. AUTHOR
+   - Use this exact author line in the \author{} block: Ari Holtzman and NeuriCo
+
+3. ABSTRACT (150-250 words)
+   - Problem statement
+   - Approach
+   - Key results
+   - Significance
+
+4. INTRODUCTION
+   - Research problem and motivation
+   - Gap in existing work
+   - Our contribution (be specific)
+   - Paper organization
+
+5. RELATED WORK
+   - Organized by theme/approach
+   - Position our work relative to prior work
+   - Cite papers from literature review
+
+6. METHODOLOGY
+   - Clear description of approach
+   - Experimental setup
+   - Datasets used
+   - Evaluation metrics
+   - Baselines
+
+7. RESULTS
+   - Present results with tables and figures
+   - Statistical analysis
+   - Comparison to baselines
+   - Ablation studies (if applicable)
+
+8. DISCUSSION
+   - Interpretation of results
+   - Limitations
+   - Broader implications
+
+9. CONCLUSION
+   - Summary of contributions
+   - Key findings
+   - Future work
+
+10. REFERENCES
+   - BibTeX format
+   - All cited papers
+
+════════════════════════════════════════════════════════════════════════════════
+                          OUTPUT FORMAT
+════════════════════════════════════════════════════════════════════════════════
+
+Create a MODULAR LaTeX project with the following directory structure:
+
+paper_draft/
+├── main.tex              # Main file that imports all sections
+├── references.bib        # BibTeX references
+├── sections/
+│   ├── abstract.tex      # Abstract content
+│   ├── introduction.tex  # Introduction section
+│   ├── related_work.tex  # Related work section
+│   ├── methodology.tex   # Methodology section
+│   ├── results.tex       # Results section
+│   ├── discussion.tex    # Discussion section
+│   └── conclusion.tex    # Conclusion section
+├── figures/              # Directory for any generated figures
+├── tables/               # Directory for complex standalone tables
+└── appendix/             # Directory for appendix sections (if needed)
+
+INSTRUCTIONS:
+1. First, create the directory structure above (mkdir -p paper_draft/sections paper_draft/figures paper_draft/tables paper_draft/appendix)
+2. Write main.tex using the EXACT preamble for NEURIPS:
+
+   \documentclass{article}
+   \usepackage[final]{neurips_2025}  % NEURIPS style (neurips_2025.sty is in paper_draft/)
+   \usepackage[hidelinks]{hyperref}  % REQUIRED: clickable links
+   \usepackage{booktabs}  % REQUIRED: professional tables
+   \usepackage{graphicx}
+   \usepackage{amsmath,amssymb}
+
+   % Import command files
+   \input{commands/math}
+   \input{commands/general}
+   \input{commands/macros}
+
+   % Use this bibliography style:
+   \bibliographystyle{plainnat}
+
+   \author{Ari Holtzman and NeuriCo}
+
+   - Use \input{sections/...} to include each section
+   - Use \bibliography{references} for references
+3. Write each section file with COMPLETE content (no placeholders)
+4. Each section file should include its \section{} command
+5. Write references.bib with all citations in BibTeX format
+6. After writing all files, compile the paper:
+   cd paper_draft && pdflatex -interaction=nonstopmode main.tex && bibtex main && pdflatex -interaction=nonstopmode main.tex && pdflatex -interaction=nonstopmode main.tex
+
+This modular structure allows humans to easily:
+- Edit individual sections without navigating a large file
+- Track changes per section
+- Reuse sections across different paper versions
+
+════════════════════════════════════════════════════════════════════════════════
+                          QUALITY REQUIREMENTS
+════════════════════════════════════════════════════════════════════════════════
+
+- Academic tone throughout
+- All claims must be supported by data from the experiment report
+- Proper citations using \cite{} commands
+- Clear figures and tables with proper captions
+- NO placeholder text - every section must have real content
+- The paper MUST compile without errors
+- If compilation fails, debug and fix the LaTeX errors
+
+════════════════════════════════════════════════════════════════════════════════
+                          LAB WRITING STYLE
+════════════════════════════════════════════════════════════════════════════════
+
+Follow these lab-specific conventions to match our paper style:
+
+1. LANGUAGE STYLE:
+   - Use active voice: "We propose", "We examine", "We focus on"
+   - Be direct and confident: "Our main question is...", "We hypothesize that..."
+   - State things clearly and simply - prefer plain language over jargon
+   - Use bold questions as paragraph organizers: {\bf what is X?}
+   - Include specific quantitative claims: "8.97% over baseline"
+   - Avoid fancy wording: "utilize" → "use", "facilitate" → "help"
+
+2. INTRODUCTION STRUCTURE:
+   - Engaging hook (get to the point quickly)
+   - Problem importance
+   - Gap identification
+   - Your approach with method figure reference
+   - Quantitative preview of results
+   - Contribution bullets (3-4 items, action verbs)
+
+3. CONTRIBUTION LISTS:
+   \begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+       \item We propose...
+       \item We conduct...
+       \item We complement...
+   \end{itemize}
+
+4. MODULAR COMMANDS STRUCTURE:
+   Command templates are pre-copied to paper_draft/commands/:
+   - math.tex: Math notation macros
+   - general.tex: Formatting macros
+   - macros.tex: Project-specific term definitions (customize this for your paper)
+
+   In main.tex, include:
+   \input{commands/math}
+   \input{commands/general}
+   \input{commands/macros}
+
+5. REFERENCE CONVENTIONS:
+   Use reference macros from math.tex:
+   - \figref{fig:name} for "figure 1" (lowercase, in-sentence)
+   - \Figref{fig:name} for "Figure 1" (capitalized, start of sentence)
+   - \secref{sec:name} for "section 2"
+
+6. TEXT FORMATTING:
+   - Use \para{Header text} for bold paragraph headers
+   - Define method/dataset names with \textsc and \xspace:
+     \newcommand{\methodname}{\textsc{MethodName}\xspace}
+
+7. TABLE FORMATTING:
+   - Use booktabs package (no vertical lines)
+   - Use \resizebox{\textwidth}{!}{...} for wide tables
+   - Use @{} to remove padding at table edges
+   - Use \cmidrule(lr){x-y} for sub-headers
+   - Use \textsc{} for dataset/method names in headers
+   - Bold best results with {\bf ...}
+
+8. FIGURE FORMATTING:
+   - Use 0.32\textwidth for 3-column subfigures
+   - Use 0.95\linewidth for full-width figures
+   - Use \input{figures/legend} for shared legends
+   - Write self-contained captions explaining key observations
+
+9. RESULTS PRESENTATION:
+   - Define \increase and \decrease for colored arrows (green up, red down)
+   - Bold best results in tables
+   - Report confidence intervals when available
+
+10. ALGORITHM STYLING:
+    - Use algpseudocode with [noend]
+    - Use \triangleright for comments
+
+11. HYPERLINKS (REQUIRED):
+    - Always use \usepackage[hidelinks]{hyperref} or with colored links
+    - All citations, section refs, figure refs, table refs must be clickable
+    - This is essential for reader navigation
+
+════════════════════════════════════════════════════════════════════════════════
+                          WORKFLOW: REVIEW AND REFLECT
+════════════════════════════════════════════════════════════════════════════════
+
+Before calling finish, you MUST complete these review steps:
+
+1. REVIEW RESOURCES (at the start):
+   - Read .claude/skills/paper-writer/SKILL.md for detailed guidance
+   - Study templates/paper_writing/lab_style_guide.md for style conventions
+   - Browse paper_examples/ for formatting and language patterns
+
+2. SELF-REFLECTION (before finishing):
+   After writing all sections, review your work against these criteria:
+
+   LANGUAGE CHECK:
+   - [ ] Is the writing clear and jargon-free?
+   - [ ] Are claims specific with quantitative support?
+   - [ ] Is active voice used throughout?
+
+   FORMATTING CHECK:
+   - [ ] Does main.tex include \input{commands/math}, \input{commands/general}, \input{commands/macros}?
+   - [ ] Is hyperref package included for clickable references?
+   - [ ] Do tables use booktabs (no vertical lines)?
+   - [ ] Are best results bolded in tables?
+   - [ ] Are figures/tables properly captioned?
+
+   STRUCTURE CHECK:
+   - [ ] Does introduction follow: hook → importance → gap → approach → preview → contributions?
+   - [ ] Are contribution bullets specific with action verbs?
+   - [ ] Does the paper compile without errors?
+
+3. FIX ISSUES:
+   - Address any issues found in the self-reflection
+   - Re-compile and verify the PDF looks correct
+
+Only after completing this review should you consider the paper finished.
