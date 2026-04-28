@@ -1,0 +1,27 @@
+idea:
+  title: How Many Agents to Avoid Collapse?
+  domain: artificial_intelligence
+  hypothesis: 'Is there a minimum viable population for an LLM information ecosystem
+    such that it does not collapse? Will such an ecosystem always collapse? What counts
+    as different enough to be an individual in the population?
+
+    '
+  background:
+    description: 'Wikipedia describes the Minimum Viable Population (MVP) as "lower
+      bound on the population of a species, such that it can survive in the wild."
+      Is there a minimum viable population for an LLM information ecosystem not to
+      collapse? Will it always collapse? What counts as different enough to be an
+      individual in the population? To be clear, this refers to an ecosystem in which
+      LLMs write data and new models end up training on that data later, essentially
+      birthing new LLMs.
+
+      '
+  metadata:
+    author: Ari Holtzman
+    source: IdeaHub
+    source_url: https://hypogenic.ai/ideahub/idea/Yi8Jlqx82qR5KJsFfjCm
+    idea_id: how_many_agents_to_avoid_colla_20260428_051412_4133bed3
+    created_at: '2026-04-28T05:14:12.765541'
+    status: submitted
+    github_repo_name: agents-avoid-collapse-2361-claude
+    github_repo_url: https://github.com/Hypogenic-AI/agents-avoid-collapse-2361-claude
